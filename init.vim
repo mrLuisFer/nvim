@@ -83,8 +83,10 @@ nnoremap <leader>x :x<CR>
 
 " Treelua_mappings:
 nnoremap <C-b> :NvimTreeToggle<CR>
-" nnoremap <leader>ff :NvimTreeFindFile<CR>
 
-" Dashboard_BUffer:
+" Nvim_Dashboard:
+nnoremap <leader>ff :DashboardFindFile<CR>
+nnoremap <leader>fw :DashboardFindWord<CR>
+" remove dashboard buffer
 autocmd FileType dashboard set showtabline=0 | autocmd WinLeave <buffer> set showtabline=2
  
