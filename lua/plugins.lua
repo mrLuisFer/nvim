@@ -40,4 +40,5 @@ return require('packer').startup(function()
 	use 'glepnir/dashboard-nvim'
 	-- Git Integration
 	use 'tpope/vim-fugitive'
+	use 'norcalli/nvim-colorizer.lua'
 end)
