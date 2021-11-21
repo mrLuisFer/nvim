@@ -20,12 +20,10 @@ set si
 set nobackup
 set nowritebackup
 set shortmess+=c
-" set number = true
 set showcmd
 set ruler
 set showmatch
 set hlsearch
-" set cursorline
 set title
 set smarttab
 set smartindent
@@ -67,7 +65,6 @@ if has("win32") || has("win64") || has("win16") || has('win95')
 endif
 
 " Colorscheme:
-" colorscheme <change here>
 colorscheme material
 
 " Lua_Files:
