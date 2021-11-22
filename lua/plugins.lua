@@ -1,6 +1,5 @@
 local use = require('packer').use
 local fn = vim.fn
-local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -41,4 +40,10 @@ return require('packer').startup(function()
 	-- Git Integration
 	use 'tpope/vim-fugitive'
 	use 'norcalli/nvim-colorizer.lua'
+	
+	if fn.has('linux') > 0 or fn.has('unix') > 0 then
+		-- Treesitter just for linux
+		-- On Windows, for some reason, it doesn't work properly.
+		use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+	end
 end)

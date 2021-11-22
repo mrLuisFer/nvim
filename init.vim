@@ -72,6 +72,7 @@ lua require("plugins")
 lua require("plugins/treelua-config")
 lua require("plugins/dashboard-config")
 lua require("plugins/colorizer-config")
+lua require("plugins/treesitter-config")
 
 " IDE Mappings:
 nnoremap <leader>so :so%<CR>
