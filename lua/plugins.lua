@@ -40,6 +40,7 @@ return require('packer').startup(function()
 	-- Git Integration
 	use 'tpope/vim-fugitive'
 	use 'norcalli/nvim-colorizer.lua'
+	use 'neovim/nvim-lspconfig'
 	
 	if fn.has('linux') > 0 or fn.has('unix') > 0 then
 		-- Treesitter just for linux
