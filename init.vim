@@ -89,6 +89,8 @@ nnoremap <C-b> :NvimTreeToggle<CR>
 " Nvim_Dashboard:
 nnoremap <leader>ff :DashboardFindFile<CR>
 nnoremap <leader>fw :DashboardFindWord<CR>
+" Open dashboard
+nnoremap <F3> :Dashboard<CR>
 " remove dashboard buffer
 autocmd FileType dashboard set showtabline=0 | autocmd WinLeave <buffer> set showtabline=2
  
