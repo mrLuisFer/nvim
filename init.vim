@@ -65,7 +65,8 @@ if has("win32") || has("win64") || has("win16") || has('win95')
 endif
 
 " Colorscheme:
-colorscheme material
+" colorscheme material
+colorscheme onedark
 
 " Lua_Files:
 lua require("plugins")
