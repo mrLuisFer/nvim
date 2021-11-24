@@ -20,6 +20,7 @@ set si
 set nobackup
 set nowritebackup
 set shortmess+=c
+set completeopt=menuone,noinsert,noselect
 set showcmd
 set ruler
 set showmatch
