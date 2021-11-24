@@ -77,6 +77,7 @@ lua require("plugins/lsp-config")
 lua require("plugins/lualine-config")
 lua require("plugins/treelua-config")
 lua require("plugins/treesitter-config")
+lua require("plugins/bufferline-config")
 
 " IDE Mappings:
 nnoremap <leader>so :so%<CR>

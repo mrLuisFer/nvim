@@ -72,5 +72,8 @@ return require('packer').startup(function()
 	use 'terryma/vim-multiple-cursors'
 	use 'mhinz/vim-signify'
 	use 'preservim/nerdcommenter'
+
+	-- using packer.nvim
+	use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
 end)
 
