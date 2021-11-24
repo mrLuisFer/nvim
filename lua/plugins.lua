@@ -62,5 +62,15 @@ return require('packer').startup(function()
 	use 'hrsh7th/cmp-vsnip'
 	use 'hrsh7th/vim-vsnip'
 	use {'navarasu/onedark.nvim', as = 'onedark'}
+	-- Typing
+	use 'jiangmiao/auto-pairs'
+	use 'alvan/vim-closetag'
+	use 'tpope/vim-surround'
+
+	-- IDE
+	use	'editorconfig/editorconfig-vim'
+	use 'terryma/vim-multiple-cursors'
+	use 'mhinz/vim-signify'
+	use 'preservim/nerdcommenter'
 end)
 
