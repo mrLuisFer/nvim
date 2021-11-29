@@ -5,7 +5,8 @@ syntax enable
 
 let mapleader = " "
 " Setters:
-set relativenumber
+" set relativenumber
+set number
 set mouse=a
 set sw=2
 set backspace=2
