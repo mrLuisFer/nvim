@@ -20,6 +20,7 @@ return require('packer').startup(function()
   	'marko-cerovac/material.nvim',
     as='material'
   }
+	use { 'jacoborus/tender.vim', as="tender" }
 	-- PLUGINS:
 	use 'wbthomason/packer.nvim'
   use {
