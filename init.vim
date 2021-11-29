@@ -67,8 +67,8 @@ endif
 
 " Colorscheme:
 " colorscheme material
-" colorscheme onedark
-colorscheme tender
+colorscheme onedark
+" colorscheme tender
 
 " Lua_Files:
 lua require("plugins")
