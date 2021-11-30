@@ -1,10 +1,7 @@
-" Enable Mouse
-set mouse=a
 
 " Set Editor Font
 if exists(':GuiFont')
-  " Use GuiFont! to ignore font errors
-  GuiFont {font_name}:h{size}
+  GuiFont! {font_name}:h{size}
 endif
 
 " Disable GUI Tabline
