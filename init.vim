@@ -77,9 +77,12 @@ lua require("plugins/colorizer-config")
 lua require("plugins/dashboard-config")
 lua require("plugins/lualine-config")
 lua require("plugins/treelua-config")
-lua require("plugins/treesitter-config")
-lua require("plugins/bufferline-config")
 lua require("plugins/cmp-config")
+lua require("plugins/bufferline-config")
+
+if has('linux') || has('unix')
+	lua require("plugins/treesitter-config")
+end
 
 " IDE Mappings:
 nnoremap <leader>so :so%<CR>
