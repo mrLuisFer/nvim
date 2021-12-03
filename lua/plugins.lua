@@ -74,7 +74,12 @@ return require('packer').startup(function()
 	use 'mhinz/vim-signify'
 	use 'preservim/nerdcommenter'
 
-	-- using packer.nvim
 	use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
+	use {
+		'prettier/vim-prettier', 
+		run = 'yarn install --frozen-lockfile --production', 
+		branch = 'release/0.x'
+	}
+
 end)
 
