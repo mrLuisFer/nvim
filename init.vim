@@ -104,3 +104,4 @@ autocmd FileType dashboard set showtabline=0 | autocmd WinLeave <buffer> set sho
 let g:dashboard_custom_header =<< trim END
 	N E O V I M                                 
 END
+
