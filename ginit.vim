@@ -1,7 +1,7 @@
 
 " Set Editor Font
 if exists(':GuiFont')
-  GuiFont! {font_name}:h{size}
+  GuiFont! Jetbrains Mono:h12
 endif
 
 " Disable GUI Tabline

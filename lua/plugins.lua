@@ -80,6 +80,10 @@ return require('packer').startup(function()
 		run = 'yarn install --frozen-lockfile --production', 
 		branch = 'release/0.x'
 	}
+	use 'sheerun/vim-polyglot'
 
+	if fn.executable("go --version") > 0 then
+		use {	'fatih/vim-go', run = ':GoUpdateBinaries' }
+	end	
 end)
 
