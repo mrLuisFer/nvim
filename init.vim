@@ -93,11 +93,12 @@ nnoremap <C-b> :NvimTreeToggle<CR>
 " Nvim_Dashboard:
 nnoremap <leader>ff :DashboardFindFile<CR>
 nnoremap <leader>fw :DashboardFindWord<CR>
-" Open dashboard
 nnoremap <F3> :Dashboard<CR>
+
 " remove dashboard buffer
 autocmd FileType dashboard set showtabline=0 | autocmd WinLeave <buffer> set showtabline=2
  
 let g:dashboard_custom_header =<< trim END
 	N E O V I M                                 
 END
+

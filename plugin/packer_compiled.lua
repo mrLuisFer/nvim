@@ -210,6 +210,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\mrlui\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-multiple-cursors",
     url = "https://github.com/terryma/vim-multiple-cursors"
   },
+  ["vim-polyglot"] = {
+    loaded = true,
+    path = "/home/mrluisfer/.local/share/nvim/site/pack/packer/start/vim-polyglot",
+    url = "https://github.com/sheerun/vim-polyglot"
+  },
   ["vim-prettier"] = {
     loaded = true,
     path = "C:\\Users\\mrlui\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-prettier",
