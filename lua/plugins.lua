@@ -48,11 +48,7 @@ return require('packer').startup(function()
   	requires = {'kyazdani42/nvim-web-devicons', opt = true}
 	}
 	
-	if fn.has('linux') > 0 or fn.has('unix') > 0 then
-		-- Treesitter just for linux
-		-- On Windows, for some reason, it doesn't work properly.
-		use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-	end
+	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
 	-- CMP Plugin
 	use 'hrsh7th/cmp-nvim-lsp'
