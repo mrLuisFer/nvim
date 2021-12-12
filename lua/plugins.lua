@@ -58,6 +58,7 @@ return require('packer').startup(function()
 	use 'hrsh7th/nvim-cmp'
 	use 'hrsh7th/cmp-vsnip'
 	use 'hrsh7th/vim-vsnip'
+
 	use {'navarasu/onedark.nvim', as = 'onedark'}
 	-- Typing
 	use 'jiangmiao/auto-pairs'
@@ -78,8 +79,6 @@ return require('packer').startup(function()
 	}
 	use 'sheerun/vim-polyglot'
 
-	if fn.executable("go --version") > 0 then
-		use {	'fatih/vim-go', run = ':GoUpdateBinaries' }
-	end	
+	use {	'fatih/vim-go', run = ':GoUpdateBinaries' }
 end)
 
