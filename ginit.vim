@@ -1,7 +1,7 @@
 
 " Set Editor Font
 if exists(':GuiFont')
-  GuiFont! Jetbrains Mono:h12
+  GuiFont! Caskaydia Cove Nerd Font:h12
 endif
 
 " Disable GUI Tabline
