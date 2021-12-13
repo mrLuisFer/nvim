@@ -23,11 +23,10 @@ return require('packer').startup(function()
 	use { 'jacoborus/tender.vim', as="tender" }
 	-- PLUGINS:
 	use 'wbthomason/packer.nvim'
-  use {
+	use {
     'kyazdani42/nvim-tree.lua',
-    requires = 'kyazdani42/nvim-web-devicons',
-    config = function() require'nvim-tree'.setup {} end
-  }
+    requires = { 'kyazdani42/nvim-web-devicons' },
+	}
 	use 'ryanoasis/vim-devicons'
 	-- Navigate with C-h C-l C-j C-k
   use 'christoomey/vim-tmux-navigator'
