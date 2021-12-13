@@ -78,7 +78,6 @@ lua require("plugins/dashboard-config")
 lua require("plugins/lualine-config")
 lua require("plugins/treelua-config")
 lua require("plugins/cmp-config")
-lua require("plugins/bufferline-config")
 lua require("plugins/treesitter-config")
 
 " IDE Mappings:
