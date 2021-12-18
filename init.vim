@@ -69,7 +69,6 @@ endif
 " Colorscheme:
 " colorscheme material
 colorscheme onedark
-" colorscheme tender
 
 " Lua_Files:
 lua require("plugins")
@@ -93,6 +92,9 @@ nnoremap <C-b> :NvimTreeToggle<CR>
 nnoremap <leader>ff :DashboardFindFile<CR>
 nnoremap <leader>fw :DashboardFindWord<CR>
 nnoremap <F3> :Dashboard<CR>
+
+" Vim Smoothie
+let g:smoothie_enabled=1
 
 " remove dashboard buffer
 autocmd FileType dashboard set showtabline=0 | autocmd WinLeave <buffer> set showtabline=2
