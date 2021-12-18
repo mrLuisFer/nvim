@@ -20,7 +20,6 @@ return require('packer').startup(function()
   	'marko-cerovac/material.nvim',
     as='material'
   }
-	use { 'jacoborus/tender.vim', as="tender" }
 	-- PLUGINS:
 	use 'wbthomason/packer.nvim'
 	use {
@@ -69,6 +68,7 @@ return require('packer').startup(function()
 	use 'terryma/vim-multiple-cursors'
 	use 'mhinz/vim-signify'
 	use 'preservim/nerdcommenter'
+	use 'psliwka/vim-smoothie'
 
 	use {
 		'prettier/vim-prettier', 
