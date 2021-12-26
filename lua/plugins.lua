@@ -78,5 +78,6 @@ return require('packer').startup(function()
 	use 'sheerun/vim-polyglot'
 
 	use {	'fatih/vim-go', run = ':GoUpdateBinaries' }
+	use 'leafOfTree/vim-svelte-plugin'
 end)
 
