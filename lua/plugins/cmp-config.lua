@@ -47,7 +47,6 @@ local servers = {
 	'emmet_ls',
 	'gopls',
 	'html',
-	'phpactor',
 	'svelte',
 	'vimls'
 }
