@@ -23,6 +23,11 @@ require'nvim-treesitter.configs'.setup{
 		'vim',
 		'yaml',
 		'c',
+		'java',
+		'vue',
+		'jsdoc',
+		'json',
+
 	},
 	highlight = {
   	enable = true,
