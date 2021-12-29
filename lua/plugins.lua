@@ -20,14 +20,12 @@ return require('packer').startup(function()
   	'marko-cerovac/material.nvim',
     as='material'
   }
-	use { 'jacoborus/tender.vim', as="tender" }
 	-- PLUGINS:
 	use 'wbthomason/packer.nvim'
-  use {
+	use {
     'kyazdani42/nvim-tree.lua',
-    requires = 'kyazdani42/nvim-web-devicons',
-    config = function() require'nvim-tree'.setup {} end
-  }
+    requires = { 'kyazdani42/nvim-web-devicons' },
+	}
 	use 'ryanoasis/vim-devicons'
 	-- Navigate with C-h C-l C-j C-k
   use 'christoomey/vim-tmux-navigator'
@@ -48,11 +46,7 @@ return require('packer').startup(function()
   	requires = {'kyazdani42/nvim-web-devicons', opt = true}
 	}
 	
-	if fn.has('linux') > 0 or fn.has('unix') > 0 then
-		-- Treesitter just for linux
-		-- On Windows, for some reason, it doesn't work properly.
-		use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-	end
+	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
 	-- CMP Plugin
 	use 'hrsh7th/cmp-nvim-lsp'
@@ -62,6 +56,7 @@ return require('packer').startup(function()
 	use 'hrsh7th/nvim-cmp'
 	use 'hrsh7th/cmp-vsnip'
 	use 'hrsh7th/vim-vsnip'
+
 	use {'navarasu/onedark.nvim', as = 'onedark'}
 	-- Typing
 	use 'jiangmiao/auto-pairs'
@@ -73,8 +68,8 @@ return require('packer').startup(function()
 	use 'terryma/vim-multiple-cursors'
 	use 'mhinz/vim-signify'
 	use 'preservim/nerdcommenter'
+	use 'psliwka/vim-smoothie'
 
-	use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
 	use {
 		'prettier/vim-prettier', 
 		run = 'yarn install --frozen-lockfile --production', 
@@ -82,8 +77,7 @@ return require('packer').startup(function()
 	}
 	use 'sheerun/vim-polyglot'
 
-	if fn.executable("go --version") > 0 then
-		use {	'fatih/vim-go', run = ':GoUpdateBinaries' }
-	end	
+	use {	'fatih/vim-go', run = ':GoUpdateBinaries' }
+	use 'leafOfTree/vim-svelte-plugin'
 end)
 
