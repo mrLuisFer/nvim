@@ -40,3 +40,5 @@ g.smoothie_enabled = 1
 -- Colorscheme
 vim.cmd('colorscheme onedark')
 
+vim.notify = require('notify')
+
