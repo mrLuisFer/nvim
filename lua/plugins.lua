@@ -79,5 +79,6 @@ return require('packer').startup(function()
 
 	use {	'fatih/vim-go', run = ':GoUpdateBinaries' }
 	use 'leafOfTree/vim-svelte-plugin'
+	use 'romgrk/barbar.nvim'
 end)
 
