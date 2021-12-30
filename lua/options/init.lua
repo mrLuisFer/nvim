@@ -37,3 +37,6 @@ set.clipboard = 'unnamed'
 -- Vim Smoothie
 g.smoothie_enabled = 1
 
+-- Colorscheme
+vim.cmd('colorscheme onedark')
+
