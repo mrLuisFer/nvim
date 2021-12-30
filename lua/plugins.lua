@@ -17,21 +17,21 @@ end
 return require('packer').startup(function()
 	-- THEMES:
 	use {
-  	'marko-cerovac/material.nvim',
-    as='material'
-  }
+  		'marko-cerovac/material.nvim',
+    	as='material'
+	}
 	-- PLUGINS:
 	use 'wbthomason/packer.nvim'
 	use {
-    'kyazdani42/nvim-tree.lua',
-    requires = { 'kyazdani42/nvim-web-devicons' },
+    	'kyazdani42/nvim-tree.lua',
+    	requires = { 'kyazdani42/nvim-web-devicons' },
 	}
 	use 'ryanoasis/vim-devicons'
 	-- Navigate with C-h C-l C-j C-k
-  use 'christoomey/vim-tmux-navigator'
+	use 'christoomey/vim-tmux-navigator'
 	-- FZF
-  use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
-  use 'junegunn/fzf.vim'
+	use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
+	use 'junegunn/fzf.vim'
 	--
 	use 'yggdroot/indentline'
 	-- Nvim Dashboard
@@ -42,8 +42,8 @@ return require('packer').startup(function()
 	use 'neovim/nvim-lspconfig'
 	-- Lualine
 	use {
-  	'nvim-lualine/lualine.nvim',
-  	requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  		'nvim-lualine/lualine.nvim',
+  		requires = {'kyazdani42/nvim-web-devicons', opt = true}
 	}
 	
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
@@ -79,5 +79,7 @@ return require('packer').startup(function()
 
 	use {	'fatih/vim-go', run = ':GoUpdateBinaries' }
 	use 'leafOfTree/vim-svelte-plugin'
+	use 'romgrk/barbar.nvim'
+	use 'rcarriga/nvim-notify'
 end)
 
