@@ -21,7 +21,7 @@ set.wrap = false
 set.scrolloff = 5
 set.fileencoding = 'utf-8'
 
-set.relativenumber = false
+set.number = true
 set.cursorline = true
 set.wildmenu = true
 set.completeopt = 'menuone,noselect'
