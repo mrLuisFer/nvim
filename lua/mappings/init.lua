@@ -16,8 +16,8 @@ map('n', '<F3>', ':Dashboard', opts)
 -- Barbar
 -- A is Alt key
 -- Move to previous/next
-map('n', '<A-,>', ':BufferPrevious<CR>', opts)
-map('n', '<A-.>', ':BufferNext<CR>', opts)
+map('n', '<A-Left>', ':BufferPrevious<CR>', opts)
+map('n', '<A-Right>', ':BufferNext<CR>', opts)
 -- Re-order to previous/next
 map('n', '<A-<>', ':BufferMovePrevious<CR>', opts)
 map('n', '<A->>', ' :BufferMoveNext<CR>', opts)
