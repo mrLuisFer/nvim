@@ -14,5 +14,4 @@ require("plugins/barbar-config")
 require('plugins/lsp-config/completion')
 require('plugins/lsp-config/lang-server')
 require('plugins/lsp-config/lspsaga')
-require('plugins/lsp-config/null_ls-config')
 

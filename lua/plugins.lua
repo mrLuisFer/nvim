@@ -83,7 +83,6 @@ return require('packer').startup(function()
 	use 'rcarriga/nvim-notify'
 
 	use 'williamboman/nvim-lsp-installer'                           
-    use 'jose-elias-alvarez/null-ls.nvim'
     use 'tami5/lspsaga.nvim'                                        
     use 'onsails/lspkind-nvim'                                      
     use 'saadparwaiz1/cmp_luasnip'                                  
