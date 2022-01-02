@@ -81,5 +81,12 @@ return require('packer').startup(function()
 	use 'leafOfTree/vim-svelte-plugin'
 	use 'romgrk/barbar.nvim'
 	use 'rcarriga/nvim-notify'
+
+	use 'williamboman/nvim-lsp-installer'                           
+    use 'jose-elias-alvarez/null-ls.nvim'
+    use 'tami5/lspsaga.nvim'                                        
+    use 'onsails/lspkind-nvim'                                      
+    use 'saadparwaiz1/cmp_luasnip'                                  
+    use 'L3MON4D3/LuaSnip'
 end)
 

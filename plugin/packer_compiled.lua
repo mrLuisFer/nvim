@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  LuaSnip = {
+    loaded = true,
+    path = "/home/mrluisfer/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   ["auto-pairs"] = {
     loaded = true,
     path = "/home/mrluisfer/.local/share/nvim/site/pack/packer/start/auto-pairs",
@@ -104,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/mrluisfer/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/home/mrluisfer/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
   ["dashboard-nvim"] = {
     loaded = true,
     path = "/home/mrluisfer/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
@@ -129,6 +139,16 @@ _G.packer_plugins = {
     path = "/home/mrluisfer/.local/share/nvim/site/pack/packer/start/indentline",
     url = "https://github.com/yggdroot/indentline"
   },
+  ["lspkind-nvim"] = {
+    loaded = true,
+    path = "/home/mrluisfer/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
+    url = "https://github.com/onsails/lspkind-nvim"
+  },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/home/mrluisfer/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/tami5/lspsaga.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/mrluisfer/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -144,6 +164,11 @@ _G.packer_plugins = {
     path = "/home/mrluisfer/.local/share/nvim/site/pack/packer/start/nerdcommenter",
     url = "https://github.com/preservim/nerdcommenter"
   },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/mrluisfer/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/mrluisfer/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -154,10 +179,20 @@ _G.packer_plugins = {
     path = "/home/mrluisfer/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/home/mrluisfer/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/mrluisfer/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-notify"] = {
+    loaded = true,
+    path = "/home/mrluisfer/.local/share/nvim/site/pack/packer/start/nvim-notify",
+    url = "https://github.com/rcarriga/nvim-notify"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
