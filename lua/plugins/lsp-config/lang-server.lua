@@ -39,7 +39,9 @@ local servers = {
 	'gopls',
 	'html',
 	'svelte',
-	'vimls'
+	'vimls',
+	'pylsp',
+	'jtdls'
 }
 
 for _, name in pairs(servers) do
