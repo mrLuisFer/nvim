@@ -20,6 +20,9 @@ return require('packer').startup(function()
   		'marko-cerovac/material.nvim',
     	as='material'
 	}
+	use 'EdenEast/nightfox.nvim'
+	use {'navarasu/onedark.nvim', as = 'onedark'}
+
 	-- PLUGINS:
 	use 'wbthomason/packer.nvim'
 	use {
@@ -45,7 +48,7 @@ return require('packer').startup(function()
   		'nvim-lualine/lualine.nvim',
   		requires = {'kyazdani42/nvim-web-devicons', opt = true}
 	}
-	
+
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
 	-- CMP Plugin
@@ -57,7 +60,6 @@ return require('packer').startup(function()
 	use 'hrsh7th/cmp-vsnip'
 	use 'hrsh7th/vim-vsnip'
 
-	use {'navarasu/onedark.nvim', as = 'onedark'}
 	-- Typing
 	use 'jiangmiao/auto-pairs'
 	use 'alvan/vim-closetag'
@@ -69,23 +71,20 @@ return require('packer').startup(function()
 	use 'mhinz/vim-signify'
 	use 'preservim/nerdcommenter'
 	use 'psliwka/vim-smoothie'
-
 	use {
 		'prettier/vim-prettier', 
 		run = 'yarn install --frozen-lockfile --production', 
 		branch = 'release/0.x'
 	}
 	use 'sheerun/vim-polyglot'
-
 	use {	'fatih/vim-go', run = ':GoUpdateBinaries' }
 	use 'leafOfTree/vim-svelte-plugin'
 	use 'romgrk/barbar.nvim'
 	use 'rcarriga/nvim-notify'
-
-	use 'williamboman/nvim-lsp-installer'                           
-    use 'tami5/lspsaga.nvim'                                        
-    use 'onsails/lspkind-nvim'                                      
-    use 'saadparwaiz1/cmp_luasnip'                                  
+	use 'williamboman/nvim-lsp-installer'
+    use 'tami5/lspsaga.nvim'
+    use 'onsails/lspkind-nvim'
+    use 'saadparwaiz1/cmp_luasnip'
     use 'L3MON4D3/LuaSnip'
 end)
 
