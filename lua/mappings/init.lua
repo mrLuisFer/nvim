@@ -14,10 +14,10 @@ map('n', '<leader>fw', ':DashboardFindWord<CR>', opts)
 map('n', '<F3>', ':Dashboard', opts)
 
 -- Barbar
--- A is Alt key
+-- A- alt, C - control, S - shift
 -- Move to previous/next
-map('n', '<A-Left>', ':BufferPrevious<CR>', opts)
-map('n', '<A-Right>', ':BufferNext<CR>', opts)
+map('n', '<S-Tab>', ':BufferPrevious<CR>', opts)
+map('n', '<Tab>', ':BufferNext<CR>', opts)
 -- Re-order to previous/next
 map('n', '<A-<>', ':BufferMovePrevious<CR>', opts)
 map('n', '<A->>', ' :BufferMoveNext<CR>', opts)
@@ -33,7 +33,7 @@ map('n', '<A-8>', ':BufferGoto 8<CR>', opts)
 map('n', '<A-9>', ':BufferGoto 9<CR>', opts)
 map('n', '<A-0>', ':BufferLast<CR>', opts)
 -- Close buffer
-map('n', '<A-c>', ':BufferClose<CR>', opts)
+map('n', '<C-w>', ':BufferClose<CR>', opts)
 map('n', '<C-p>', ':BufferPick<CR>', opts)
 map('n', '<Space>bb', ':BufferOrderByBufferNumber<CR>', opts)
 map('n', '<Space>bd', ':BufferOrderByDirectory<CR>', opts)
