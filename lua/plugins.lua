@@ -82,9 +82,15 @@ return require('packer').startup(function()
 	use 'romgrk/barbar.nvim'
 	use 'rcarriga/nvim-notify'
 	use 'williamboman/nvim-lsp-installer'
-    use 'tami5/lspsaga.nvim'
-    use 'onsails/lspkind-nvim'
-    use 'saadparwaiz1/cmp_luasnip'
-    use 'L3MON4D3/LuaSnip'
+  use 'tami5/lspsaga.nvim'
+  use 'onsails/lspkind-nvim'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'L3MON4D3/LuaSnip'
+
+	-- JSX PLUGINS
+	use 'pangloss/vim-javascript'
+	use 'mxw/vim-jsx'	
+	use 'leafgarland/typescript-vim'
+	use 'peitalin/vim-jsx-typescript'
 end)
 
