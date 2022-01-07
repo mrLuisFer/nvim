@@ -3,8 +3,8 @@ local g = vim.g
 
 set.expandtab = true
 set.smarttab = true
-set.shiftwidth = 4
-set.tabstop = 4
+set.shiftwidth = 2
+set.tabstop = 2
 -- set.backspace = 2
 set.showtabline = 2
 
