@@ -36,7 +36,6 @@ local servers = {
 	'cssls',
 	'dockerls',
 	'emmet_ls',
-	'gopls',
 	'html',
 	'svelte',
 	'vimls',
