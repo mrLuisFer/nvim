@@ -42,3 +42,4 @@ vim.cmd('colorscheme onedark')
 
 vim.notify = require('notify')
 
+-- vim.cmd('set filetypes as typescriptreact autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact')
