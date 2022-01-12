@@ -40,7 +40,7 @@ local servers = {
 	'svelte',
 	'vimls',
 	'pylsp',
-	'jtdls'
+	'jtdls',
 	'jsonls'
 }
 
