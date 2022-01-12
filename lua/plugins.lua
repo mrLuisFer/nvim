@@ -22,6 +22,7 @@ return require('packer').startup(function()
 	}
 	use 'EdenEast/nightfox.nvim'
 	use {'navarasu/onedark.nvim', as = 'onedark'}
+	use 'ray-x/aurora'    
 
 	-- PLUGINS:
 	use 'wbthomason/packer.nvim'
