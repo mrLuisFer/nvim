@@ -41,6 +41,7 @@ local servers = {
 	'vimls',
 	'pylsp',
 	'jtdls'
+	'jsonls'
 }
 
 for _, name in pairs(servers) do
