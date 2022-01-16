@@ -22,7 +22,7 @@ return require('packer').startup(function()
 	}
 	use 'EdenEast/nightfox.nvim'
 	use {'navarasu/onedark.nvim', as = 'onedark'}
-	use 'ray-x/aurora'    
+	use 'ray-x/aurora'
 
 	-- PLUGINS:
 	use 'wbthomason/packer.nvim'
@@ -90,8 +90,10 @@ return require('packer').startup(function()
 
 	-- JSX PLUGINS
 	use 'pangloss/vim-javascript'
-	use 'mxw/vim-jsx'	
+	use 'mxw/vim-jsx'
 	use 'leafgarland/typescript-vim'
 	use 'peitalin/vim-jsx-typescript'
+	-- i3 syntax highlight
+	use 'mboughaba/i3config.vim'
 end)
 
