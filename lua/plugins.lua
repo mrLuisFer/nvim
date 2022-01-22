@@ -73,8 +73,8 @@ return require('packer').startup(function()
 	use 'preservim/nerdcommenter'
 	use 'psliwka/vim-smoothie'
 	use {
-		'prettier/vim-prettier', 
-		run = 'yarn install --frozen-lockfile --production', 
+		'prettier/vim-prettier',
+		run = 'yarn install --frozen-lockfile --production',
 		branch = 'release/0.x'
 	}
 	use 'sheerun/vim-polyglot'
@@ -87,6 +87,15 @@ return require('packer').startup(function()
   use 'onsails/lspkind-nvim'
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
+	use {
+  	"max397574/better-escape.nvim",
+  	config = function()
+			require("better_escape").setup {
+				clear_empty_lines = true,
+				keys = "<Esc>"
+			}
+  	end,
+	}
 
 	-- JSX PLUGINS
 	use 'pangloss/vim-javascript'
