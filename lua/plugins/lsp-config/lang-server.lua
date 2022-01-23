@@ -40,8 +40,9 @@ local servers = {
 	'svelte',
 	'vimls',
 	'pylsp',
-	'jtdls'
-	'jsonls'
+	'jtdls',
+	'jsonls',
+	'denols',
 }
 
 for _, name in pairs(servers) do
@@ -57,6 +58,9 @@ end
 lsp_installer.on_server_ready(function(server)
 	local default_opts = {
 		on_attach = on_attach,
+    init_options = {
+      lint = true,
+    }
 	}
 	server:setup(default_opts)
 end)

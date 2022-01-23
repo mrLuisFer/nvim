@@ -22,7 +22,7 @@ return require('packer').startup(function()
 	}
 	use 'EdenEast/nightfox.nvim'
 	use {'navarasu/onedark.nvim', as = 'onedark'}
-	use 'ray-x/aurora'    
+	use 'ray-x/aurora'
 
 	-- PLUGINS:
 	use 'wbthomason/packer.nvim'
@@ -49,9 +49,14 @@ return require('packer').startup(function()
   		'nvim-lualine/lualine.nvim',
   		requires = {'kyazdani42/nvim-web-devicons', opt = true}
 	}
-
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-
+  
+  -- Tabnine
+ 	if (fn.has('linux') or fn.has('unix')) then
+ 	  use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+  elseif (vim.fn.has('windows')) then
+ 	  use {'tzachar/cmp-tabnine', after = "nvim-cmp", run='powershell ./install.ps1', requires = 'hrsh7th/nvim-cmp'}
+  end
 	-- CMP Plugin
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'hrsh7th/cmp-buffer'
@@ -73,8 +78,8 @@ return require('packer').startup(function()
 	use 'preservim/nerdcommenter'
 	use 'psliwka/vim-smoothie'
 	use {
-		'prettier/vim-prettier', 
-		run = 'yarn install --frozen-lockfile --production', 
+		'prettier/vim-prettier',
+		run = 'yarn install --frozen-lockfile --production',
 		branch = 'release/0.x'
 	}
 	use 'sheerun/vim-polyglot'
@@ -87,11 +92,22 @@ return require('packer').startup(function()
   use 'onsails/lspkind-nvim'
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
+	use {
+  	"max397574/better-escape.nvim",
+  	config = function()
+			require("better_escape").setup {
+				clear_empty_lines = true,
+				keys = "<Esc>"
+			}
+  	end,
+	}
 
 	-- JSX PLUGINS
 	use 'pangloss/vim-javascript'
-	use 'mxw/vim-jsx'	
+	use 'mxw/vim-jsx'
 	use 'leafgarland/typescript-vim'
 	use 'peitalin/vim-jsx-typescript'
+  use {'styled-components/vim-styled-components', branch = 'main' }
+  use 'jparise/vim-graphql'
 end)
 

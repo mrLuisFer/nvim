@@ -12,6 +12,7 @@ set.hlsearch = true
 set.incsearch = true
 set.ignorecase = true
 set.smartcase = true
+set.visualbell = true
 
 set.termguicolors = true
 set.showmode = false
