@@ -49,9 +49,14 @@ return require('packer').startup(function()
   		'nvim-lualine/lualine.nvim',
   		requires = {'kyazdani42/nvim-web-devicons', opt = true}
 	}
-
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-
+  
+  -- Tabnine
+ 	if (fn.has('linux') or fn.has('unix')) then
+ 	  use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+  elseif (vim.fn.has('windows')) then
+ 	  use {'tzachar/cmp-tabnine', after = "nvim-cmp", run='powershell ./install.ps1', requires = 'hrsh7th/nvim-cmp'}
+  end
 	-- CMP Plugin
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'hrsh7th/cmp-buffer'
