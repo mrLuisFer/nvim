@@ -107,7 +107,7 @@ return require('packer').startup(function()
 	use 'mxw/vim-jsx'
 	use 'leafgarland/typescript-vim'
 	use 'peitalin/vim-jsx-typescript'
-	-- i3 syntax highlight
-	use 'mboughaba/i3config.vim'
+  use {'styled-components/vim-styled-components', branch = 'main' }
+  use 'jparise/vim-graphql'
 end)
 
