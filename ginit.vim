@@ -1,7 +1,7 @@
 
 " Set Editor Font
 if exists(':GuiFont')
-  GuiFont! Caskaydia Cove Nerd Font:h12
+  GuiFont! CaskaydiaCove Nerd Font:h11
 endif
 
 " Disable GUI Tabline
