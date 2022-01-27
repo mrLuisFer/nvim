@@ -13,7 +13,6 @@ cmp.setup({
 			end,
 		}),
 	},
-
 	snippet = {
 		expand = function(args)
 			require("luasnip").lsp_expand(args.body)
@@ -53,21 +52,6 @@ cmp.setup({
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
 		{ name = "neorg" },
-		{ name = 'cmp_tabnine' },
 	},
-	sorting = {
-		priority_weight = 2,
-    comparators = {
-      require('cmp_tabnine.compare'),
-      compare.offset,
-      compare.exact,
-      compare.score,
-      compare.recently_used,
-      compare.kind,
-      compare.sort_text,
-      compare.length,
-      compare.order,
-    },
-	}
 })
 
