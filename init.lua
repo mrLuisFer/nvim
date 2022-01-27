@@ -9,7 +9,6 @@ require("plugins/lualine-config")
 require("plugins/treelua-config")
 require("plugins/treesitter-config")
 require("plugins/barbar-config")
-require("plugins/tabnine-config")
 
 -- LSP Config
 require('plugins/lsp-config/completion')

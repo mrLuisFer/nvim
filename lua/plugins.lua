@@ -51,14 +51,6 @@ return require('packer').startup(function()
 	}
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   
-  -- Tabnine
- 	if (fn.has('linux') or fn.has('unix')) then
- 	  use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
-  elseif (vim.fn.has('windows')) then
- 	  use {'tzachar/cmp-tabnine', after = "nvim-cmp", run='powershell ./install.ps1', requires = 'hrsh7th/nvim-cmp'}
-	else 
-		print("Unsupported Platform :(")
-  end
 	-- CMP Plugin
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'hrsh7th/cmp-buffer'
@@ -88,7 +80,6 @@ return require('packer').startup(function()
 	use {	'fatih/vim-go', run = ':GoUpdateBinaries' }
 	use 'leafOfTree/vim-svelte-plugin'
 	use 'romgrk/barbar.nvim'
-	use 'rcarriga/nvim-notify'
 	use 'williamboman/nvim-lsp-installer'
   use 'tami5/lspsaga.nvim'
   use 'onsails/lspkind-nvim'
