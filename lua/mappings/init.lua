@@ -4,10 +4,10 @@ local opts = { noremap = true, silent = true }
 g.mapleader = ' ' -- Space
 
 -- Custom Mappings
-map('n', '<leader>w', ':w!<CR>', opts)
+map('n', '<leader>w', ':w<CR>', opts)
 map('n', '<leader>so', ':so%<CR>', opts)
 map('n', '<leader>q', ':q<CR>', opts)
-map('n', '<leader>x', ':x!<CR>', opts)
+map('n', '<leader>x', ':x<CR>', opts)
 map('n', '<leader>t', ':terminal<CR>', opts)
 
 -- NvimTree
