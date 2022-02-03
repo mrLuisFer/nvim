@@ -44,11 +44,6 @@ return require('packer').startup(function()
 	use 'tpope/vim-fugitive'
 	use 'norcalli/nvim-colorizer.lua'
 	use 'neovim/nvim-lspconfig'
-	-- Lualine
-	use {
-  		'nvim-lualine/lualine.nvim',
-  		requires = {'kyazdani42/nvim-web-devicons', opt = true}
-	}
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   
 	-- CMP Plugin
