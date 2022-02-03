@@ -19,8 +19,11 @@ local on_attach = function(client, bufnr)
 	buf_set_keymap("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", opts) --> selects a code action available at the current cursor position
 	buf_set_keymap("n", "gr", ":lua vim.lsp.buf.references()<CR>", opts) --> lists all the references to the symbl under the cursor in the quickfix window
 	buf_set_keymap("n", "<leader>ld", ":lua vim.diagnostic.open_float()<CR>", opts)
-	buf_set_keymap("n", "[d", ":lua vim.diagnostic.goto_prev()<CR>", opts)
-	buf_set_keymap("n", "]d", ":lua vim.diagnostic.goto_next()<CR>", opts)
+	-- buf_set_keymap("n", "[d", ":lua vim.diagnostic.goto_prev()<CR>", opts)
+	-- buf_set_keymap("n", "]d", ":lua vim.diagnostic.goto_next()<CR>", opts)
+	buf_set_keymap("n", "[d", ":lua vim.diagnostic.show()<CR>", opts)
+	buf_set_keymap("n", "]d", ":lua vim.diagnostic.show()<CR>", opts)
+
 	buf_set_keymap("n", "<leader>lq", ":lua vim.diagnostic.setloclist()<CR>", opts)
 	buf_set_keymap("n", "<leader>lf", ":lua vim.lsp.buf.formatting()<CR>", opts) --> formats the current buffer
 end

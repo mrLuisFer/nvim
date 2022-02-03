@@ -23,6 +23,13 @@ return require('packer').startup(function()
 	use 'EdenEast/nightfox.nvim'
 	use {'navarasu/onedark.nvim', as = 'onedark'}
 	use 'ray-x/aurora'
+	use 'morhetz/gruvbox'
+	use 'tomasr/molokai'
+	use 'altercation/vim-colors-solarized'
+	use { 'sonph/onehalf', rtp = 'vim'}
+	-- use 'dracula/dracula-theme'
+	use 'drewtempelmeyer/palenight.vim'
+	use 'haishanh/night-owl.vim'
 
 	-- PLUGINS:
 	use 'wbthomason/packer.nvim'
@@ -44,11 +51,6 @@ return require('packer').startup(function()
 	use 'tpope/vim-fugitive'
 	use 'norcalli/nvim-colorizer.lua'
 	use 'neovim/nvim-lspconfig'
-	-- Lualine
-	use {
-  		'nvim-lualine/lualine.nvim',
-  		requires = {'kyazdani42/nvim-web-devicons', opt = true}
-	}
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   
 	-- CMP Plugin
@@ -94,6 +96,10 @@ return require('packer').startup(function()
 			}
   	end,
 	}
+	use {
+    'glepnir/galaxyline.nvim',
+    branch = 'main'
+  }
 
 	-- JSX PLUGINS
 	use 'pangloss/vim-javascript'

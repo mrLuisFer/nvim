@@ -35,6 +35,3 @@ set.ruler = true
 
 set.clipboard = 'unnamed'
 
--- Colorscheme
-vim.cmd('colorscheme onedark')
--- vim.cmd('set filetypes as typescriptreact autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact')
