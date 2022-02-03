@@ -35,4 +35,3 @@ set.ruler = true
 
 set.clipboard = 'unnamed'
 
---- vim.cmd('set filetypes as typescriptreact autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact')
