@@ -24,6 +24,12 @@ return require('packer').startup(function()
 	use {'navarasu/onedark.nvim', as = 'onedark'}
 	use 'ray-x/aurora'
 	use 'morhetz/gruvbox'
+	use 'tomasr/molokai'
+	use 'altercation/vim-colors-solarized'
+	use { 'sonph/onehalf', rtp = 'vim'}
+	-- use 'dracula/dracula-theme'
+	use 'drewtempelmeyer/palenight.vim'
+	use 'haishanh/night-owl.vim'
 
 	-- PLUGINS:
 	use 'wbthomason/packer.nvim'
