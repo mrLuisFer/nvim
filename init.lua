@@ -8,6 +8,7 @@ require("plugins/dashboard-config")
 require("plugins/treelua-config")
 require("plugins/treesitter-config")
 require("plugins/barbar-config")
+require('plugins/galaxyline-config')
 require('options/themes')
 
 -- LSP Config
