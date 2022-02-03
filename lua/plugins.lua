@@ -23,6 +23,7 @@ return require('packer').startup(function()
 	use 'EdenEast/nightfox.nvim'
 	use {'navarasu/onedark.nvim', as = 'onedark'}
 	use 'ray-x/aurora'
+	use 'morhetz/gruvbox'
 
 	-- PLUGINS:
 	use 'wbthomason/packer.nvim'
@@ -89,6 +90,10 @@ return require('packer').startup(function()
 			}
   	end,
 	}
+	use {
+    'glepnir/galaxyline.nvim',
+    branch = 'main'
+  }
 
 	-- JSX PLUGINS
 	use 'pangloss/vim-javascript'
