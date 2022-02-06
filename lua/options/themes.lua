@@ -5,8 +5,8 @@ local cmd = vim.cmd
 
 -- Colorscheme
 -- cmd('colorscheme onedark')
--- cmd('colorscheme gruvbox')
+ cmd('colorscheme gruvbox')
 -- cmd('colorscheme night-owl')
 -- cmd('colorscheme molokai')
-cmd('colorscheme palenight')
+-- cmd('colorscheme palenight')
 
