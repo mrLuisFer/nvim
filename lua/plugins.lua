@@ -15,6 +15,7 @@ end
 
 -- PACKER:
 return require('packer').startup(function()
+	use 'wbthomason/packer.nvim'
 	-- THEMES:
 	use {'navarasu/onedark.nvim', as = 'onedark'}
 	use 'morhetz/gruvbox'
@@ -23,7 +24,6 @@ return require('packer').startup(function()
 	use 'haishanh/night-owl.vim'
 
 	-- PLUGINS:
-	use 'wbthomason/packer.nvim'
 	use {
     	'kyazdani42/nvim-tree.lua',
     	requires = { 'kyazdani42/nvim-web-devicons' },
