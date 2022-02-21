@@ -16,18 +16,9 @@ end
 -- PACKER:
 return require('packer').startup(function()
 	-- THEMES:
-	use {
-  		'marko-cerovac/material.nvim',
-    	as='material'
-	}
-	use 'EdenEast/nightfox.nvim'
 	use {'navarasu/onedark.nvim', as = 'onedark'}
-	use 'ray-x/aurora'
 	use 'morhetz/gruvbox'
 	use 'tomasr/molokai'
-	use 'altercation/vim-colors-solarized'
-	use { 'sonph/onehalf', rtp = 'vim'}
-	-- use 'dracula/dracula-theme'
 	use 'drewtempelmeyer/palenight.vim'
 	use 'haishanh/night-owl.vim'
 
@@ -44,7 +35,6 @@ return require('packer').startup(function()
 	use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
 	use 'junegunn/fzf.vim'
 	--
-	use 'yggdroot/indentline'
 	-- Nvim Dashboard
 	use 'glepnir/dashboard-nvim'
 	-- Git Integration
@@ -62,23 +52,15 @@ return require('packer').startup(function()
 	use 'hrsh7th/cmp-vsnip'
 	use 'hrsh7th/vim-vsnip'
 
-	-- Typing
-	use 'jiangmiao/auto-pairs'
-	use 'alvan/vim-closetag'
-	use 'tpope/vim-surround'
-
 	-- IDE
+	use 'tpope/vim-surround'
 	use	'editorconfig/editorconfig-vim'
-	use 'terryma/vim-multiple-cursors'
 	use 'mhinz/vim-signify'
-	use 'preservim/nerdcommenter'
-	use 'psliwka/vim-smoothie'
 	use {
 		'prettier/vim-prettier',
 		run = 'yarn install --frozen-lockfile --production',
 		branch = 'release/0.x'
 	}
-	use 'sheerun/vim-polyglot'
 	use {	'fatih/vim-go', run = ':GoUpdateBinaries' }
 	use 'leafOfTree/vim-svelte-plugin'
 	use 'romgrk/barbar.nvim'
@@ -96,10 +78,7 @@ return require('packer').startup(function()
 			}
   	end,
 	}
-	use {
-    'glepnir/galaxyline.nvim',
-    branch = 'main'
-  }
+	use { 'glepnir/galaxyline.nvim', branch = 'main' }
 
 	-- JSX PLUGINS
 	use 'pangloss/vim-javascript'
@@ -107,6 +86,5 @@ return require('packer').startup(function()
 	use 'leafgarland/typescript-vim'
 	use 'peitalin/vim-jsx-typescript'
   use {'styled-components/vim-styled-components', branch = 'main' }
-  use 'jparise/vim-graphql'
 end)
 
