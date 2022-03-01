@@ -19,7 +19,6 @@ return require('packer').startup(function()
 	-- THEMES:
 	use {'navarasu/onedark.nvim', as = 'onedark'}
 	use 'morhetz/gruvbox'
-	use 'tomasr/molokai'
 	use 'drewtempelmeyer/palenight.vim'
 	use 'haishanh/night-owl.vim'
 
@@ -53,9 +52,8 @@ return require('packer').startup(function()
 	use 'hrsh7th/vim-vsnip'
 
 	-- IDE
-	use 'tpope/vim-surround'
 	use	'editorconfig/editorconfig-vim'
-	use 'mhinz/vim-signify'
+  use 'mhinz/vim-signify'
 	use {
 		'prettier/vim-prettier',
 		run = 'yarn install --frozen-lockfile --production',
@@ -67,17 +65,6 @@ return require('packer').startup(function()
 	use 'williamboman/nvim-lsp-installer'
   use 'tami5/lspsaga.nvim'
   use 'onsails/lspkind-nvim'
-  use 'saadparwaiz1/cmp_luasnip'
-  use 'L3MON4D3/LuaSnip'
-	use {
-  	"max397574/better-escape.nvim",
-  	config = function()
-			require("better_escape").setup {
-				clear_empty_lines = true,
-				keys = "<Esc>"
-			}
-  	end,
-	}
 	use { 'glepnir/galaxyline.nvim', branch = 'main' }
 
 	-- JSX PLUGINS
@@ -85,6 +72,5 @@ return require('packer').startup(function()
 	use 'mxw/vim-jsx'
 	use 'leafgarland/typescript-vim'
 	use 'peitalin/vim-jsx-typescript'
-  use {'styled-components/vim-styled-components', branch = 'main' }
 end)
 
