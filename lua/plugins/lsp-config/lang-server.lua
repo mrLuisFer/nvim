@@ -35,9 +35,7 @@ local servers = {
 	"emmet_ls",
 	"ltex",
 	"cssls",
-	"emmet_ls",
 	"html",
-	"svelte",
 	"vimls",
 	"pylsp",
 }
