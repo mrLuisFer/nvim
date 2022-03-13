@@ -1,5 +1,4 @@
 local function t()
-
   vim.api.nvim_exec(
   [[
     inoremap <silent><expr> <TAB>
@@ -95,5 +94,7 @@ local function t()
     nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
     nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
   ]],
-  true) 
+  true)
 end
+return t
+
