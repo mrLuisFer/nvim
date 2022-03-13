@@ -11,6 +11,7 @@ require("plugins/barbar-config")
 require('plugins/galaxyline-config')
 require("plugins/coc-config")
 require("options/themes")
+require("options/coc-extensions")
 
 -- LSP Config
 require("plugins/lsp-config/lang-server")
