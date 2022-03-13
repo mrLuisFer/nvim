@@ -9,10 +9,11 @@ require("plugins/treelua-config")
 require("plugins/treesitter-config")
 require("plugins/barbar-config")
 require('plugins/galaxyline-config')
-require('options/themes')
+require("plugins/coc-config")
+require("options/themes")
+require("options/coc-extensions")
 
 -- LSP Config
-require('plugins/lsp-config/completion')
-require('plugins/lsp-config/lang-server')
-require('plugins/lsp-config/lspsaga')
+require("plugins/lsp-config/lang-server")
+require("plugins/lsp-config/lspsaga")
 

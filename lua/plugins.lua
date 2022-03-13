@@ -3,12 +3,12 @@ local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
 if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({
-		'git', 
-		'clone', 
-		'--depth', 
-		'1', 
-		'https://github.com/wbthomason/packer.nvim', 
+  local packer_bootstrap = fn.system({
+		'git',
+		'clone',
+		'--depth',
+		'1',
+		'https://github.com/wbthomason/packer.nvim',
 		install_path
 	})
 end
@@ -20,6 +20,10 @@ return require('packer').startup(function()
 	use {'navarasu/onedark.nvim', as = 'onedark'}
 	use 'morhetz/gruvbox'
 	use 'drewtempelmeyer/palenight.vim'
+  use {
+    'folke/tokyonight.nvim',
+    branch =  'main'
+  }
 	use 'haishanh/night-owl.vim'
 
 	-- PLUGINS:
@@ -41,19 +45,10 @@ return require('packer').startup(function()
 	use 'norcalli/nvim-colorizer.lua'
 	use 'neovim/nvim-lspconfig'
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-  
-	-- CMP Plugin
-	use 'hrsh7th/cmp-nvim-lsp'
-	use 'hrsh7th/cmp-buffer'
-	use 'hrsh7th/cmp-path'
-	use 'hrsh7th/cmp-cmdline'
-	use 'hrsh7th/nvim-cmp'
-	use 'hrsh7th/cmp-vsnip'
-	use 'hrsh7th/vim-vsnip'
-  use 'saadparwaiz1/cmp_luasnip'
-  use 'L3MON4D3/LuaSnip'
+  -- CoC Config
+  use {'neoclide/coc.nvim', branch = 'release'}
 
-	-- IDE
+		-- IDE
 	use	'editorconfig/editorconfig-vim'
   use 'mhinz/vim-signify'
 	use {
@@ -68,11 +63,14 @@ return require('packer').startup(function()
   use 'tami5/lspsaga.nvim'
   use 'onsails/lspkind-nvim'
 	use { 'glepnir/galaxyline.nvim', branch = 'main' }
+  use 'psliwka/vim-smoothie'
+  use 'tpope/vim-commentary'
 
 	-- JSX PLUGINS
 	use 'pangloss/vim-javascript'
 	use 'mxw/vim-jsx'
 	use 'leafgarland/typescript-vim'
 	use 'peitalin/vim-jsx-typescript'
+  use 'Yggdroot/indentLine'
 end)
 
