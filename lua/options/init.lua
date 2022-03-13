@@ -35,5 +35,3 @@ set.ruler = true
 
 set.clipboard = 'unnamed'
 
-g.coc_global_extensions = {'coc-json', 'coc-git', 'coc-css'}
-
