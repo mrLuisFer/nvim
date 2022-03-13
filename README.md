@@ -48,6 +48,12 @@ And do a **pull request** to the **main** branch
 
 - [**Neovim**](https://neovim.io/) C:
 
+- [**Lua**](https://koenwoortman.com/lua-install-on-ubuntu/)
+
+- It's recommended have installed [**Rust**](https://stackoverflow.com/questions/67656028/rustup-gives-command-not-found-error-with-zsh-even-after-installing-with-brew)
+
+- Recommended install [**Ruby**](https://phoenixnap.com/kb/install-ruby-ubuntu)
+
 ## Important
 
 For a good operation of this configuration and to take **advantage of all** the Plugins, we recommend you to use v5 or higher that adds many improvements and support for many things
@@ -168,6 +174,15 @@ It may be that when you enter the cloned configuration in nvim for the first tim
 
 But don't worry just press `Enter` or `q` and run this command **:PackerInstall**
 Several plugins will be downloaded, then **exit and enter neovim again**
+
+## 🐊 CoC
+
+This setup uses [**CoC**](https://github.com/neoclide/coc.nvim) to complete and intellisense
+It's also recommended to install the following tools.
+
+- [Stylua](https://github.com/JohnnyMorganz/StyLua)
+
+- [Steep for Ruby support](https://github.com/soutaro/steep)
 
 ## 📔 Vim Dashboard
 
