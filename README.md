@@ -184,6 +184,10 @@ It's also recommended to install the following tools.
 
 - [Steep for Ruby support](https://github.com/soutaro/steep)
 
+- [Lua LSP](https://github.com/Alloyed/lua-lsp) 
+  
+ - [If you have an error with Lua and tools](https://stackoverflow.com/questions/20079572/srlua-makefile-error-lua-h-no-such-file-or-directory)
+
 ## 📔 Vim Dashboard
 
 If you want neovim to show you a dashboard screen similar to this one, you need certain things
