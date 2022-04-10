@@ -73,25 +73,19 @@ return require('packer').startup(function()
   use 'Yggdroot/indentLine'
 
   use {
-    'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
-
-  use {
     'rmagatti/goto-preview',
     config = function()
-      require('goto-preview').setup {}
+      require('goto-preview').setup()
     end
   }
 
   use {
     'norcalli/nvim-colorizer.lua',
     config = function ()
-      require'colorizer'.setup()
+      require('colorizer').setup()
     end
   }
 
-  use 'xiyaowong/nvim-transparent'
   use 'yamatsum/nvim-cursorline'
 end)
 
