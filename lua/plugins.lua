@@ -42,7 +42,6 @@ return require('packer').startup(function()
 	use 'glepnir/dashboard-nvim'
 	-- Git Integration
 	use 'tpope/vim-fugitive'
-	use 'norcalli/nvim-colorizer.lua'
 	use 'neovim/nvim-lspconfig'
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   -- CoC Config
@@ -72,5 +71,27 @@ return require('packer').startup(function()
 	use 'leafgarland/typescript-vim'
 	use 'peitalin/vim-jsx-typescript'
   use 'Yggdroot/indentLine'
+
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
+  use {
+    'rmagatti/goto-preview',
+    config = function()
+      require('goto-preview').setup {}
+    end
+  }
+
+  use {
+    'norcalli/nvim-colorizer.lua',
+    config = function ()
+      require'colorizer'.setup()
+    end
+  }
+
+  use 'xiyaowong/nvim-transparent'
+  use 'yamatsum/nvim-cursorline'
 end)
 
