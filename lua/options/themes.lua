@@ -3,9 +3,9 @@ local cmd = vim.cmd
 --And type :colorscheme space and press TAB
 
 -- Colorscheme
--- cmd('colorscheme onedark')
+cmd('colorscheme onedark')
 -- cmd('colorscheme gruvbox')
 -- cmd('colorscheme night-owl')
 -- cmd('colorscheme palenight')
-cmd('colorscheme tokyonight')
+-- cmd('colorscheme tokyonight')
 
