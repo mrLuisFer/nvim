@@ -12,6 +12,8 @@ require('plugins/galaxyline-config')
 require("plugins/coc-config")
 require("options/themes")
 require("options/coc-extensions")
+require("plugins/goto-config")
+require("plugins/transparent-config")
 
 -- LSP Config
 require("plugins/lsp-config/lang-server")
