@@ -64,6 +64,8 @@ return require('packer').startup(function()
 	use { 'glepnir/galaxyline.nvim', branch = 'main' }
   use 'psliwka/vim-smoothie'
   use 'tpope/vim-commentary'
+  use 'preservim/nerdcommenter'
+  use 'jiangmiao/auto-pairs'
 
 	-- JSX PLUGINS
 	use 'pangloss/vim-javascript'
@@ -86,6 +88,5 @@ return require('packer').startup(function()
     end
   }
 
-  use 'yamatsum/nvim-cursorline'
 end)
 
