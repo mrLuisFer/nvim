@@ -140,6 +140,13 @@ But the main branch is so to speak the stable version
 $ git clone -b main https://github.com/mrLuisFer/neovim-minimalist-config.git .
 ```
 
+If you have an error like `'C' compiler not found`:
+
+Open a terminal as a Admin and run:
+```
+$ choco install zig
+```
+
 ### 🐧 Setup Linux:
 
 ```bash
