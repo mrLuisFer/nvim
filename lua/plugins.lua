@@ -26,11 +26,9 @@ return require('packer').startup(function()
   }
 	use 'haishanh/night-owl.vim'
 
-	-- PLUGINS:
-	use {
-    	'kyazdani42/nvim-tree.lua',
-    	requires = { 'kyazdani42/nvim-web-devicons' },
-	}
+  -- PLUGINS:
+  use 'kyazdani42/nvim-web-devicons' 
+	use 'kyazdani42/nvim-tree.lua'
 	use 'ryanoasis/vim-devicons'
 	-- Navigate with C-h C-l C-j C-k
 	use 'christoomey/vim-tmux-navigator'
@@ -38,12 +36,9 @@ return require('packer').startup(function()
 	use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
 	use 'junegunn/fzf.vim'
 	--
-	-- Nvim Dashboard
-	use 'glepnir/dashboard-nvim'
 	-- Git Integration
 	use 'tpope/vim-fugitive'
 	use 'neovim/nvim-lspconfig'
-	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   -- CoC Config
   use {'neoclide/coc.nvim', branch = 'release'}
 
@@ -73,13 +68,6 @@ return require('packer').startup(function()
 	use 'leafgarland/typescript-vim'
 	use 'peitalin/vim-jsx-typescript'
   use 'Yggdroot/indentLine'
-
-  use {
-    'rmagatti/goto-preview',
-    config = function()
-      require('goto-preview').setup()
-    end
-  }
 
   use {
     'norcalli/nvim-colorizer.lua',
