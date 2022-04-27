@@ -1,6 +1,6 @@
-# Neovim Minimalist Config
-
+## Neovim Minimalist Config
 <!-- ![Neovim Preview](./doc/screenshot-init-vim.PNG) -->
+![Neovim Preview](./preview.png)
 
 ### ⚡ About
 
