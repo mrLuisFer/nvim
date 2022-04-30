@@ -11,11 +11,7 @@
       "args": ["start"],
       "filetypes": ["sh"]
     },
-    "lua": {
-      "command": "lua-lsp",
-      "filetypes": ["lua"]
-    },
-    "intelephense": {
+   "intelephense": {
       "command": "intelephense",
       "args": ["--stdio"],
       "filetypes": ["php"],
