@@ -31,11 +31,9 @@ local servers = {
 	"pyright",
 	"tsserver",
 	"emmet_ls",
-	"ltex",
 	"cssls",
 	"html",
 	"vimls",
-	"pylsp",
 }
 
 for _, name in pairs(servers) do

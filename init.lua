@@ -10,6 +10,7 @@ require('plugins/galaxyline-config')
 require("plugins/coc-config")
 require("options/themes")
 require("options/coc-extensions")
+require('plugins/dashboard-config')
 
 -- LSP Config
 require("plugins/lsp-config/lang-server")
