@@ -32,6 +32,7 @@ return require('packer').startup(function()
 	use 'ryanoasis/vim-devicons'
 	-- Navigate with C-h C-l C-j C-k
 	use 'christoomey/vim-tmux-navigator'
+  use 'glepnir/dashboard-nvim'
 	-- FZF
 	use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
 	use 'junegunn/fzf.vim'
@@ -68,7 +69,6 @@ return require('packer').startup(function()
 	use 'leafgarland/typescript-vim'
 	use 'peitalin/vim-jsx-typescript'
   use 'Yggdroot/indentLine'
-
   use {
     'norcalli/nvim-colorizer.lua',
     config = function ()
