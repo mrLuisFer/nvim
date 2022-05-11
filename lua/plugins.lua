@@ -24,7 +24,6 @@ return require('packer').startup(function()
     'folke/tokyonight.nvim',
     branch =  'main'
   }
-	use 'haishanh/night-owl.vim'
 
   -- PLUGINS:
   use 'kyazdani42/nvim-web-devicons' 
@@ -52,7 +51,6 @@ return require('packer').startup(function()
 		branch = 'release/0.x'
 	}
 	use {	'fatih/vim-go', run = ':GoUpdateBinaries' }
-	use 'leafOfTree/vim-svelte-plugin'
 	use 'romgrk/barbar.nvim'
 	use 'williamboman/nvim-lsp-installer'
   use 'tami5/lspsaga.nvim'
@@ -75,6 +73,5 @@ return require('packer').startup(function()
       require('colorizer').setup()
     end
   }
-
 end)
 
