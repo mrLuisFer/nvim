@@ -6,35 +6,12 @@
       "trace.server": "verbose",
       "filetypes": ["go"]
     },
-    "bash": {
-      "command": "bash-language-server",
-      "args": ["start"],
-      "filetypes": ["sh"]
-    },
-   "intelephense": {
-      "command": "intelephense",
-      "args": ["--stdio"],
-      "filetypes": ["php"],
-      "initializationOptions": {
-        "storagePath": "/tmp/intelephense"
-      }
-    },
-    "rust": {
+   "rust": {
       "command": "rust-analyzer",
       "filetypes": ["rust"],
       "rootPatterns": ["Cargo.toml"]
     },
-    "sql": {
-      "command": "sql-language-server",
-      "args" : ["up", "--method", "stdio"],
-      "filetypes": ["sql", "mysql"]
-    },
-    "steep": {
-      "command": "steep",
-      "args" : ["langserver"],
-      "filetypes": ["ruby"]
-    },
-    "python": {
+   "python": {
       "command": "python",
       "args": [
         "-mpyls",
@@ -100,7 +77,6 @@
           }
         }
       }
-    }
-  },
-  "Lua.telemetry.enable": true
+    }  
+  }
 }
