@@ -13,10 +13,6 @@ map('i', '<C-d>', '<Escape>', opts)
 
 -- NvimTree
 map('n', '<C-b>', ':NvimTreeToggle<CR>', opts)
--- Dashboard
-map('n', '<leader>ff', ':DashboardFindFile<CR>', opts)
-map('n', '<leader>fw', ':DashboardFindWord<CR>', opts)
-map('n', '<F3>', ':Dashboard', opts)
 
 -- Barbar
 --A- alt, C - control, S - shift
@@ -45,10 +41,4 @@ map('n', '<Space>bl', ':BufferOrderByLanguage<CR>', opts)
 
 -- Prettier
 map('n', '<Space>p', ':Prettier<CR>', opts)
-
--- Go-To COnfig
-map("n", "gpd", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", opts)
-map("n","gpi","<cmd>lua require('goto-preview').goto_preview_implementation()<CR>", opts)
-map("n", "gP", "<cmd>lua require('goto-preview').close_all_win()<CR>", opts)
-map("n", "gpr", "<cmd>lua require('goto-preview').goto_preview_references()<CR>", opts)
 

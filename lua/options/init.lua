@@ -5,7 +5,6 @@ set.expandtab = true
 set.smarttab = true
 set.shiftwidth = 2
 set.tabstop = 2
--- set.backspace = 2
 set.showtabline = 2
 
 set.hlsearch = true
