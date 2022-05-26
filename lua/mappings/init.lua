@@ -42,3 +42,8 @@ map('n', '<Space>bl', ':BufferOrderByLanguage<CR>', opts)
 -- Prettier
 map('n', '<Space>p', ':Prettier<CR>', opts)
 
+-- Dashboard
+map('n', '<leader>ff', ':DashboardFindFile<CR>', opts)
+map('n', '<leader>fw', ':DashboardFindWord<CR>', opts)
+map('n', '<F3>', ':Dashboard', opts)
+

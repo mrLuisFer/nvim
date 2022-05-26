@@ -34,7 +34,7 @@ return require('packer').startup(function()
 	-- FZF
 	use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
 	use 'junegunn/fzf.vim'
-	--
+  use 'glepnir/dashboard-nvim'
 	-- Git Integration
 	use 'tpope/vim-fugitive'
 	use 'neovim/nvim-lspconfig'
