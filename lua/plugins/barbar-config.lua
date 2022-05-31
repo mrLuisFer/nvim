@@ -5,4 +5,5 @@ vim.g.bufferline = {
 	icon_close_tab = "",
 	icon_separator_active = "|",
 	icon_separator_inactive = "",
+  closeable = true,
 }

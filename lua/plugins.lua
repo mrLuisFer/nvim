@@ -27,7 +27,6 @@ return require('packer').startup(function()
 
   -- PLUGINS:
   use 'kyazdani42/nvim-web-devicons' 
-	use 'kyazdani42/nvim-tree.lua'
 	use 'ryanoasis/vim-devicons'
 	-- Navigate with C-h C-l C-j C-k
 	use 'christoomey/vim-tmux-navigator'
@@ -50,7 +49,6 @@ return require('packer').startup(function()
 		branch = 'release/0.x'
 	}
 	use {	'fatih/vim-go', run = ':GoUpdateBinaries' }
-	use 'romgrk/barbar.nvim'
 	use 'williamboman/nvim-lsp-installer'
   use 'tami5/lspsaga.nvim'
   use 'onsails/lspkind-nvim'
