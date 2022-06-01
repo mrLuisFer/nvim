@@ -28,6 +28,7 @@ return require('packer').startup(function()
   -- PLUGINS:
   use 'kyazdani42/nvim-web-devicons' 
 	use 'ryanoasis/vim-devicons'
+  use 'adelarsq/vim-devicons-emoji' 
 	-- Navigate with C-h C-l C-j C-k
 	use 'christoomey/vim-tmux-navigator'
 	-- FZF
