@@ -57,6 +57,7 @@ return require('packer').startup(function()
   use 'tpope/vim-commentary'
   use 'preservim/nerdcommenter'
   use 'jiangmiao/auto-pairs'
+  use { 'ms-jpq/chadtree', branch = 'chad', run = 'python3 -m chadtree deps'}
 
 	-- JSX PLUGINS
 	use 'pangloss/vim-javascript'
