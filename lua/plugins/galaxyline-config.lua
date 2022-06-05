@@ -7,7 +7,7 @@ gl.short_line_list = {'NvimTree','vista','dbui', 'packer'}
 
 gls.left[1] = {
   RainbowRed = {
-    provider = function() return '▊ ' end,
+    provider = function() return ' ▊ ' end,
     highlight = {colors.blue,colors.bg}
   },
 }
