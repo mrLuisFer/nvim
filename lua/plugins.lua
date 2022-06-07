@@ -58,7 +58,13 @@ return require('packer').startup(function()
   use 'tpope/vim-commentary'
   use 'preservim/nerdcommenter'
   use 'jiangmiao/auto-pairs'
-  use { 'ms-jpq/chadtree', branch = 'chad', run = 'python3 -m chadtree deps'}
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', 
+    },
+    tag = 'nightly' 
+  }
 
 	-- JSX PLUGINS
 	use 'pangloss/vim-javascript'

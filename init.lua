@@ -9,5 +9,5 @@ require("options/coc-extensions")
 require("plugins/lsp-config/lang-server")
 require("plugins/lsp-config/lspsaga")
 require("plugins/dashboard-config")
-require("plugins/chadtree-config")
+require("plugins/treelua-config")
 

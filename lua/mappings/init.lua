@@ -19,7 +19,9 @@ map('n', '<leader>ff', ':DashboardFindFile<CR>', opts)
 map('n', '<leader>fw', ':DashboardFindWord<CR>', opts)
 map('n', '<F3>', ':Dashboard<CR>', opts)
 
--- ChadTree
-map('n', '<C-b>', ':CHADopen<CR>', opts)
-map('n', '<Space>l', ':call setqflist([])<CR>', opts)
+-- NVIM Tree Lua
+map('n', '<C-b>', ':NvimTreeToggle<CR>', opts)
+map('n', '<leader>r', ':NvimTreeRefresh<CR>', opts)
+-- Default Tree
+map('n', '<C-n>', ':Ntree<CR>', opts)
 
