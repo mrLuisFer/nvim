@@ -25,3 +25,7 @@ map('n', '<leader>r', ':NvimTreeRefresh<CR>', opts)
 -- Default Tree
 map('n', '<C-n>', ':Ntree<CR>', opts)
 
+-- Bufferline
+map('n', '<Tab>', ':BufferLineCycleNext<CR>', opts)
+map('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', opts)
+

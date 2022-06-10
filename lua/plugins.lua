@@ -20,10 +20,8 @@ return require('packer').startup(function()
 	use {'navarasu/onedark.nvim', as = 'onedark'}
 	use 'morhetz/gruvbox'
 	use 'drewtempelmeyer/palenight.vim'
-  use {
-    'folke/tokyonight.nvim',
-    branch =  'main'
-  }
+  use { 'folke/tokyonight.nvim', branch =  'main' }
+  use {'catppuccin/nvim', as = 'catppuccin'}
 
   -- PLUGINS:
   use 'kyazdani42/nvim-web-devicons' 
@@ -40,8 +38,8 @@ return require('packer').startup(function()
 	use 'neovim/nvim-lspconfig'
   -- CoC Config
   use {'neoclide/coc.nvim', branch = 'release'}
-
-		-- IDE
+  -- Bufferline
+  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 	use	'editorconfig/editorconfig-vim'
   use 'mhinz/vim-signify'
 	use {
