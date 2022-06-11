@@ -28,4 +28,9 @@ map('n', '<C-n>', ':Ntree<CR>', opts)
 -- Bufferline
 map('n', '<Tab>', ':BufferLineCycleNext<CR>', opts)
 map('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', opts)
+-- Select what tab close
+-- It doesnt work correctly on Windows
+map('n', '<C-w>', ':BufferLinePickClose<CR>', opts)
+-- Select for change to the selected tab
+map('n', '<C-k>', ':BufferLinePick<CR>', opts)
 
