@@ -48,7 +48,7 @@ And do a **pull request** to the **main** branch
 
 - [**Neovim**](https://neovim.io/) C:
 
-- [**Lua**](https://koenwoortman.com/lua-install-on-ubuntu/)
+- [**Lua (?)**](https://koenwoortman.com/lua-install-on-ubuntu/)
 
 - It's recommended have installed [**Rust**](https://stackoverflow.com/questions/67656028/rustup-gives-command-not-found-error-with-zsh-even-after-installing-with-brew)
 
@@ -179,15 +179,13 @@ Or `:LspInfo` for see the languages you have setup
 
 It may be that when you enter the cloned configuration in nvim for the first time, you will get multiple errors
 
-But don't worry just press `Enter` or `q` and run this command **:PackerInstall**
-Several plugins will be downloaded, then **exit and enter neovim again**
+But don't worry just press `Enter` or `q` and run this command **:PackerInstall** or **PackerSync**
+Several plugins will be downloaded, then **restart neovim (exit and enter neovim again)**
 
 ## 🐊 CoC
 
 This setup uses [**CoC**](https://github.com/neoclide/coc.nvim) to complete and intellisense
 It's also recommended to install the following tools.
-
-- [Stylua](https://github.com/JohnnyMorganz/StyLua)
 
 - [Steep for Ruby support](https://github.com/soutaro/steep)
 
@@ -195,23 +193,35 @@ It's also recommended to install the following tools.
   
  - [If you have an error with Lua and tools](https://stackoverflow.com/questions/20079572/srlua-makefile-error-lua-h-no-such-file-or-directory)
 
-## 📔 Vim Dashboard
+## 🤖 Setup GitHub Copilot
 
-If you want neovim to show you a dashboard screen similar to this one, you need certain things
+In this setting you have the option to enable GitHub Copilot for smart autocompletion.
 
-The most important is that you need [Neovim 0.5 or higher](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+First you must be able to use Copilot, once activated in your account, execute:
 
-You also need **[Ripgrep](https://github.com/BurntSushi/ripgrep)**, this is for the operation of search engines for files, words, history, etc.
+```
+:Copilot setup
+```
 
-- [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
+With this it will open a page in your browser where you will perform an authentication and with that it will be ready :)
 
-You also need to have **[FZF](https://github.com/junegunn/fzf)** installed, this is already included in the configuration but if it shows you an error you can read the documentation
+If in case the autocomplete does not appear, execute:
+```
+:Copilot enable
+```
+
+If you want to read more about this plugin I leave you the documentation:
+- [github/copilot.vim](https://github.com/github/copilot.vim)
+
+## 📔 FZF
+If you want to have some fancy neovim utilities like, search files. You should install Fuzzy Finder
 
 - [junegunn/fzf](https://github.com/junegunn/fzfv)
 
-An alternative that you can use is **[Vim Clap](https://github.com/liuchengxu/vim-clap/)**, it also comes inside the config but you can check its documentation
+You also need **[Ripgrep](https://github.com/BurntSushi/ripgrep)**, this is if you want search words, history logs, etc.
 
-- [glepnir/dashboard-nvim](https://github.com/glepnir/dashboard-nvim)
+- [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
+
 
 ## ⚙  RipGrep
 
@@ -365,8 +375,7 @@ If you're a 🦀 **Rust programmer**, ripgrep can be installed with `cargo`.
 $ cargo install ripgrep
 ```
 
-# Shortcuts
-
-# Contact Me
+# 🛠️ Shortcuts
+Coming soon...
 
 Made with 💙 [by mrLuisFer](https://mrluisfer-linktry.netlify.app/)
