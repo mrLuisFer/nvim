@@ -32,7 +32,6 @@ return require('packer').startup(function()
 	-- FZF
 	use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
 	use 'junegunn/fzf.vim'
-  use 'glepnir/dashboard-nvim'
 	-- Git Integration
 	use 'tpope/vim-fugitive'
 	use 'neovim/nvim-lspconfig'
@@ -69,12 +68,18 @@ return require('packer').startup(function()
 	use 'mxw/vim-jsx'
 	use 'leafgarland/typescript-vim'
 	use 'peitalin/vim-jsx-typescript'
-  use 'Yggdroot/indentLine'
   use {
     'norcalli/nvim-colorizer.lua',
     config = function ()
       require('colorizer').setup()
     end
   }
+  use {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      require("indent_blankline").setup { filetype_exclude = { "dashboard" }
+    }
+    end
+}
 end)
 

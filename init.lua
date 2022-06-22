@@ -8,7 +8,6 @@ require("options/themes")
 require("options/coc-extensions")
 require("plugins/lsp-config/lang-server")
 require("plugins/lsp-config/lspsaga")
-require("plugins/dashboard-config")
 require("plugins/treelua-config")
 require("plugins/bufferline-config")
 

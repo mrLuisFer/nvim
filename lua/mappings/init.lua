@@ -14,10 +14,7 @@ map('i', '<C-d>', '<Escape>', opts)
 -- Prettier
 map('n', '<Space>p', ':Prettier<CR>', opts)
 
--- Dashboard
-map('n', '<leader>ff', ':DashboardFindFile<CR>', opts)
-map('n', '<leader>fw', ':DashboardFindWord<CR>', opts)
-map('n', '<F3>', ':Dashboard<CR>', opts)
+map('n', '<leader>ff', ':FZF<CR>', opts)
 
 -- NVIM Tree Lua
 map('n', '<C-b>', ':NvimTreeToggle<CR>', opts)
