@@ -42,19 +42,19 @@ And do a **pull request** to the **main** branch
 
 ### 📦 Requirements
 
-- [**Packer Nvim**](https://github.com/wbthomason/packer.nvim)
+- [**Packer Nvim**](https://github.com/wbthomason/packer.nvim) <code title="required">R</code>
 
-- [**Git**](https://git-scm.com/)
+- [**Git**](https://git-scm.com/) <code title="required">R</code>
 
-- [**Neovim**](https://neovim.io/) C:
+- [**Neovim**](https://neovim.io/) <code title="required">R</code>
 
-- [**Lua (?)**](https://koenwoortman.com/lua-install-on-ubuntu/)
+- [**Lua**](https://koenwoortman.com/lua-install-on-ubuntu/) <code title="optional">?</code>
 
-- It's recommended have installed [**Rust**](https://stackoverflow.com/questions/67656028/rustup-gives-command-not-found-error-with-zsh-even-after-installing-with-brew)
+- It's recommended have installed [**Rust**](https://stackoverflow.com/questions/67656028/rustup-gives-command-not-found-error-with-zsh-even-after-installing-with-brew) <code title="optional">?</code>
 
-- Recommended install [**Ruby**](https://phoenixnap.com/kb/install-ruby-ubuntu)
+- Recommended install [**Ruby**](https://phoenixnap.com/kb/install-ruby-ubuntu) <code title="optional">?</code>
 
-## Important
+## ❗ Important
 
 For a good operation of this configuration and to take **advantage of all** the Plugins, we recommend you to use v5 or higher that adds many improvements and support for many things
 
