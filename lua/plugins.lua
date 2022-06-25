@@ -33,7 +33,6 @@ return require('packer').startup(function()
 	use 'junegunn/fzf.vim'
 	use 'tpope/vim-fugitive'
 	use 'neovim/nvim-lspconfig'
-  use {'neoclide/coc.nvim', branch = 'release'}
   use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 	use	'editorconfig/editorconfig-vim'
   use 'mhinz/vim-signify'
@@ -75,5 +74,16 @@ return require('packer').startup(function()
     end
   }
   use "github/copilot.vim"
+  
+  -- CMP:
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+
 end)
 
