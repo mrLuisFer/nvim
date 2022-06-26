@@ -52,9 +52,7 @@ return require('packer').startup(function()
   use 'jiangmiao/auto-pairs'
   use {
     'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons', 
-    },
+    requires = { 'kyazdani42/nvim-web-devicons', },
     tag = 'nightly' 
   }
 	use 'pangloss/vim-javascript'
@@ -81,9 +79,7 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
-
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
-
 end)
 
