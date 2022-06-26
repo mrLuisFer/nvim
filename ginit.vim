@@ -1,7 +1,7 @@
 
 " Set Editor Font
 if exists(':GuiFont')
-  GuiFont! CaskaydiaCove Nerd Font:h11
+  GuiFont! FiraCode Nerd Font:h11
 endif
 
 " Disable GUI Tabline
