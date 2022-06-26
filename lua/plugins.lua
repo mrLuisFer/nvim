@@ -24,9 +24,9 @@ return require('packer').startup(function()
   use {'catppuccin/nvim', as = 'catppuccin'}
 
   -- PLUGINS:
-  use 'kyazdani42/nvim-web-devicons' 
+  use 'kyazdani42/nvim-web-devicons'
 	use 'ryanoasis/vim-devicons'
-  use 'adelarsq/vim-devicons-emoji' 
+  use 'adelarsq/vim-devicons-emoji'
 	-- Navigate with C-h C-l C-j C-k
 	use 'christoomey/vim-tmux-navigator'
 	use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
@@ -53,7 +53,7 @@ return require('packer').startup(function()
   use {
     'kyazdani42/nvim-tree.lua',
     requires = { 'kyazdani42/nvim-web-devicons', },
-    tag = 'nightly' 
+    tag = 'nightly'
   }
 	use 'pangloss/vim-javascript'
 	use 'mxw/vim-jsx'
@@ -71,8 +71,8 @@ return require('packer').startup(function()
       require("indent_blankline").setup { filetype_exclude = { "dashboard" } }
     end
   }
+  -- Copilot:
   use "github/copilot.vim"
-  
   -- CMP:
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
