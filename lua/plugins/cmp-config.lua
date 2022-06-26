@@ -3,7 +3,7 @@ local cmp = require'cmp'
 cmp.setup({
     snippet = {
       expand = function(args)
-        require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+        require('luasnip').lsp_expand(args.body) 
       end,
     },
     window = {
@@ -19,7 +19,7 @@ cmp.setup({
     }),
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
-      { name = 'luasnip' }, -- For luasnip users.
+      { name = 'luasnip' },
     }, {
       { name = 'buffer' },
     })
@@ -27,7 +27,7 @@ cmp.setup({
 
 cmp.setup.filetype('gitcommit', {
     sources = cmp.config.sources({
-      { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
+      { name = 'cmp_git' },
     }, {
       { name = 'buffer' },
     })
@@ -87,6 +87,22 @@ require('lspconfig')['quick_lint_js'].setup {
     capabilities = capabilities
 }
 require('lspconfig')['sumneko_lua'].setup {
-    capabilities = capabilities
-}
+    capabilities = capabilities,
+    settings = {
+      Lua = {
+        format = {
+          enable = true,
+          defaultConfig = {
+            indent_style = "space",
+            indent_size = 2,
+            end_of_line = "lf",
+          }
+        },
+        diagnostics = {
+          enable = true,
+          globals = {'vim'}
+        }
+      }
+    }
+  }
 
