@@ -27,4 +27,6 @@ set.hidden = true
 set.mouse = "a"
 set.ruler = true
 set.clipboard = 'unnamed'
+set.relativenumber = true
+set.cursorline = true
 
