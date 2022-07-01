@@ -60,6 +60,10 @@ return require('packer').startup(function()
       require("indent_blankline").setup { filetype_exclude = { "dashboard" } }
     end
   }
+	use {
+		'nvim-lualine/lualine.nvim',
+		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	}
   -- Copilot:
   use "github/copilot.vim"
   -- CMP:

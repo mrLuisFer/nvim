@@ -9,4 +9,5 @@ require("plugins/treelua-config")
 require("plugins/bufferline-config")
 require("plugins/cmp-config")
 require("plugins/telescope-config")
+require("plugins/lualine-config")
 
