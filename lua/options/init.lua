@@ -30,3 +30,11 @@ set.clipboard = 'unnamed'
 set.relativenumber = true
 set.cursorline = true
 
+-- Global Plugins variable
+g.vim_svelte_plugin_load_full_syntax = 1
+-- VSnip Filetypes
+g.vsnip_filetypes = {}
+g.vsnip_filetypes.javascriptreact = {'javascript'}
+g.vsnip_filetypes.typescriptreact = {'typescript'}
+g.neoline_disable_tabline = 1
+

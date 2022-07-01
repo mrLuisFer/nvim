@@ -22,13 +22,12 @@ return require('packer').startup(function()
 	use 'drewtempelmeyer/palenight.vim'
   use { 'folke/tokyonight.nvim', branch =  'main' }
   use {'catppuccin/nvim', as = 'catppuccin'}
+	use 'marko-cerovac/material.nvim'
 
-  -- PLUGINS:
+	-- PLUGINS:
   use 'kyazdani42/nvim-web-devicons'
 	use 'ryanoasis/vim-devicons'
-  use 'adelarsq/vim-devicons-emoji'
-	-- Navigate with C-h C-l C-j C-k
-	use 'christoomey/vim-tmux-navigator'
+	use 'christoomey/vim-tmux-navigator' -- Navigate with C-h C-l C-j C-k
 	use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
 	use 'junegunn/fzf.vim'
 	use 'tpope/vim-fugitive'
@@ -36,29 +35,19 @@ return require('packer').startup(function()
   use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 	use	'editorconfig/editorconfig-vim'
   use 'mhinz/vim-signify'
-	use {
-		'prettier/vim-prettier',
-		run = 'yarn install --frozen-lockfile --production',
-		branch = 'release/0.x'
-	}
-	use {	'fatih/vim-go', run = ':GoUpdateBinaries' }
+	use {'prettier/vim-prettier',	run = 'yarn install --frozen-lockfile --production'}
 	use 'williamboman/nvim-lsp-installer'
   use 'tami5/lspsaga.nvim'
   use 'onsails/lspkind-nvim'
-	use { 'glepnir/galaxyline.nvim', branch = 'main' }
   use 'psliwka/vim-smoothie'
   use 'tpope/vim-commentary'
   use 'preservim/nerdcommenter'
-  use 'jiangmiao/auto-pairs'
   use {
     'kyazdani42/nvim-tree.lua',
     requires = { 'kyazdani42/nvim-web-devicons', },
     tag = 'nightly'
   }
-	use 'pangloss/vim-javascript'
-	use 'mxw/vim-jsx'
-	use 'leafgarland/typescript-vim'
-	use 'peitalin/vim-jsx-typescript'
+	use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim'}}}
   use {
     'norcalli/nvim-colorizer.lua',
     config = function ()
@@ -79,11 +68,13 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
-  use 'L3MON4D3/LuaSnip'
-  use 'saadparwaiz1/cmp_luasnip'
-	use {
-		'nvim-telescope/telescope.nvim',
-		requires = { {'nvim-lua/plenary.nvim'} }
-	}
+
+	-- SYNTAX:
+	use {	'fatih/vim-go', run = ':GoUpdateBinaries' }
+	use 'peitalin/vim-jsx-typescript'
+	use 'pangloss/vim-javascript'
+	use 'mxw/vim-jsx'
+	use 'leafgarland/typescript-vim'
+	use 'leafOfTree/vim-svelte-plugin'
 end)
 

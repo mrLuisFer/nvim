@@ -1,11 +1,6 @@
-local cmp = require'cmp'
+  local cmp = require'cmp'
 
-cmp.setup({
-    snippet = {
-      expand = function(args)
-        require('luasnip').lsp_expand(args.body)
-      end,
-    },
+  cmp.setup({
     window = {
       completion = cmp.config.window.bordered(),
       documentation = cmp.config.window.bordered(),
@@ -19,28 +14,28 @@ cmp.setup({
     }),
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
-      { name = 'luasnip' },
     }, {
       { name = 'buffer' },
     })
   })
 
-cmp.setup.filetype('gitcommit', {
+  cmp.setup.filetype('gitcommit', {
     sources = cmp.config.sources({
-      { name = 'cmp_git' },
+      { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
     }, {
       { name = 'buffer' },
     })
   })
 
-cmp.setup.cmdline('/', {
+  cmp.setup.cmdline('/', {
     mapping = cmp.mapping.preset.cmdline(),
     sources = {
       { name = 'buffer' }
     }
   })
 
-cmp.setup.cmdline(':', {
+  -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+  cmp.setup.cmdline(':', {
     mapping = cmp.mapping.preset.cmdline(),
     sources = cmp.config.sources({
       { name = 'path' }
