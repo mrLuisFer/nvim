@@ -82,5 +82,6 @@ return require('packer').startup(function()
 	use 'mxw/vim-jsx'
 	use 'leafgarland/typescript-vim'
 	use 'leafOfTree/vim-svelte-plugin'
+	use	{'styled-components/vim-styled-components', branch = 'main' }
 end)
 
