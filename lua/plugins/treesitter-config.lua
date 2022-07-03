@@ -1,4 +1,4 @@
-require'nvim-treesitter.configs'.setup{
+require'nvim-treesitter.configs'.setup {
 	ensure_installed = {
 		'css',
 		'go',
@@ -9,9 +9,14 @@ require'nvim-treesitter.configs'.setup{
 		'scss',
 		'svelte',
 		'tsx',
+		'prisma',
 		'typescript',
+		'vue',
+		'vim',
+		'lua'
   },
 	highlight = {
   	enable = true,
+    additional_vim_regex_highlighting = false,
   },
 }
