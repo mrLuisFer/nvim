@@ -23,6 +23,7 @@ return require('packer').startup(function()
   use { 'folke/tokyonight.nvim', branch =  'main' }
   use {'catppuccin/nvim', as = 'catppuccin'}
 	use 'marko-cerovac/material.nvim'
+	use 'EdenEast/nightfox.nvim'
 
 	-- PLUGINS:
   use 'kyazdani42/nvim-web-devicons'
@@ -75,6 +76,17 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
 	use 'L3MON4D3/LuaSnip'
 	use 'saadparwaiz1/cmp_luasnip'
+	use {"windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end}
+	use({
+    "mcauley-penney/tidy.nvim",
+    config = function()
+        require("tidy").setup()
+    end
+	})
+	use { 'mhartington/formatter.nvim' }
+	use 'sbdchd/neoformat'
+	-- competitive programming
+	use 'p00f/cphelper.nvim'
 
 	-- SYNTAX:
 	use {	'fatih/vim-go', run = ':GoUpdateBinaries' }
@@ -84,5 +96,5 @@ return require('packer').startup(function()
 	use 'leafgarland/typescript-vim'
 	use 'leafOfTree/vim-svelte-plugin'
 	use	{'styled-components/vim-styled-components', branch = 'main' }
+	use 'mattn/emmet-vim'
 end)
-
