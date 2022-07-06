@@ -54,7 +54,7 @@ return require('packer').startup(function()
   }
 	use { 'nvim-lua/popup.nvim' }
 	use { 'windwp/nvim-ts-autotag' }
-  use { 'norcalli/nvim-colorizer.lua', config = function () require('colorizer').setup() end}
+  use { 'norcalli/nvim-colorizer.lua' }
   use { "lukas-reineke/indent-blankline.nvim", config = function() require("indent_blankline").setup { filetype_exclude = { "dashboard" } } end }
 	use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
 	use { 'nvim-treesitter/nvim-treesitter'}
