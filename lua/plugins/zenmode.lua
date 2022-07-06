@@ -1,3 +1,6 @@
+local gitsigns = require('gitsigns.actions')
+local hlargs	 = require('hlargs')
+
 require('zen-mode').setup {
   window = {
     backdrop = 0.95, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
@@ -9,7 +12,7 @@ require('zen-mode').setup {
     -- by default, no options are changed for the Zen window
     -- uncomment any of the options below, or add other vim.wo options you want to apply
     options = {
-      -- signcolumn = "no", -- disable signcolumn
+			-- signcolumn = "no", -- disable signcolumn
       -- number = false, -- disable number column
       -- relativenumber = false, -- disable relative numbers
       -- cursorline = false, -- disable cursorline
@@ -18,8 +21,6 @@ require('zen-mode').setup {
       -- list = false, -- disable whitespace characters
     }, },
   plugins = {
-    -- disable some global vim options (vim.o...)
-    -- comment the lines to not apply the options
     options = {
       enabled = true,
       ruler = false, -- disables the ruler text in the cmd line area
@@ -37,20 +38,14 @@ require('zen-mode').setup {
       font = "+1", -- font size increment
     },
   },
-
-  -- callback where you can add custom code when the Zen window opens
   on_open = function()
-    require('gitsigns.actions').toggle_current_line_blame()
-    vim.opt.relativenumber = false
-    require('hlargs').disable()
-    require('gitsigns.actions').refresh()
+    gitsigns.toggle_current_line_blame()
+    gitsigns.refresh()
+    hlargs.disable()
   end,
-
-  -- callback where you can add custom code when the Zen window closes
   on_close = function()
-    require('gitsigns.actions').toggle_current_line_blame()
-    vim.opt.relativenumber = true
-    require('hlargs').enable()
-    require('gitsigns.actions').refresh()
+    gitsigns.toggle_current_line_blame()
+    gitsigns.refresh()
+    hlargs.enable()
   end,
 }

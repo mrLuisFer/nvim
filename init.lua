@@ -1,3 +1,4 @@
+pcall(require, 'impatient')
 -- Init Lua File
 require("options")
 require("options.themes")
@@ -22,3 +23,5 @@ require("plugins.telescope")
 require("plugins.treelua")
 require("plugins.treesitter")
 require("plugins.zenmode")
+
+require("plugins.git.sings")
