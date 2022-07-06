@@ -28,6 +28,9 @@ map('n', '<leader>F', ':Neoformat<CR>', opts)
 map('n', '<C-b>', ':NvimTreeToggle<CR>', opts)
 map('n', '<leader>r', ':NvimTreeRefresh<CR>', opts)
 
+-- Toggle ZenMode
+map('n', '<leader>z', ':ZenMode<CR>', opts)
+
 -- Barbar
 map('n', '<Tab>', ':BufferNext<CR>', opts)
 map('n', '<S-Tab>', ':BufferPrev<CR>', opts)
