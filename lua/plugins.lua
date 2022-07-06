@@ -24,6 +24,7 @@ return require('packer').startup(function()
   use {'catppuccin/nvim', as = 'catppuccin'}
 	use 'marko-cerovac/material.nvim'
 	use {'overcache/NeoSolarized', as = 'neosolarized'}
+	use 'glepnir/zephyr-nvim'
 	-- PLUGINS:
   use 'kyazdani42/nvim-web-devicons'
 	use 'ryanoasis/vim-devicons'
