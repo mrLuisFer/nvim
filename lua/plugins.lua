@@ -88,7 +88,6 @@ return require('packer').startup(function()
   use { 'David-Kunz/cmp-npm' }
   use { 'saadparwaiz1/cmp_luasnip' }
 	use { 'L3MON4D3/LuaSnip' }
-	use { 'mg979/vim-visual-multi' }
 	use { 'p00f/nvim-ts-rainbow' }
 	-- if you want to use GitHub Copilot, enable this plugin and run :Copilot setup
 	-- use { 'github/copilot.vim' }
