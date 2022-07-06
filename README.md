@@ -1,4 +1,4 @@
-# Neovim FullStack (Frontend & Backend) - Minimalist Config
+# Neovim FullStack (Frontend & Backend) - Config
 <!-- ![Neovim Preview](./doc/screenshot-init-vim.PNG) -->
 ![Neovim Preview](./preview.png)
 
