@@ -58,6 +58,7 @@ return require('packer').startup(function()
 	use {'groenewege/vim-less', as = 'less' }
 	use {'kchmck/vim-coffee-script', as = 'coffee' }
 	use 'folke/lsp-colors.nvim'
+	use 'xiyaowong/nvim-transparent'
 	-- CMP:
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'

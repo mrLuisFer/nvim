@@ -33,10 +33,6 @@ set.cursorline = true
 
 -- Global Plugins variable
 g.vim_svelte_plugin_load_full_syntax = 1
--- VSnip Filetypes
-g.vsnip_filetypes = {}
-g.vsnip_filetypes.javascriptreact = {'javascript'}
-g.vsnip_filetypes.typescriptreact = {'typescript'}
 g.neoline_disable_tabline = 1
 
 if fn.has('linux') or fn.has('unix') then
@@ -45,5 +41,5 @@ elseif fn.has('win32') or fn.has('win64') then
   -- Please read the documentation and run in a terminal: Whereis.exe python or python3
   -- and add it between the string
 	-- DOCUMENTATION: https://github.com/neovim/neovim/wiki/Installing-Neovim
-  -- g.python_host_prog = ''
+  g.python_host_prog = ''
 end
