@@ -24,4 +24,4 @@ require("plugins.treelua")
 require("plugins.treesitter")
 require("plugins.zenmode")
 
-require("plugins.git.sings")
+require("plugins.git.signs")
