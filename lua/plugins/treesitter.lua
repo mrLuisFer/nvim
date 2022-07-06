@@ -1,22 +1,18 @@
 require'nvim-treesitter.configs'.setup {
-	ensure_installed = {
-		'css',
-		'go',
-		'gomod',
-		'graphql',
-		'javascript',
-	  'python',
-		'scss',
-		'svelte',
-		'tsx',
-		'prisma',
-		'typescript',
-		'vue',
-		'vim',
-		'lua'
+	ensure_installed = "all",
+	ignore_install = { 'phpdoc' },
+  highlight = {
+    enable = true,
   },
-	highlight = {
-  	enable = true,
-    additional_vim_regex_highlighting = false,
+  textobjects = {
+    select = {
+			enable = true,
+				keymaps = {
+          ["af"] = "@function.outer",
+          ["if"] = "@function.inner",
+          ["ac"] = "@class.outer",
+          ["ic"] = "@class.inner",
+        },
+    },
   },
 }
