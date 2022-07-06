@@ -92,6 +92,7 @@ return require('packer').startup(function()
 	-- if you want to use GitHub Copilot, enable this plugin and run :Copilot setup
 	-- use { 'github/copilot.vim' }
 	if packer_bootstrap then
+		print("Updating packer...")
 		require('packer').sync()
   end
 end)

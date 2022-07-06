@@ -1,6 +1,8 @@
 # Neovim FullStack (Frontend & Backend) - Config
 <!-- ![Neovim Preview](./doc/screenshot-init-vim.PNG) -->
-![Neovim Preview](./preview.png)
+![Neovim Preview](./doc/preview.png)
+
+![Neovim Second Preview](./doc/nvim-prev-2.png)
 
 ### ⚡ About
 
@@ -173,7 +175,7 @@ When you find one you like, go to `init.vim` and search with _neovim_ `/colorsch
 [In this configuration use lspconfig](https://github.com/neovim/nvim-lspconfig)
 And **Lsp-Installer** for install lsp languages -> [williamboman/nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer)
 
-Or `:LspInfo` for see the languages you have setup 
+Or `:LspInfo` for see the languages you have setup
 
 ## ⚠ Warning
 
@@ -189,8 +191,8 @@ It's also recommended to install the following tools.
 
 - [Steep for Ruby support](https://github.com/soutaro/steep)
 
-- [Lua LSP](https://github.com/Alloyed/lua-lsp) 
-  
+- [Lua LSP](https://github.com/Alloyed/lua-lsp)
+
  - [If you have an error with Lua and tools](https://stackoverflow.com/questions/20079572/srlua-makefile-error-lua-h-no-such-file-or-directory)
 
 ## 🤖 Setup GitHub Copilot
