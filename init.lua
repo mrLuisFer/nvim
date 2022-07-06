@@ -5,6 +5,7 @@ require("options.themes")
 require("options.autocmds")
 
 require("mappings")
+require("mappings.react-snippets")
 
 require("plugins")
 require("plugins.lsp.lang-server")
