@@ -55,7 +55,7 @@ return require('packer').startup(function()
 	use { 'nvim-lua/popup.nvim' }
 	use { 'windwp/nvim-ts-autotag' }
   use { 'norcalli/nvim-colorizer.lua' }
-  use { "lukas-reineke/indent-blankline.nvim", config = function() require("indent_blankline").setup { filetype_exclude = { "dashboard" } } end }
+  use { "lukas-reineke/indent-blankline.nvim" }
 	use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
 	use { 'nvim-treesitter/nvim-treesitter'}
 	use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end }
@@ -72,6 +72,7 @@ return require('packer').startup(function()
 	use { 'lewis6991/impatient.nvim' }
 	use { 'jose-elias-alvarez/typescript.nvim' }
 	use { 'romgrk/barbar.nvim' }
+	use { 'nacro90/numb.nvim', config = function () require("numb").setup()	end }
 	-- CMP:
   use { 'hrsh7th/nvim-cmp' }
   use { 'hrsh7th/cmp-nvim-lua' }
