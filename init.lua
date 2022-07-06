@@ -11,6 +11,7 @@ require("plugins")
 require("plugins.lsp.lang-server")
 require("plugins.lsp.lspsaga")
 
+require("plugins.alpha")
 require("plugins.barbar")
 require("plugins.bg-transparent")
 require("plugins.bufferline")

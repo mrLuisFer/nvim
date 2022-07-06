@@ -55,7 +55,7 @@ if vim.fn.has('nvim-0.8') == 1 then
       end
 
       if vim.bo.filetype == 'GitBlame' then
-        local hl_group = "EcovimSecondary"
+        local hl_group = "Secondary"
         vim.opt_local.winbar = " " .. "%#" .. hl_group .. "#" .. require('icons').git .. "Blame" .. "%*"
         return
       end
@@ -75,4 +75,3 @@ if vim.fn.has('nvim-0.8') == 1 then
     end,
   })
 end
-

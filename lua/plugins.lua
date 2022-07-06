@@ -76,6 +76,7 @@ return require('packer').startup(function()
 	use { 'folke/zen-mode.nvim' }
 	use { 'lewis6991/gitsigns.nvim' }
 	use { 'm-demare/hlargs.nvim', config = function () require("hlargs").setup() end }
+	use { 'goolord/alpha-nvim' }
 	-- CMP:
   use { 'hrsh7th/nvim-cmp' }
   use { 'hrsh7th/cmp-nvim-lua' }
