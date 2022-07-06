@@ -1,6 +1,7 @@
 -- Init Lua File
 require("options")
 require("options/themes")
+require("options/autocmds")
 
 require("mappings")
 

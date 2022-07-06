@@ -71,6 +71,7 @@ return require('packer').startup(function()
 	use { 'nathom/filetype.nvim' }
 	use { 'lewis6991/impatient.nvim' }
 	use { 'jose-elias-alvarez/typescript.nvim' }
+	use { 'romgrk/barbar.nvim' }
 	-- CMP:
   use { 'hrsh7th/nvim-cmp' }
   use { 'hrsh7th/cmp-nvim-lua' }
