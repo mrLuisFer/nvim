@@ -7,5 +7,5 @@ local cmd = vim.cmd
 -- cmd('colorscheme palenight')
 -- cmd('colorscheme tokyonight')
 -- cmd('colorscheme catppuccin')
-cmd('colorscheme material')
-
+-- cmd('colorscheme material')
+cmd('colorscheme NeoSolarized')

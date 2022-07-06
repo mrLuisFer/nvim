@@ -11,6 +11,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 		'https://github.com/wbthomason/packer.nvim',
 		install_path
 	})
+	print(packer_bootstrap)
 end
 
 -- PACKER:
@@ -19,22 +20,18 @@ return require('packer').startup(function()
 	-- THEMES:
 	use {'navarasu/onedark.nvim', as = 'onedark'}
 	use 'morhetz/gruvbox'
-	use 'drewtempelmeyer/palenight.vim'
   use { 'folke/tokyonight.nvim', branch =  'main' }
   use {'catppuccin/nvim', as = 'catppuccin'}
 	use 'marko-cerovac/material.nvim'
-	use 'EdenEast/nightfox.nvim'
-	use { 'kyoz/purify', rtp = 'vim' }
-
+	use {'overcache/NeoSolarized', as = 'neosolarized'}
 	-- PLUGINS:
   use 'kyazdani42/nvim-web-devicons'
 	use 'ryanoasis/vim-devicons'
 	use 'christoomey/vim-tmux-navigator' -- Navigate with C-h C-l C-j C-k
 	use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
 	use 'junegunn/fzf.vim'
-	use 'tpope/vim-fugitive'
 	use 'neovim/nvim-lspconfig'
-  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+  use {'akinsho/bufferline.nvim', tag = "v2.*"}
 	use	'editorconfig/editorconfig-vim'
   use 'mhinz/vim-signify'
 	use {'prettier/vim-prettier',	run = 'yarn install --frozen-lockfile --production'}
@@ -44,35 +41,24 @@ return require('packer').startup(function()
   use 'psliwka/vim-smoothie'
   use 'tpope/vim-commentary'
   use 'preservim/nerdcommenter'
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = { 'kyazdani42/nvim-web-devicons', },
-    tag = 'nightly'
-  }
-	use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim'}}}
-  use {
-    'norcalli/nvim-colorizer.lua',
-    config = function ()
-      require('colorizer').setup()
-    end
-  }
-  use {
-    "lukas-reineke/indent-blankline.nvim",
-    config = function()
-      require("indent_blankline").setup { filetype_exclude = { "dashboard" } }
-    end
-  }
+  use {'kyazdani42/nvim-tree.lua', tag = 'nightly'}
+	use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim'}}}
+	use 'nvim-lua/popup.nvim'
+	use 'windwp/nvim-ts-autotag'
+  use {'norcalli/nvim-colorizer.lua', config = function () require('colorizer').setup() end}
+  use {"lukas-reineke/indent-blankline.nvim", config = function() require("indent_blankline").setup { filetype_exclude = { "dashboard" } } end}
 	use {'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
 	use {'nvim-treesitter/nvim-treesitter'}
 	use {"windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end}
-	use({ "mcauley-penney/tidy.nvim", config = function() require("tidy").setup() end	})
-	use { 'mhartington/formatter.nvim' }
+	use {"mcauley-penney/tidy.nvim", config = function() require("tidy").setup() end	}
+	use {'mhartington/formatter.nvim' }
 	use 'sbdchd/neoformat'
-	use 'p00f/cphelper.nvim'-- competitive programming
-
-  -- Copilot:
-  use "github/copilot.vim"
-  -- CMP:
+	use {	'fatih/vim-go', run = ':GoUpdateBinaries' }
+	use	{'styled-components/vim-styled-components', branch = 'main' }
+	use {'groenewege/vim-less', as = 'less' }
+	use {'kchmck/vim-coffee-script', as = 'coffee' }
+	use 'folke/lsp-colors.nvim'
+	-- CMP:
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
@@ -80,14 +66,4 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
 	use 'L3MON4D3/LuaSnip'
 	use 'saadparwaiz1/cmp_luasnip'
-
-	-- SYNTAX:
-	use {	'fatih/vim-go', run = ':GoUpdateBinaries' }
-	use 'peitalin/vim-jsx-typescript'
-	use 'pangloss/vim-javascript'
-	use 'mxw/vim-jsx'
-	use 'leafgarland/typescript-vim'
-	use 'leafOfTree/vim-svelte-plugin'
-	use	{'styled-components/vim-styled-components', branch = 'main' }
-	use 'mattn/emmet-vim'
 end)

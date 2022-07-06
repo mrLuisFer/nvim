@@ -1,5 +1,6 @@
 local set = vim.opt
 local g = vim.g
+local fn = vim.fn
 
 set.expandtab = true
 set.smarttab = true
@@ -38,3 +39,11 @@ g.vsnip_filetypes.javascriptreact = {'javascript'}
 g.vsnip_filetypes.typescriptreact = {'typescript'}
 g.neoline_disable_tabline = 1
 
+if fn.has('linux') or fn.has('unix') then
+  g.python_host_prog = '/usr/bin/python3'
+elseif fn.has('win32') or fn.has('win64') then
+  -- Please read the documentation and run in a terminal: Whereis.exe python or python3
+  -- and add it between the string
+	-- DOCUMENTATION: https://github.com/neovim/neovim/wiki/Installing-Neovim
+  -- g.python_host_prog = ''
+end
