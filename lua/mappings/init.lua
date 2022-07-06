@@ -10,7 +10,7 @@ map('n', '<leader>x', ':x<CR>', opts)
 map('n', '<leader>t', ':terminal<CR>', opts)
 
 -- Prettier
-map('n', '<Space>p', ':Prettier<CR>', opts)
+map('n', '<C-p>', ':Prettier<CR>', opts)
 -- FZF:
 map('n', '<leader>fz', ':FZF<CR>', opts)
 
