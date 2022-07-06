@@ -1,10 +1,10 @@
-## Neovim Minimalist Config
+# Neovim FullStack (Frontend & Backend) - Minimalist Config
 <!-- ![Neovim Preview](./doc/screenshot-init-vim.PNG) -->
 ![Neovim Preview](./preview.png)
 
 ### ⚡ About
 
-This is my personal config and adapted to my needs, but it can be easily adapted to any config, as well as separate vim files
+This is my personal config and adapted for the Frontend and Backend development, but it can be easily adapted to any config, as well as separate vim files
 
 This will be adapted for **Windows** and **Linux** systems
 And they will correct things in the future
