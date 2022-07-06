@@ -2,8 +2,10 @@ local use = require('packer').use
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
+local packer_bootstrap = nil
+
 if fn.empty(fn.glob(install_path)) > 0 then
-  local packer_bootstrap = fn.system({
+  packer_bootstrap = fn.system({
 		'git',
 		'clone',
 		'--depth',
@@ -43,7 +45,13 @@ return require('packer').startup(function()
   use 'tpope/vim-commentary'
   use 'preservim/nerdcommenter'
   use {'kyazdani42/nvim-tree.lua', tag = 'nightly'}
-	use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim'}}}
+	use { 'nvim-telescope/telescope.nvim',
+    requires = {
+      { 'nvim-lua/popup.nvim' },
+      { 'nvim-lua/plenary.nvim' },
+      { 'nvim-telescope/telescope-fzf-native.nvim' }
+    }
+  }
 	use 'nvim-lua/popup.nvim'
 	use 'windwp/nvim-ts-autotag'
   use {'norcalli/nvim-colorizer.lua', config = function () require('colorizer').setup() end}
@@ -60,14 +68,25 @@ return require('packer').startup(function()
 	use {'kchmck/vim-coffee-script', as = 'coffee' }
 	use 'folke/lsp-colors.nvim'
 	use 'xiyaowong/nvim-transparent'
+	use { 'nathom/filetype.nvim' }
+	use { 'lewis6991/impatient.nvim' }
+	use 'jose-elias-alvarez/typescript.nvim'
 	-- CMP:
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/nvim-cmp'
+  use { 'hrsh7th/nvim-cmp' }
+  use { 'hrsh7th/cmp-nvim-lua' }
+  use { 'hrsh7th/cmp-nvim-lsp' }
+  use { 'hrsh7th/cmp-buffer' }
+  use { 'hrsh7th/cmp-path' }
+  use { 'hrsh7th/cmp-cmdline' }
+  use { 'hrsh7th/cmp-calc' }
+  use { 'David-Kunz/cmp-npm' }
+  use { 'saadparwaiz1/cmp_luasnip' }
 	use 'L3MON4D3/LuaSnip'
-	use 'saadparwaiz1/cmp_luasnip'
+	use { 'mg979/vim-visual-multi' }
+	use { 'p00f/nvim-ts-rainbow' }
 	-- if you want to use GitHub Copilot, enable this plugin and run :Copilot setup
 	-- use 'github/copilot.vim'
+	if packer_bootstrap then
+		require('packer').sync()
+  end
 end)
