@@ -10,9 +10,11 @@ local colorschemes = {
 	neosol				= 'NeoSolarized',
 	catpp					= 'catppuccin',
 	nightowl			= 'night-owl',
-	palenightfall = 'palenightfall'
+	palenightfall = 'palenightfall',
+	everblush			= 'everblush'
 }
+vim.g.everblushNR = 1
 
-cmd('colorscheme '..colorschemes.palenightfall)
+cmd('colorscheme '..colorschemes.everblush)
 
 return colorschemes

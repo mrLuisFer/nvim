@@ -28,6 +28,7 @@ return require('packer').startup(function()
 	use {'overcache/NeoSolarized', as = 'neosolarized' }
 	use { 'glepnir/zephyr-nvim' }
 	use { 'JoosepAlviste/palenightfall.nvim' }
+	use { "mangeshrex/everblush.vim" }
 	-- PLUGINS:
   use { 'kyazdani42/nvim-web-devicons' }
 	use { 'ryanoasis/vim-devicons' }
