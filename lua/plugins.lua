@@ -27,12 +27,7 @@ return require('packer').startup(function()
 	use { 'marko-cerovac/material.nvim' }
 	use {'overcache/NeoSolarized', as = 'neosolarized' }
 	use { 'glepnir/zephyr-nvim' }
-	use {
-		'JoosepAlviste/palenightfall.nvim',
-		config = function()
-			require 'themes.palenightfall'
-		end,
-	}
+	use { 'JoosepAlviste/palenightfall.nvim' }
 	-- PLUGINS:
   use { 'kyazdani42/nvim-web-devicons' }
 	use { 'ryanoasis/vim-devicons' }
@@ -83,6 +78,7 @@ return require('packer').startup(function()
 	use { 'lewis6991/gitsigns.nvim' }
 	use { 'm-demare/hlargs.nvim', config = function () require("hlargs").setup() end }
 	use { 'goolord/alpha-nvim' }
+	use { 'rcarriga/nvim-notify' }
 	-- CMP:
   use { 'hrsh7th/nvim-cmp' }
   use { 'hrsh7th/cmp-nvim-lua' }

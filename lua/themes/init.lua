@@ -1,4 +1,5 @@
 local cmd = vim.cmd
+
 local colorschemes = {
 	zep						= 'zephyr',
 	one						= 'onedark',
@@ -13,3 +14,5 @@ local colorschemes = {
 }
 
 cmd('colorscheme '..colorschemes.palenightfall)
+
+return colorschemes
