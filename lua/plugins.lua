@@ -27,6 +27,12 @@ return require('packer').startup(function()
 	use { 'marko-cerovac/material.nvim' }
 	use {'overcache/NeoSolarized', as = 'neosolarized' }
 	use { 'glepnir/zephyr-nvim' }
+	use {
+		'JoosepAlviste/palenightfall.nvim',
+		config = function()
+			require 'themes.palenightfall'
+		end,
+	}
 	-- PLUGINS:
   use { 'kyazdani42/nvim-web-devicons' }
 	use { 'ryanoasis/vim-devicons' }

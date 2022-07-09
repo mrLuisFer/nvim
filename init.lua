@@ -2,9 +2,10 @@ pcall(require, 'impatient')
 
 -- Init Lua File
 require("options")
-require("options.themes")
 require("options.autocmds")
 require("options.filetypes")
+
+require("themes")
 
 require("mappings")
 require("mappings.react-snippets")
