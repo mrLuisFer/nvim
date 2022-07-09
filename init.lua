@@ -3,6 +3,7 @@ pcall(require, 'impatient')
 require("options")
 require("options.themes")
 require("options.autocmds")
+require("options.filetypes")
 
 require("mappings")
 require("mappings.react-snippets")

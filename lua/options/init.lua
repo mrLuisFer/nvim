@@ -1,12 +1,10 @@
-local g   =   vim.g
 local fn  =   vim.fn
 local opt =   vim.opt
 local g   =   vim.g
 
 local options = {
-	ruler					 = true,
+	ruler          = true,
   clipboard      = "unnamed,unnamedplus",   --- Copy-paste between vim and everything else
-  cmdheight      = 2,                       --- Give more space for displaying messages
   completeopt    = "menu,menuone,noselect", --- Better autocompletion
   cursorline     = true,                    --- Highlight of current line
   emoji          = false,                   --- Fix emoji display
@@ -36,8 +34,8 @@ local options = {
   undofile       = true,                    --- Sets undo to file
   updatetime     = 100,                     --- Faster completion
   viminfo        = "'1000",                 --- Increase the size of file history
-  wildignore     = "*node_modules/**",      --- Don't search inside Node.js modules (works for gutentag)
-  wrap           = false,                   --- Display long lines as just one line
+  wildignore     = { "*node_modules/**", '**/coverage/**', '**/.idea/**', '**/.git/**', '**/.nuxt/**' }, --- Don't search inside Node.js modules (works for gutentag)
+  wrap           = true,                    --- Display long lines as just one line
   writebackup    = false,                   --- Not needed
   -- Neovim defaults
   autoindent     = true,                    --- Good auto indent
@@ -49,6 +47,15 @@ local options = {
   fileencoding   = "utf-8",                 --- The encoding written to file
   incsearch      = true,                    --- Start searching before pressing enter
   showmode       = false,                   --- Don't show things like -- INSERT -- anymore
+	hidden         = true,
+  linebreak      = true,
+  list           = true,
+  showmatch      = true,
+  joinspaces     = false, -- Prevent inserting two spaces with J
+  suffixesadd    = { '.md', '.js', '.ts', '.tsx' }, -- File extensions not required when opening with `gf`
+  cmdheight      = 1,                       --- Give more space for displaying messages
+	confirm        = true,
+	inccommand     = 'nosplit' -- Show preview of ex commands
 }
 
 local globals = {
