@@ -7,7 +7,7 @@ local options = {
   clipboard      = "unnamed,unnamedplus",   --- Copy-paste between vim and everything else
   completeopt    = "menu,menuone,noselect", --- Better autocompletion
   cursorline     = true,                    --- Highlight of current line
-  emoji          = false,                   --- Fix emoji display
+  emoji          = true,                    --- Fix emoji display
   expandtab      = true,                    --- Use spaces instead of tabs
   foldlevelstart = 99,                      --- Expand all folds by default
   foldtext       = "CustomFold()",          --- Emit custom function for foldtext
@@ -41,7 +41,7 @@ local options = {
   autoindent     = true,                    --- Good auto indent
   backspace      = "indent,eol,start",      --- Making sure backspace works
   backup         = false,                   --- Recommended by coc
-  conceallevel   = 0,                       --- Show `` in markdown files
+  conceallevel   = 1,                       --- Show `` in markdown files
   encoding       = "utf-8",                 --- The encoding displayed
   errorbells     = false,                   --- Disables sound effect for errors
   fileencoding   = "utf-8",                 --- The encoding written to file
@@ -51,11 +51,17 @@ local options = {
   linebreak      = true,
   list           = true,
   showmatch      = true,
-  joinspaces     = false, -- Prevent inserting two spaces with J
+  joinspaces     = false,										-- Prevent inserting two spaces with J
   suffixesadd    = { '.md', '.js', '.ts', '.tsx' }, -- File extensions not required when opening with `gf`
   cmdheight      = 1,                       --- Give more space for displaying messages
 	confirm        = true,
-	inccommand     = 'nosplit' -- Show preview of ex commands
+	inccommand     = 'nosplit',								-- Show preview of ex commands
+	whichwrap      = opt.whichwrap + 'h,l,<,>,[,]',
+  showbreak      = '↳ ',                    -- DOWNWARDS ARROW WITH TIP RIGHTWARDS (U+21B3, UTF-8: E2 86 B3)
+  fillchars    = {
+                  eob = ' ',                -- Suppress ~ at EndOfBuffer
+                  fold = ' ',               -- Hide trailing folding characters
+                 }
 }
 
 local globals = {
@@ -70,6 +76,7 @@ opt.shortmess:append('c');
 opt.formatoptions:remove('c');
 opt.formatoptions:remove('r');
 opt.formatoptions:remove('o');
+opt.sessionoptions:remove { 'buffers', 'folds' }
 
 for k, v in pairs(options) do
   opt[k] = v

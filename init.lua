@@ -1,4 +1,5 @@
 pcall(require, 'impatient')
+
 -- Init Lua File
 require("options")
 require("options.themes")
