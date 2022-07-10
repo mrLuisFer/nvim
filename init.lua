@@ -1,4 +1,4 @@
-pcall(require, 'impatient')
+pcall(require, "impatient")
 
 -- Init Lua File
 require("options")
@@ -26,6 +26,7 @@ require("plugins.indent")
 require("plugins.lualine")
 require("plugins.luasnip")
 require("plugins.notify")
+require("plugins.null-ls")
 require("plugins.telescope")
 require("plugins.treelua")
 require("plugins.treesitter")
