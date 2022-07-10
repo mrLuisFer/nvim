@@ -10,7 +10,8 @@ local lsp_formatting = function()
 		filter = function(client)
 			-- apply whatever logic you want (in this example, we'll only use null-ls)
 			return client.name == "null-ls"
-		end
+		end,
+		timeout_ms = 2000,
 	})
 end
 
@@ -53,7 +54,7 @@ null_ls.setup({
 					if vim.fn.has("nvim-0.8") == 1 then
 						lsp_formatting()
 					else
-						lsp.buf.formatting_sync()
+						lsp.buf.formatting_sync(nil, 2000) -- 23 seconds
 					end
 				end,
 			})
