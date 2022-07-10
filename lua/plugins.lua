@@ -86,6 +86,7 @@ return require("packer").startup(function()
 
 	use({ "nvim-treesitter/nvim-treesitter" })
 	use({ "mhartington/formatter.nvim" })
+	use("lewis6991/hover.nvim")
 
 	use({ "fatih/vim-go", run = ":GoUpdateBinaries" })
 	use({ "xiyaowong/nvim-transparent" })
