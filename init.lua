@@ -12,7 +12,7 @@ require("mappings")
 require("mappings.react-snippets")
 
 require("plugins")
-require("plugins.lsp.lang-server")
+require("plugins.lsp")
 require("plugins.lsp.lspsaga")
 
 require("plugins.alpha")
