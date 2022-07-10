@@ -6,7 +6,7 @@ require'lspsaga'.setup {
     hint_sign = "",
     infor_sign = "",
     diagnostic_header_icon = "   ",
-    code_action_icon = " ",
+    code_action_icon = " ",
     code_action_prompt = {
     enable = true,
     sign = true,
@@ -37,4 +37,3 @@ require'lspsaga'.setup {
     rename_prompt_prefix = "➤",
     diagnostic_prefix_format = "%d. ",
 }
-

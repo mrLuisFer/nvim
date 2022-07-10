@@ -1,4 +1,5 @@
   local cmp = require'cmp'
+	local lspkind = require'lspkind'
 
   cmp.setup({
 		snippet = {
@@ -22,7 +23,12 @@
 			{ name = 'luasnip' }
     }, {
       { name = 'buffer' },
-    })
+    }),
+		formatting = {
+			format = lspkind.cpm_format,
+			mode = 'symbol',
+			maxWidth = "55px"
+		}
   })
 
   cmp.setup.filetype('gitcommit', {
@@ -106,4 +112,3 @@ require('lspconfig')['sumneko_lua'].setup {
       }
     }
   }
-

@@ -1,10 +1,9 @@
 vim.opt.termguicolors = true
 
 local bg_color = require('palenightfall')
--- local bg_color = require('palenightfall')
 
 require('notify').setup {
-	bg_color.colors.background,
+	background_colour = bg_color.colors.background,
 }
 
 vim.notify = require 'notify'
