@@ -6,7 +6,6 @@ local colorschemes = {
 	gruv					= 'gruvbox',
 	palenight			= 'palenight',
 	tokyon				= 'tokyonight',
-	material			= 'material',
 	neosol				= 'NeoSolarized',
 	catpp					= 'catppuccin',
 	nightowl			= 'night-owl',

@@ -25,7 +25,6 @@ return require("packer").startup(function()
 	use({ "morhetz/gruvbox" })
 	use({ "folke/tokyonight.nvim", branch = "main" })
 	use({ "catppuccin/nvim", as = "catppuccin" })
-	use({ "marko-cerovac/material.nvim" })
 	use({ "overcache/NeoSolarized", as = "neosolarized" })
 	use({ "glepnir/zephyr-nvim" })
 	use({ "JoosepAlviste/palenightfall.nvim" })
@@ -56,7 +55,6 @@ return require("packer").startup(function()
 	use({ "psliwka/vim-smoothie" })
 	use({ "tpope/vim-commentary" })
 	use({ "preservim/nerdcommenter" })
-	use("jose-elias-alvarez/null-ls.nvim")
 
 	use({ "kyazdani42/nvim-tree.lua", tag = "nightly" })
 	use({
@@ -85,8 +83,6 @@ return require("packer").startup(function()
 	})
 
 	use({ "nvim-treesitter/nvim-treesitter" })
-	use({ "mhartington/formatter.nvim" })
-	use("lewis6991/hover.nvim")
 
 	use({ "fatih/vim-go", run = ":GoUpdateBinaries" })
 	use({ "xiyaowong/nvim-transparent" })
@@ -106,7 +102,6 @@ return require("packer").startup(function()
 		end,
 	})
 	use({ "goolord/alpha-nvim" })
-	use({ "rcarriga/nvim-notify" })
 	-- CMP:
 	use({ "hrsh7th/nvim-cmp" })
 	use({ "hrsh7th/cmp-nvim-lua" })
@@ -122,6 +117,6 @@ return require("packer").startup(function()
 	-- use { 'github/copilot.vim' }
 	if packer_bootstrap then
 		print("Updating packer...")
-		require("packer").sync()
+		-- require("packer").sync()
 	end
 end)

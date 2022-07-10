@@ -7,7 +7,6 @@ map("n", "<leader>w", ":w<CR>", opts)
 map("n", "<leader>so", ":so%<CR>", opts)
 map("n", "<leader>q", ":q<CR>", opts)
 map("n", "<leader>x", ":x<CR>", opts)
-map("n", "<leader>t", ":terminal<CR>", opts)
 
 -- Prettier
 map("n", "<C-p>", ":Prettier<CR>", opts)
@@ -19,10 +18,9 @@ map("n", "<C-f>", ":Telescope find_files<CR>", opts)
 map("n", "<leader>fw", ":Telescope live_grep<CR>", opts)
 map("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 
--- Format Files
-map("n", "<leader>f", ":Format<CR>", opts)
-map("n", "<leader>fr", ":FormatWrite<CR>", opts)
-map("n", "<leader>F", ":NullFormat<CR>", opts)
+-- map("n", "<leader>f", "<CR>", opts)
+-- map("n", "<leader>fr", "<CR>", opts)
+-- map("n", "<leader>F", "<CR>", opts)
 
 -- NVIM Tree Lua
 map("n", "<C-b>", ":NvimTreeToggle<CR>", opts)
@@ -46,7 +44,3 @@ map("n", "<A-7>", "<Cmd>BufferGoto 7<CR>", opts)
 map("n", "<A-8>", "<Cmd>BufferGoto 8<CR>", opts)
 map("n", "<A-9>", "<Cmd>BufferGoto 9<CR>", opts)
 map("n", "<A-0>", "<Cmd>BufferLast<CR>", opts)
-
--- Hover keymaps
-vim.keymap.set("n", "<S-k>", require("hover").hover, { desc = "hover.nvim" })
-vim.keymap.set("n", "<S-g>", require("hover").hover_select, { desc = "hover.nvim (select)" })
