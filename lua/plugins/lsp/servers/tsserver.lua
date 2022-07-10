@@ -40,12 +40,12 @@ end
 local on_attach = function(client, bufnr)
   -- Modifying a server's capabilities is not recommended and is no longer
   -- necessary thanks to the `vim.lsp.buf.format` API introduced in Neovim
-  -- 0.8. Users with Neovim 0.7 needs to uncomment below lines to make tsserver formatting work (or keep using eslint).
-
-  -- client.server_capabilities.documentFormattingProvider = false
-  -- client.server_capabilities.documentRangeFormattingProvider = false
-
-  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+  -- 0.8.
+	if vim.fn.has('nvim-0.8') == 0 then
+		client.server_capabilities.documentFormattingProvider = false
+		client.server_capabilities.documentRangeFormattingProvider = false
+	end
+	local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 end
 
