@@ -13,6 +13,7 @@ end
 local handlers = {
 	["textDocument/hover"] = lsp.with(lsp.handlers.hover, { border = "rounded" }),
 	["textDocument/signatureHelp"] = lsp.with(lsp.handlers.signature_help, { border = "rounded" }),
+	["textDocument/codeAction"] = lsp.with(lsp.buf.code_action(), { border = "rounded" })
 }
 local servers = {
 	"pyright",

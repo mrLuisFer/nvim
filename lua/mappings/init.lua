@@ -15,14 +15,14 @@ map("n", "<C-p>", ":Prettier<CR>", opts)
 map("n", "<leader>fz", ":FZF<CR>", opts)
 
 -- Find files using Telescope command-line sugar.
-map("n", "<leader>ff", ":Telescope find_files<CR>", opts)
+map("n", "<C-f>", ":Telescope find_files<CR>", opts)
 map("n", "<leader>fw", ":Telescope live_grep<CR>", opts)
 map("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 
 -- Format Files
 map("n", "<leader>f", ":Format<CR>", opts)
 map("n", "<leader>fr", ":FormatWrite<CR>", opts)
-map("n", "<leader>F", ":Neoformat<CR>", opts)
+map("n", "<leader>F", ":NullFormat<CR>", opts)
 
 -- NVIM Tree Lua
 map("n", "<C-b>", ":NvimTreeToggle<CR>", opts)

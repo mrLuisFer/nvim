@@ -2,18 +2,19 @@ local null_ls = require("null-ls")
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 local action = null_ls.builtins.code_actions
+local lsp = vim.lsp
+local api = vim.api
 
-local lsp_formatting = function(bufnr)
-	vim.lsp.buf.format({
+local lsp_formatting = function()
+	lsp.buf.format({
 		filter = function(client)
 			-- apply whatever logic you want (in this example, we'll only use null-ls)
 			return client.name == "null-ls"
-		end,
-		bufnr = bufnr,
+		end
 	})
 end
 
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+local augroup = api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
 	debug = false,
@@ -32,9 +33,9 @@ null_ls.setup({
 		action.eslint,
 	},
 	on_attach = function(client, bufnr)
-		local bufcmd = vim.api.nvim_buf_create_user_command
+		local bufcmd = api.nvim_buf_create_user_command
 		local format = function()
-			local params = vim.lsp.util.make_formatting_params({})
+			local params = lsp.util.make_formatting_params({})
 			client.request("textDocument/formatting", params, nil, bufnr)
 		end
 
@@ -43,16 +44,16 @@ null_ls.setup({
 		end
 
 		if client.supports_method("textDocument/formatting") then
-			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-			vim.api.nvim_create_autocmd("BufWritePre", {
+			api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+			api.nvim_create_autocmd("BufWritePre", {
 				group = augroup,
 				buffer = bufnr,
 				callback = function()
+					vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()")
 					if vim.fn.has("nvim-0.8") == 1 then
-						vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting()")
-						lsp_formatting(bufnr)
+						lsp_formatting()
 					else
-						vim.lsp.buf.formatting_sync()
+						lsp.buf.formatting_sync()
 					end
 				end,
 			})
