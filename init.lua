@@ -13,7 +13,6 @@ require("mappings.react-snippets")
 
 require("plugins")
 require("plugins.lsp")
-require("plugins.lsp.lspsaga")
 
 require("plugins.alpha")
 require("plugins.barbar")
@@ -27,6 +26,5 @@ require("plugins.luasnip")
 require("plugins.telescope")
 require("plugins.treelua")
 require("plugins.treesitter")
-require("plugins.zenmode")
 
 require("plugins.git.signs")

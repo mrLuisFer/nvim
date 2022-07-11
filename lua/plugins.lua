@@ -39,7 +39,7 @@ return require("packer").startup(function()
 	use({ "junegunn/fzf.vim" })
 
 	use({ "neovim/nvim-lspconfig" })
-	use({ "tami5/lspsaga.nvim" })
+	use({ "glepnir/lspsaga.nvim" })
 	use({ "onsails/lspkind-nvim" })
 	use({ "williamboman/nvim-lsp-installer" })
 	use({ "folke/lsp-colors.nvim" })
@@ -48,12 +48,8 @@ return require("packer").startup(function()
 	use({ "romgrk/barbar.nvim" })
 	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
 
-	use({ "editorconfig/editorconfig-vim" })
-
-	use({ "mhinz/vim-signify" })
 	use({ "prettier/vim-prettier", run = "yarn install --frozen-lockfile --production" })
 	use({ "psliwka/vim-smoothie" })
-	use({ "tpope/vim-commentary" })
 	use({ "preservim/nerdcommenter" })
 
 	use({ "kyazdani42/nvim-tree.lua", tag = "nightly" })
@@ -78,7 +74,7 @@ return require("packer").startup(function()
 	use({
 		"windwp/nvim-autopairs",
 		config = function()
-			require("nvim-autopairs").setup({})
+			require("nvim-autopairs").setup()
 		end,
 	})
 
@@ -87,13 +83,6 @@ return require("packer").startup(function()
 	use({ "fatih/vim-go", run = ":GoUpdateBinaries" })
 	use({ "xiyaowong/nvim-transparent" })
 	use({ "nathom/filetype.nvim" })
-	use({
-		"nacro90/numb.nvim",
-		config = function()
-			require("numb").setup()
-		end,
-	})
-	use({ "folke/zen-mode.nvim" })
 	use({ "lewis6991/gitsigns.nvim" })
 	use({
 		"m-demare/hlargs.nvim",
@@ -109,14 +98,8 @@ return require("packer").startup(function()
 	use({ "hrsh7th/cmp-buffer" })
 	use({ "hrsh7th/cmp-path" })
 	use({ "hrsh7th/cmp-cmdline" })
-	use({ "hrsh7th/cmp-calc" })
-	use({ "David-Kunz/cmp-npm" })
-	use({ "saadparwaiz1/cmp_luasnip" })
+	use({ "hrsh7th/cmp-calc" }) use({ "David-Kunz/cmp-npm" }) use({ "saadparwaiz1/cmp_luasnip" })
 	use({ "L3MON4D3/LuaSnip" })
 	-- if you want to use GitHub Copilot, enable this plugin and run :Copilot setup
 	-- use { 'github/copilot.vim' }
-	if packer_bootstrap then
-		print("Updating packer...")
-		-- require("packer").sync()
-	end
 end)
