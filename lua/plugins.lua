@@ -29,6 +29,7 @@ return require("packer").startup(function()
 	use({ "glepnir/zephyr-nvim" })
 	use({ "JoosepAlviste/palenightfall.nvim" })
 	use({ "mangeshrex/everblush.vim" })
+  use({ "wadackel/vim-dogrun" })
 	-- PLUGINS:
 	use({ "kyazdani42/nvim-web-devicons" })
 	use({ "ryanoasis/vim-devicons" })
@@ -44,7 +45,7 @@ return require("packer").startup(function()
 	use({ "williamboman/nvim-lsp-installer" })
 	use({ "folke/lsp-colors.nvim" })
 
-	use({ "akinsho/bufferline.nvim", tag = "v2.*" })
+	use({ "akinsho/bufferline.nvim", tag = "v2.*", config = function () require("bufferline").setup {} end })
 	use({ "romgrk/barbar.nvim" })
 	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
 
