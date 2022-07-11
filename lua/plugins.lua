@@ -71,12 +71,6 @@ return require("packer").startup(function()
 			require("tidy").setup()
 		end,
 	})
-	use({
-		"windwp/nvim-autopairs",
-		config = function()
-			require("nvim-autopairs").setup()
-		end,
-	})
 
 	use({ "nvim-treesitter/nvim-treesitter" })
 
@@ -98,8 +92,16 @@ return require("packer").startup(function()
 	use({ "hrsh7th/cmp-buffer" })
 	use({ "hrsh7th/cmp-path" })
 	use({ "hrsh7th/cmp-cmdline" })
-	use({ "hrsh7th/cmp-calc" }) use({ "David-Kunz/cmp-npm" }) use({ "saadparwaiz1/cmp_luasnip" })
+	use({ "hrsh7th/cmp-calc" })
+  use({ "David-Kunz/cmp-npm" })
+  use({ "saadparwaiz1/cmp_luasnip" })
 	use({ "L3MON4D3/LuaSnip" })
 	-- if you want to use GitHub Copilot, enable this plugin and run :Copilot setup
 	-- use { 'github/copilot.vim' }
+  use({ 'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile', requires = {
+    { 'neoclide/coc-tsserver' },
+    { 'neoclide/coc-pairs' },
+    { 'neoclide/coc-git' },
+    { 'neoclide/coc-snippets' }
+  }})
 end)

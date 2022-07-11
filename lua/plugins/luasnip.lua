@@ -3,7 +3,7 @@ local ls = require("luasnip")
 ls.config.set_config({
 	history = false,
 	update_events = "TextChanged,TextChangedI",
-	region_check_events = "CursorMoved", 
+	region_check_events = "CursorMoved",
 })
 
 
