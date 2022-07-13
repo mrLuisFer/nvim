@@ -2,32 +2,25 @@ local g = vim.g
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
--- Custom Mappings
+-- Neovim Utils
 map("n", "<leader>w", ":w<CR>", opts)
 map("n", "<leader>so", ":so%<CR>", opts)
 map("n", "<leader>q", ":q<CR>", opts)
-map("n", "<leader>x", ":x<CR>", opts)
+map("n", "<C-x>", ":x<CR>", opts)
 
 -- Prettier
 map("n", "<C-p>", ":Prettier<CR>", opts)
--- FZF:
-map("n", "<leader>fz", ":FZF<CR>", opts)
 
--- Find files using Telescope command-line sugar.
+-- Find files using Telescope
 map("n", "<C-f>", ":Telescope find_files<CR>", opts)
 map("n", "<leader>fw", ":Telescope live_grep<CR>", opts)
 map("n", "<leader>fb", ":Telescope buffers<CR>", opts)
-
--- map("n", "<leader>f", "<CR>", opts)
--- map("n", "<leader>fr", "<CR>", opts)
--- map("n", "<leader>F", "<CR>", opts)
+-- or FZF
+map("n", "<leader>z", ":FZF<CR>", opts)
 
 -- NVIM Tree Lua
 map("n", "<C-b>", ":NvimTreeToggle<CR>", opts)
 map("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
-
--- Toggle ZenMode
-map("n", "<leader>z", ":ZenMode<CR>", opts)
 
 -- Barbar
 map("n", "<Tab>", ":BufferNext<CR>", opts)

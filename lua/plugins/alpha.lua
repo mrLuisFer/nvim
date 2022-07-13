@@ -1,3 +1,4 @@
+-- DASHBOARD
 local present, alpha = pcall(require, "alpha")
 if not present then
   return
@@ -100,7 +101,7 @@ local function button(sc, txt, keybind, keybind_opts)
 end
 
 dashboard.section.buttons.val = {
-  button("SPC f f", icons.fileNoBg .. " " .. "Find File", "<cmd>Telescope find_files<CR>", {}),
+  button("C f", icons.fileNoBg .. " " .. "Find File", "<cmd>Telescope find_files<CR>", {}),
   button("SPC f w", icons.t .. " " .. "Find Word", "<cmd>Telescope live_grep<CR>", {}),
   button("SPC s h", icons.fileRecent .. " " .. "Recents", "<cmd>Telescope oldfiles hidden=true<CR>", {}),
   button("SPC U", icons.container .. " " .. "Update Plugins", "<cmd>PackerSync<CR>", {}),

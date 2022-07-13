@@ -34,3 +34,14 @@ cmd([[
 	autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
 	autocmd FileType lua setlocal tabstop=2 shiftwidth=2 softtabstop=2
 ]])
+cmd([[
+  augroup mygroup
+    autocmd!
+    autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+    autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+  augroup end
+]])
+cmd([[
+  " Add `:Format` command to format current buffer.
+  command! -nargs=0 Format :call CocActionAsync('format')
+]])
