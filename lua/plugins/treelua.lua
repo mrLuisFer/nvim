@@ -6,6 +6,6 @@ require'nvim-tree'.setup {
 		signcolumn = "no"
   },
 	filters = {
-		dotfiles = true
+		dotfiles = false
 	}
 }

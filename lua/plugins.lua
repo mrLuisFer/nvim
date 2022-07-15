@@ -99,7 +99,7 @@ return require("packer").startup(function()
 	use({ "L3MON4D3/LuaSnip" })
 	-- if you want to use GitHub Copilot, enable this plugin and run :Copilot setup
 	-- use { 'github/copilot.vim' }
-  use({ 'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile', requires = {
+  use({ 'neoclide/coc.nvim', branch = 'release', run = 'yarn install --frozen-lockfile', requires = {
     { 'neoclide/coc-tsserver' },
     { 'neoclide/coc-git' },
     { 'neoclide/coc-snippets' }

@@ -10,6 +10,8 @@ tramp
 .\#*
 /plugin
 /plugin/*
+node_modules/*
+yarn.lock
 
 # Org-mode
 .org-id-locations
@@ -278,4 +280,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-

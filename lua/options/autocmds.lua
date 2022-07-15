@@ -55,12 +55,7 @@ if vim.fn.has('nvim-0.8') == 1 then
         return
       end
 
-      local value = winbar.gps()
-      if value == nil then
-        value = winbar.filename()
-      end
-
-      vim.opt_local.winbar = value
+      vim.opt_local.winbar = winbar.filename()
     end,
   })
 end
