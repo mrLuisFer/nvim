@@ -90,7 +90,7 @@ or see this custom gist, on how to install Neovim on different Linux distributio
 Also you need install python neovim support.
 
 ```bash
-$ sudo apt-get install python3-neovim
+$ sudo apt-get install python3-neovim python3-pip
 
 $ pip install pynvim
 ```
