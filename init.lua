@@ -8,7 +8,6 @@ require("options.autocmds")
 require("options.filetypes")
 
 require("themes")
-require("themes.palenightfall")
 
 require("mappings")
 require("mappings.react-snippets")

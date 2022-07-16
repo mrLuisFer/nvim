@@ -30,6 +30,7 @@ return require("packer").startup(function()
 	use({ "JoosepAlviste/palenightfall.nvim" })
 	use({ "mangeshrex/everblush.vim" })
   use({ "wadackel/vim-dogrun" })
+  use 'Mofiqul/vscode.nvim'
 	-- PLUGINS:
 	use({ "kyazdani42/nvim-web-devicons" })
 	use({ "ryanoasis/vim-devicons" })
@@ -86,6 +87,7 @@ return require("packer").startup(function()
 		end,
 	})
 	use({ "goolord/alpha-nvim" })
+  use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end }
 	-- CMP:
 	use({ "hrsh7th/nvim-cmp" })
 	use({ "hrsh7th/cmp-nvim-lua" })

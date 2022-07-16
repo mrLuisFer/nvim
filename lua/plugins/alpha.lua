@@ -145,7 +145,7 @@ local opts = {
     section.footer,
   },
   opts = {
-    margin = 5
+    margin = 0
   },
 }
 

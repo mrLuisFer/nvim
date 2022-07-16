@@ -1,5 +1,4 @@
 local cmd = vim.cmd
-
 local colorschemes = {
 	zep						= 'zephyr',
 	one						= 'onedark',
@@ -10,10 +9,12 @@ local colorschemes = {
 	catpp					= 'catppuccin',
 	nightowl			= 'night-owl',
 	palenightfall = 'palenightfall',
-	everblush			= 'everblush'
+	everblush			= 'everblush',
+  vscode        = 'vscode'
 }
+require("themes.palenightfall")
 vim.g.everblushNR = 1
 
-cmd('colorscheme '..colorschemes.everblush)
+cmd('colorscheme '..colorschemes.vscode)
 
 return colorschemes

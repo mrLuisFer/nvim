@@ -35,7 +35,7 @@ local options = {
   updatetime     = 100,                     --- Faster completion
   viminfo        = "'1000",                 --- Increase the size of file history
   wildignore     = { "*node_modules/**", '**/coverage/**', '**/.idea/**', '**/.git/**', '**/.nuxt/**' }, --- Don't search inside Node.js modules (works for gutentag)
-  wrap           = true,                    --- Display long lines as just one line
+  wrap           = false,                   --- Display long lines as just one line
   writebackup    = false,                   --- Not needed
   -- Neovim defaults
   autoindent     = true,                    --- Good auto indent
@@ -58,7 +58,7 @@ local options = {
 	inccommand     = 'nosplit',								-- Show preview of ex commands
 	whichwrap      = opt.whichwrap + 'h,l,<,>,[,]',
   showbreak      = '↳ ',                    -- DOWNWARDS ARROW WITH TIP RIGHTWARDS (U+21B3, UTF-8: E2 86 B3)
-  fillchars    = {
+  fillchars      = {
                   eob = ' ',                -- Suppress ~ at EndOfBuffer
                   fold = ' ',               -- Hide trailing folding characters
                  }
