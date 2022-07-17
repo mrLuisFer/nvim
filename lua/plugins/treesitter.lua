@@ -5,6 +5,7 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
   },
   textobjects = {
+    enable = true,
     select = {
 			enable = true,
       lookahead = true,
@@ -43,7 +44,7 @@ require'nvim-treesitter.configs'.setup {
     },
 
   },
-  sync_install = false,            -- install languages synchronously (only applied to `ensure_installed`)
+  sync_install = true,            
   incremental_selection = {
     enable = false,
     keymaps = {
