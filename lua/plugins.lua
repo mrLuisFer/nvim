@@ -24,10 +24,8 @@ return require("packer").startup(function()
 	use({ "navarasu/onedark.nvim", as = "onedark" })
 	use({ "morhetz/gruvbox" })
 	use({ "folke/tokyonight.nvim", branch = "main" })
-	use({ "catppuccin/nvim", as = "catppuccin" })
 	use({ "overcache/NeoSolarized", as = "neosolarized" })
 	use({ "glepnir/zephyr-nvim" })
-	use({ "JoosepAlviste/palenightfall.nvim" })
 	use({ "mangeshrex/everblush.vim" })
   use({ "wadackel/vim-dogrun" })
   use 'Mofiqul/vscode.nvim'
@@ -77,7 +75,7 @@ return require("packer").startup(function()
 	use({ "nvim-treesitter/nvim-treesitter" })
 
 	use({ "fatih/vim-go", run = ":GoUpdateBinaries" })
-	use({ "xiyaowong/nvim-transparent" })
+	-- use({ "xiyaowong/nvim-transparent" })
 	use({ "nathom/filetype.nvim" })
 	use({ "lewis6991/gitsigns.nvim" })
 	use({
@@ -96,14 +94,7 @@ return require("packer").startup(function()
 	use({ "hrsh7th/cmp-path" })
 	use({ "hrsh7th/cmp-cmdline" })
 	use({ "hrsh7th/cmp-calc" })
- --  use({ "David-Kunz/cmp-npm" })
- -- use({ "saadparwaiz1/cmp_luasnip" })
 	use({ "L3MON4D3/LuaSnip" })
 	-- if you want to use GitHub Copilot, enable this plugin and run :Copilot setup
 	-- use { 'github/copilot.vim' }
-  use({ 'neoclide/coc.nvim', branch = 'release', run = 'yarn install --frozen-lockfile', requires = {
-    { 'neoclide/coc-tsserver' },
-    { 'neoclide/coc-git' },
-    { 'neoclide/coc-snippets' }
-  }})
 end)

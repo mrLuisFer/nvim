@@ -34,13 +34,11 @@ local options = {
   undofile       = true,                    --- Sets undo to file
   updatetime     = 100,                     --- Faster completion
   viminfo        = "'1000",                 --- Increase the size of file history
-  wildignore     = { "*node_modules/**", '**/coverage/**', '**/.idea/**', '**/.git/**', '**/.nuxt/**' }, --- Don't search inside Node.js modules (works for gutentag)
+  wildignore     = { "*node_modules/**", '**/coverage/**', '**/.idea/**', '**/.nuxt/**' }, --- Don't search inside Node.js modules
   wrap           = false,                   --- Display long lines as just one line
-  writebackup    = false,                   --- Not needed
   -- Neovim defaults
   autoindent     = true,                    --- Good auto indent
   backspace      = "indent,eol,start",      --- Making sure backspace works
-  backup         = false,                   --- Recommended by coc
   conceallevel   = 1,                       --- Show `` in markdown files
   encoding       = "utf-8",                 --- The encoding displayed
   errorbells     = false,                   --- Disables sound effect for errors
@@ -48,16 +46,15 @@ local options = {
   incsearch      = true,                    --- Start searching before pressing enter
   showmode       = false,                   --- Don't show things like -- INSERT -- anymore
 	hidden         = true,
-  linebreak      = true,
-  list           = true,
-  showmatch      = true,
+  -- linebreak      = true,
+  -- list           = true,
+  -- showmatch      = true,
   joinspaces     = false,										-- Prevent inserting two spaces with J
   suffixesadd    = { '.md', '.js', '.ts', '.tsx' }, -- File extensions not required when opening with `gf`
   cmdheight      = 1,                       --- Give more space for displaying messages
 	confirm        = true,
 	inccommand     = 'nosplit',								-- Show preview of ex commands
-	whichwrap      = opt.whichwrap + 'h,l,<,>,[,]',
-  showbreak      = '↳ ',                    -- DOWNWARDS ARROW WITH TIP RIGHTWARDS (U+21B3, UTF-8: E2 86 B3)
+	-- whichwrap      = opt.whichwrap + 'h,l,<,>,[,]',
   fillchars      = {
                   eob = ' ',                -- Suppress ~ at EndOfBuffer
                   fold = ' ',               -- Hide trailing folding characters
@@ -86,7 +83,6 @@ for k, v in pairs(globals) do
   g[k] = v
 end
 
--- Global Plugins variable
 if fn.has('linux') or fn.has('unix') then
   g.python_host_prog = '/usr/bin/python3'
 elseif fn.has('win32') or fn.has('win64') then

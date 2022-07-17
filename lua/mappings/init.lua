@@ -4,6 +4,7 @@ local opts = { noremap = true, silent = true }
 
 -- Neovim Utils
 map("n", "<leader>w", ":w<CR>", opts)
+map("n", "<C-s>", ":w<CR>", opts)
 map("n", "<leader>so", ":so%<CR>", opts)
 map("n", "<leader>q", ":q<CR>", opts)
 map("n", "<C-x>", ":x<CR>", opts)
