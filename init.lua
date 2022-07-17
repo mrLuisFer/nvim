@@ -10,7 +10,6 @@ require("options.filetypes")
 require("themes")
 
 require("mappings")
-require("mappings.react-snippets")
 
 require("plugins.lsp")
 require("plugins.alpha")
