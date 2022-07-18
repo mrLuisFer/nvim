@@ -1,5 +1,5 @@
 require'nvim-treesitter.configs'.setup {
-	ensure_installed = "all",
+	ensure_installed = "",
 	ignore_install = { 'phpdoc', 'haskell' },
   highlight = {
     enable = true,
@@ -44,7 +44,7 @@ require'nvim-treesitter.configs'.setup {
     },
 
   },
-  sync_install = true,            
+  sync_install = true,
   incremental_selection = {
     enable = false,
     keymaps = {
