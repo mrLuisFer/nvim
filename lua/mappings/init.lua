@@ -13,7 +13,9 @@ map("i", "<C-s>", "<ESC> :w<CR>", opts)
 
 map("n", "<leader>so", ":so%<CR>", opts)
 map("n", "<leader>q", ":q<CR>", opts)
+
 map("n", "<C-x>", ":x<CR>", opts)
+map("n", "<leader>x", ":x<CR>", opts)
 
 -- Remove hightlights
 map("n", "<CR>", ":noh<CR><CR>", opts)
