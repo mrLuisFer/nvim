@@ -38,7 +38,7 @@ return require("packer").startup({function()
 	use({ "psliwka/vim-smoothie" })
   use({ "akinsho/bufferline.nvim", tag = "v2.*", config = function () require("bufferline").setup {} end })
 	use({ "romgrk/barbar.nvim", config = function() require("plugins.barbar") end })
-	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true, config = function() require("plugins.lualine") end }})
+	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true }})
   use { 'antoinemadec/FixCursorHold.nvim' } -- Needed while issue https://github.com/neovim/neovim/issues/12587 is still open
 	use({ "nathom/filetype.nvim" })
 	use({ "goolord/alpha-nvim", config = function() require("plugins.alpha")	end })
