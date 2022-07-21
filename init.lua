@@ -11,6 +11,7 @@ require("themes")
 
 require("mappings")
 
+require("plugins.indent")
 require("plugins.lsp")
 require("plugins.lualine")
 require("plugins.cmp")

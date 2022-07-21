@@ -60,7 +60,7 @@ return require("packer").startup({function()
 	use({ "fatih/vim-go", run = ":GoUpdateBinaries" })
   use { 'NvChad/nvim-colorizer.lua', config = function() require("plugins.colorizer") end}
   use { 'L3MON4D3/LuaSnip', requires = { 'rafamadriz/friendly-snippets' }, config = function() require("plugins.luasnip") end}
-  use({ "lukas-reineke/indent-blankline.nvim", config = function() require("plugins.indent") end })
+  use({ "lukas-reineke/indent-blankline.nvim" })
 	use({ "mcauley-penney/tidy.nvim", config = function() require("tidy").setup() end })
 	use({ "preservim/nerdcommenter" })
   use { "windwp/nvim-autopairs", after = { 'nvim-treesitter', 'nvim-cmp' }, config = function() require("plugins.autopairs") end }
