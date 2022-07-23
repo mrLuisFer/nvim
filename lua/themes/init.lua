@@ -12,6 +12,6 @@ local colorschemes = {
 }
 vim.g.everblushNR = 1
 
-cmd('colorscheme '..colorschemes.vscode)
+cmd('colorscheme '..colorschemes.zep)
 
 return colorschemes

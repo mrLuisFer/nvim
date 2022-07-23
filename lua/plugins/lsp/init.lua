@@ -82,7 +82,7 @@ local on_attach = function(client, bufnr)
   -- buf_set_keymap("n", "[d", ":lua vim.diagnostic.show()<CR>", opts)
   -- buf_set_keymap("n", "]d", ":lua vim.diagnostic.show()<CR>", opts)
   -- buf_set_keymap("n", "<leader>lq", ":lua vim.diagnostic.setloclist()<CR>", opts)
-  buf_set_keymap("n", "<C-l>", ":lua vim.lsp.buf.formatting()<CR>", opts) --> formats the current buffer
+  buf_set_keymap("n", "<leader>lf", ":lua vim.lsp.buf.format({ async = true })<CR>", opts) --> formats the current buffer
 
   formatting_callback(client, bufnr)
 end
