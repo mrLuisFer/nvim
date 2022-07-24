@@ -1,7 +1,7 @@
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
-		theme = "iceberg_dark", -- https://github.com/nvim-lualine/lualine.nvim/blob/master/THEMES.md#gruvbox_dark
+		theme = "horizon", -- https://github.com/nvim-lualine/lualine.nvim/blob/master/THEMES.md#gruvbox_dark
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = {},

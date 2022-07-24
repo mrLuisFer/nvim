@@ -103,7 +103,7 @@ return require("packer").startup({function()
 	use({ "hrsh7th/cmp-cmdline" })
 	use({ "hrsh7th/cmp-calc" })
   use { 'tzachar/cmp-tabnine', run = './install.sh'}
-  use { 'David-Kunz/cmp-npm', requires = 'nvim-lua/plenary.nvim' } -- config = "require('plugins.cmp-npm')" }
+  use { 'David-Kunz/cmp-npm', requires = 'nvim-lua/plenary.nvim' }
   use { 'saadparwaiz1/cmp_luasnip' }
 
   if packer_bootstrap then

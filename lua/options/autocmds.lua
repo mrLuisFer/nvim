@@ -1,7 +1,7 @@
 local api = vim.api
 
 -- Auto sync plugins on save of plugins.lua
-api.nvim_create_autocmd("BufWritePost", { pattern = "plugins.lua", command = "source <afile> | PackerSync" })
+-- api.nvim_create_autocmd("BufWritePost", { pattern = "plugins.lua", command = "source <afile> | PackerSync" })
 
 -- Highlight on yank
 api.nvim_create_autocmd("TextYankPost",
