@@ -45,6 +45,7 @@ return require("packer").startup({function()
 	use({ "prettier/vim-prettier", run = "yarn install --frozen-lockfile --production" })
 	use({ "kyazdani42/nvim-tree.lua", config = function() require("plugins.treelua") end })
   use({ "petertriho/nvim-scrollbar", config = function() require("scrollbar").setup{} end })
+  use({ "xiyaowong/nvim-transparent", config = function () require("plugins.transparent") end })
 
   -- LSP:
 	use({ "neovim/nvim-lspconfig" })
