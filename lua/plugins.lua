@@ -53,9 +53,9 @@ return require("packer").startup({function()
 	use({ "onsails/lspkind-nvim" })
 	use({ "williamboman/nvim-lsp-installer" })
 	use({ "folke/lsp-colors.nvim" })
-  use { 'stevearc/dressing.nvim', requires = 'MunifTanjim/nui.nvim', config = "require('plugins.lsp.dressing')" }
   use { 'folke/lsp-trouble.nvim', config = function() require("plugins.lsp.trouble") end }
-  use { 'ChristianChiarulli/nvim-gps', branch = 'text_hl', config = "require('plugins.lsp.gps')" }
+
+  use ({'Shougo/deoplete.nvim', run = ':UpdateRemotePlugins' })
 
   -- SYNTAX: and LANGUAGES:
   use { 'jose-elias-alvarez/typescript.nvim' }
@@ -65,7 +65,7 @@ return require("packer").startup({function()
   use({ "lukas-reineke/indent-blankline.nvim" })
 	use({ "mcauley-penney/tidy.nvim", config = function() require("tidy").setup() end })
 	use({ "preservim/nerdcommenter" })
-  use { "windwp/nvim-autopairs", after = { 'nvim-treesitter', 'nvim-cmp' }, config = function() require("plugins.autopairs") end }
+  use { "windwp/nvim-autopairs", after = { 'nvim-treesitter' }, config = function() require("plugins.autopairs") end }
   use { 'nacro90/numb.nvim', config = function() require('numb') end }
 
   -- TELESCOPE:
@@ -93,18 +93,6 @@ return require("packer").startup({function()
   use {"sindrets/diffview.nvim", config = function() require("plugins.git.diffview") end }
   -- if you want to use GitHub Copilot, enable this plugin and run :Copilot setup
 	-- use { 'github/copilot.vim' }
-
-	-- CMP:
-	use({ "hrsh7th/nvim-cmp" })
-	use({ "hrsh7th/cmp-nvim-lua" })
-	use({ "hrsh7th/cmp-nvim-lsp" })
-	use({ "hrsh7th/cmp-buffer" })
-	use({ "hrsh7th/cmp-path" })
-	use({ "hrsh7th/cmp-cmdline" })
-	use({ "hrsh7th/cmp-calc" })
-  use { 'tzachar/cmp-tabnine', run = './install.sh'}
-  use { 'David-Kunz/cmp-npm', requires = 'nvim-lua/plenary.nvim' }
-  use { 'saadparwaiz1/cmp_luasnip' }
 
   if packer_bootstrap then
     require('packer').sync()
