@@ -2,10 +2,6 @@ local g = vim.g
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
--- -- -- -- -- -- --
--- -- -- Neovim Utils
--- -- -- -- -- -- --
-
 -- Save file using `CTRL-S` or `Space-w`
 map("n", "<leader>w", ":w<CR>", opts)
 map("n", "<C-s>", ":w<CR>", opts)

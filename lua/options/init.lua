@@ -4,8 +4,8 @@ local g   =   vim.g
 
 opt.ruler          = true
 opt.clipboard      = "unnamed,unnamedplus"   --- Copy-paste between vim and everything else
-opt.completeopt    = "menu,menuone,noselect" --- Better autocompletion
-opt.cursorline     = false                   --- Highlight of current line
+opt.completeopt    = "menu,menuone,noselect,noinsert" --- Better autocompletion
+opt.cursorline     = true                    --- Highlight of current line
 opt.emoji          = true                    --- Fix emoji display
 opt.expandtab      = true                    --- Use spaces instead of tabs
 opt.foldlevelstart = 99                      --- Expand all folds by default
