@@ -1,7 +1,6 @@
 local fn  =   vim.fn
 local opt =   vim.opt
 local g   =   vim.g
-local cmd =   vim.cmd
 
 opt.ruler          = true
 opt.clipboard      = "unnamed,unnamedplus"   --- Copy-paste between vim and everything else
@@ -63,10 +62,6 @@ g.mapleader                           = ' '        --- Map leader key to SPC
 g.speeddating_no_mappings             = 1          --- Disable default mappings for speeddating
 g.vim_svelte_plugin_load_full_syntax  = 1
 g.neoline_disable_tabline             = 1
-
-cmd([[
-  let g:deoplete#enable_at_startup = 1
-]])
 
 opt.shortmess:append('c');
 opt.formatoptions:remove('c');

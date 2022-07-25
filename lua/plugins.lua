@@ -56,6 +56,9 @@ return require("packer").startup({function()
   use { 'folke/lsp-trouble.nvim', config = function() require("plugins.lsp.trouble") end }
 
   use ({'Shougo/deoplete.nvim', run = ':UpdateRemotePlugins' })
+  use({ 'deoplete-plugins/deoplete-lsp' })
+  use({ 'deoplete-plugins/deoplete-jedi' })
+  use({ 'deoplete-plugins/deoplete-go', run = 'make' })
 
   -- SYNTAX: and LANGUAGES:
   use { 'jose-elias-alvarez/typescript.nvim' }
