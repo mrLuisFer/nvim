@@ -3,6 +3,7 @@ local lsp = vim.lsp
 local util = require("vim.lsp.util")
 
 local lspconfig = require("lspconfig")
+
 local capabilities = lsp.protocol.make_client_capabilities()
 local lsp_installer_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
 
@@ -63,6 +64,7 @@ local formatting_callback = function(client, bufnr)
 end
 
 local on_attach = function(client, bufnr)
+  api.nvim_exec_autocmds('User', { pattern = 'LspAttached' })
   local opts = { noremap = true, silent = true }
   local function buf_set_keymap(...)
     api.nvim_buf_set_keymap(bufnr, ...)
@@ -84,6 +86,21 @@ local on_attach = function(client, bufnr)
   formatting_callback(client, bufnr)
 end
 
+local lsp_defaults = {
+  flags = {
+    debounce_text_changes = 150,
+  },
+  capabilities = require('cmp_nvim_lsp').update_capabilities(
+    lsp.protocol.make_client_capabilities()
+  ),
+  on_attach = on_attach
+}
+
+lspconfig.util.default_config = vim.tbl_deep_extend(
+  'force',
+  lspconfig.util.default_config,
+  lsp_defaults
+)
 
 for _, server in ipairs(servers) do
   lspconfig[server].setup({

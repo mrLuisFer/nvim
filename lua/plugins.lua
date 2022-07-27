@@ -37,15 +37,15 @@ return require("packer").startup({function()
 	use({ "christoomey/vim-tmux-navigator" }) -- Navigate with C-h C-l C-j C-k
 	use({ "psliwka/vim-smoothie" })
   use({ "akinsho/bufferline.nvim", tag = "v2.*", config = function () require("bufferline").setup {} end })
-	use({ "romgrk/barbar.nvim", config = function() require("plugins.barbar") end })
+	use({ "romgrk/barbar.nvim", config = function() require("plugins.ui.barbar") end })
 	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true }})
   use { 'antoinemadec/FixCursorHold.nvim' } -- Needed while issue https://github.com/neovim/neovim/issues/12587 is still open
 	use({ "nathom/filetype.nvim" })
-	use({ "goolord/alpha-nvim", config = function() require("plugins.alpha")	end })
+	use({ "goolord/alpha-nvim", config = function() require("plugins.ui.alpha")	end })
 	use({ "prettier/vim-prettier", run = "yarn install --frozen-lockfile --production" })
-	use({ "kyazdani42/nvim-tree.lua", config = function() require("plugins.treelua") end })
+	use({ "kyazdani42/nvim-tree.lua", config = function() require("plugins.ui.treelua") end })
   use({ "petertriho/nvim-scrollbar", config = function() require("scrollbar").setup{} end })
-  use({ "xiyaowong/nvim-transparent", config = function () require("plugins.transparent") end })
+  use({ "xiyaowong/nvim-transparent", config = function () require("plugins.ui.transparent") end })
 
   -- DOC: vim-visual-multi
   use({ 'mg979/vim-visual-multi', branch = 'master' })
@@ -69,12 +69,12 @@ return require("packer").startup({function()
   -- SYNTAX: and LANGUAGES:
   use { 'jose-elias-alvarez/typescript.nvim' }
 	use({ "fatih/vim-go", run = ":GoUpdateBinaries" })
-  use { 'NvChad/nvim-colorizer.lua', config = function() require("plugins.colorizer") end}
+  use { 'NvChad/nvim-colorizer.lua', config = function() require("plugins.syntax.colorizer") end}
   use { 'L3MON4D3/LuaSnip', requires = { 'rafamadriz/friendly-snippets' }, config = function() require("plugins.luasnip") end}
   use({ "lukas-reineke/indent-blankline.nvim" })
 	use({ "mcauley-penney/tidy.nvim", config = function() require("tidy").setup() end })
 	use({ "preservim/nerdcommenter" })
-  use { "windwp/nvim-autopairs", after = { 'nvim-treesitter' }, config = function() require("plugins.autopairs") end }
+  use { "windwp/nvim-autopairs", after = { 'nvim-treesitter' }, config = function() require("plugins.syntax.autopairs") end }
   use { 'nacro90/numb.nvim', config = function() require('numb') end }
 
   -- TELESCOPE:
@@ -89,12 +89,20 @@ return require("packer").startup({function()
 	use({ "junegunn/fzf.vim" })
 
 	-- TREESITTER:
-	use({ "nvim-treesitter/nvim-treesitter", config = function() require("plugins.treesitter") end })
+	use({ "nvim-treesitter/nvim-treesitter", config = function() require("plugins.syntax.treesitter") end })
   use { 'nvim-treesitter/nvim-treesitter-textobjects', after = { 'nvim-treesitter' } }
   use { 'RRethy/nvim-treesitter-textsubjects', after = { 'nvim-treesitter' } }
 	use({ "m-demare/hlargs.nvim", config = function() require("hlargs").setup() end })
   use { 'JoosepAlviste/nvim-ts-context-commentstring', after = { 'nvim-treesitter' } }
   use { 'p00f/nvim-ts-rainbow', after = { 'nvim-treesitter' } }
+
+  -- CMP Intellisense
+  use { 'hrsh7th/cmp-nvim-lsp' }
+  use { 'hrsh7th/cmp-buffer' }
+  use { 'hrsh7th/cmp-path' }
+  use { 'hrsh7th/cmp-cmdline' }
+  use { 'hrsh7th/nvim-cmp' }
+  use { 'saadparwaiz1/cmp_luasnip' }
 
   -- GIT:
   use { 'kdheepak/lazygit.nvim' }
