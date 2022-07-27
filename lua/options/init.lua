@@ -2,66 +2,76 @@ local fn  =   vim.fn
 local opt =   vim.opt
 local g   =   vim.g
 
-opt.ruler          = true
-opt.clipboard      = "unnamed,unnamedplus"   --- Copy-paste between vim and everything else
-opt.completeopt    = "menu,menuone,noselect,noinsert" --- Better autocompletion
-opt.cursorline     = true                    --- Highlight of current line
-opt.emoji          = true                    --- Fix emoji display
-opt.expandtab      = true                    --- Use spaces instead of tabs
-opt.foldlevelstart = 99                      --- Expand all folds by default
-opt.foldtext       = "CustomFold()"          --- Emit custom function for foldtext
-opt.ignorecase     = true                    --- Needed for smartcase
-opt.laststatus     = 3                       --- Have a global statusline at the bottom instead of one for each window
-opt.lazyredraw     = true                    --- Makes macros faster & prevent errors in complicated mappings
-opt.mouse          = "a"                     --- Enable mouse
-opt.number         = true                    --- Shows current line number
-opt.pumheight      = 10                      --- Max num of items in completion menu
-opt.relativenumber = true                    --- Enables relative number
-opt.scrolloff      = 8                       --- Always keep space when scrolling to bottom/top edge
-opt.shiftwidth     = 2                       --- Change a number of space characeters inseted for indentation
-opt.showtabline    = 2                       --- Always show tabs
-opt.signcolumn     = "yes:1"                 --- Add extra sign column next to line number
-opt.smartcase      = true                    --- Uses case in search
-opt.smartindent    = true                    --- Makes indenting smart
-opt.smarttab       = true                    --- Makes tabbing smarter will realize you have 2 vs 4
-opt.softtabstop    = 2                       --- Insert 2 spaces for a tab
-opt.splitright     = true                    --- Vertical splits will automatically be to the right
-opt.swapfile       = false                   --- Swap not needed
-opt.tabstop        = 2                       --- Insert 2 spaces for a tab
-opt.termguicolors  = true                    --- Correct terminal colors
-opt.timeoutlen     = 200                     --- Faster completion (cannot be lower than 200 because then commenting doesn't work)
-opt.undofile       = true                    --- Sets undo to file
-opt.updatetime     = 100                     --- Faster completion
-opt.viminfo        = "'1000"                 --- Increase the size of file history
-opt.wildignore     = { "*node_modules/**", '**/coverage/**', '**/.idea/**', '**/.nuxt/**' } --- Don't search inside Node.js modules
-opt.wrap           = false                   --- Display long lines as just one line
-
-  -- Neovim defaults
-opt.autoindent     = true                    --- Good auto indent
-opt.backspace      = "indent,eol,start"      --- Making sure backspace works
-opt.conceallevel   = 1                       --- Show `` in markdown files
-opt.encoding       = "utf-8"                 --- The encoding displayed
-opt.errorbells     = false                   --- Disables sound effect for errors
-opt.fileencoding   = "utf-8"                 --- The encoding written to file
-opt.incsearch      = true                    --- Start searching before pressing enter
-opt.showmode       = false                   --- Don't show things like -- INSERT -- anymore
-opt.hidden         = true
-opt.joinspaces     = false										-- Prevent inserting two spaces with J
-opt.suffixesadd    = { '.md', '.js', '.ts', '.tsx', '.jsx' } -- File extensions not required when opening with `gf`
-opt.cmdheight      = 1                       --- Give more space for displaying messages
-opt.confirm        = true
-opt.inccommand     = 'nosplit'								-- Show preview of ex commands
-opt.whichwrap      = opt.whichwrap + 'h,l,<,>,[,]'
-opt.fillchars      = {
+local options = {
+  ruler          = true,
+  clipboard      = "unnamed,unnamedplus",   --- Copy-paste between vim and everything else
+  completeopt    = "menu,menuone,noselect,noinsert", --- Better autocompletion
+  cursorline     = true,                    --- Highlight of current line
+  emoji          = true,                    --- Fix emoji display
+  expandtab      = true,                    --- Use spaces instead of tabs
+  foldlevelstart = 99,                      --- Expand all folds by default
+  foldtext       = "CustomFold()",          --- Emit custom function for foldtext
+  ignorecase     = true,                    --- Needed for smartcase
+  laststatus     = 3,                       --- Have a global statusline at the bottom instead of one for each window
+  lazyredraw     = true,                    --- Makes macros faster & prevent errors in complicated mappings
+  mouse          = "a",                     --- Enable mouse
+  number         = true,                    --- Shows current line number
+  pumheight      = 10,                      --- Max num of items in completion menu
+  relativenumber = true,                    --- Enables relative number
+  scrolloff      = 8,                       --- Always keep space when scrolling to bottom/top edge
+  shiftwidth     = 2,                       --- Change a number of space characeters inseted for indentation
+  showtabline    = 2,                       --- Always show tabs
+  signcolumn     = "yes:1",                 --- Add extra sign column next to line number
+  smartcase      = true,                    --- Uses case in search
+  smartindent    = true,                    --- Makes indenting smart
+  smarttab       = true,                    --- Makes tabbing smarter will realize you have 2 vs 4
+  softtabstop    = 2,                       --- Insert 2 spaces for a tab
+  splitright     = true,                    --- Vertical splits will automatically be to the right
+  swapfile       = false,                   --- Swap not needed
+  tabstop        = 2,                       --- Insert 2 spaces for a tab
+  termguicolors  = true,                    --- Correct terminal colors
+  timeoutlen     = 200,                     --- Faster completion (cannot be lower than 200 because then commenting doesn't work)
+  undofile       = true,                    --- Sets undo to file
+  updatetime     = 100,                     --- Faster completion
+  viminfo        = "'1000",                 --- Increase the size of file history
+  wildignore     = { "*node_modules/**", '**/coverage/**', '**/.idea/**', '**/.nuxt/**' }, --- Don't search inside Node.js modules
+  wrap           = false,                   --- Display long lines as just one line
+  autoindent     = true,                    --- Good auto indent
+  backspace      = "indent,eol,start",      --- Making sure backspace works
+  conceallevel   = 1,                       --- Show `` in markdown files
+  encoding       = "utf-8",                 --- The encoding displayed
+  errorbells     = false,                   --- Disables sound effect for errors
+  fileencoding   = "utf-8",                 --- The encoding written to file
+  incsearch      = true,                    --- Start searching before pressing enter
+  showmode       = false,                   --- Don't show things like -- INSERT -- anymore
+  hidden         = true,
+  joinspaces     = false,										-- Prevent inserting two spaces with J
+  suffixesadd    = { '.md', '.js', '.ts', '.tsx', '.jsx' }, -- File extensions not required when opening with `gf`
+  cmdheight      = 1,                       --- Give more space for displaying messages
+  confirm        = true,
+  inccommand     = 'nosplit',								-- Show preview of ex commands
+  whichwrap      = opt.whichwrap + 'h,l,<,>,[,]',
+  fillchars      = {
                   eob = ' ',                -- Suppress ~ at EndOfBuffer
                   fold = ' ',               -- Hide trailing folding characters
-                 }
+                 },
+}
 
-g.fillchars                           = "fold:\\ " --- Fill chars needed for folds
-g.mapleader                           = ' '        --- Map leader key to SPC
-g.speeddating_no_mappings             = 1          --- Disable default mappings for speeddating
-g.vim_svelte_plugin_load_full_syntax  = 1
-g.neoline_disable_tabline             = 1
+local globals = {
+  fillchars                           = "fold:\\ ", --- Fill chars needed for folds
+  mapleader                           = ' ',        --- Map leader key to SPC
+  speeddating_no_mappings             = 1,          --- Disable default mappings for speeddating
+  vim_svelte_plugin_load_full_syntax  = 1,
+  neoline_disable_tabline             = 1,
+}
+
+for k, v in pairs(options) do
+  opt[k] = v
+end
+
+for k, v in pairs(globals) do
+  g[k] = v
+end
 
 opt.shortmess:append('c');
 opt.formatoptions:remove('c');

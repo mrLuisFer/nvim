@@ -47,6 +47,17 @@ return require("packer").startup({function()
   use({ "petertriho/nvim-scrollbar", config = function() require("scrollbar").setup{} end })
   use({ "xiyaowong/nvim-transparent", config = function () require("plugins.transparent") end })
 
+  -- DOC: vim-visual-multi
+  use({ 'mg979/vim-visual-multi', branch = 'master' })
+    -- select words with Ctrl-N (like Ctrl-d in Sublime Text/VS Code)
+    -- create cursors vertically with Ctrl-Down/Ctrl-Up
+    -- select one character at a time with Shift-Arrows
+    -- press n/N to get next/previous occurrence
+    -- press [/] to select next/previous cursor
+    -- press q to skip current and get next occurrence
+    -- press Q to remove current cursor/selection
+    -- start insert mode with i,a,I,A
+
   -- LSP:
 	use({ "neovim/nvim-lspconfig" })
 	use({ "glepnir/lspsaga.nvim" })
@@ -77,7 +88,7 @@ return require("packer").startup({function()
 	use({ "junegunn/fzf", dir = "~/.fzf", run = "./install --all" })
 	use({ "junegunn/fzf.vim" })
 
-	  -- TREESITTER:
+	-- TREESITTER:
 	use({ "nvim-treesitter/nvim-treesitter", config = function() require("plugins.treesitter") end })
   use { 'nvim-treesitter/nvim-treesitter-textobjects', after = { 'nvim-treesitter' } }
   use { 'RRethy/nvim-treesitter-textsubjects', after = { 'nvim-treesitter' } }
@@ -89,8 +100,7 @@ return require("packer").startup({function()
   use { 'kdheepak/lazygit.nvim' }
 	use({ "lewis6991/gitsigns.nvim", config = function() require("plugins.git.signs") end })
   use {"sindrets/diffview.nvim", config = function() require("plugins.git.diffview") end }
-  -- if you want to use GitHub Copilot, enable this plugin and run :Copilot setup
-	-- use { 'github/copilot.vim' }
+	-- use { 'github/copilot.vim' } -- if you want to use GitHub Copilot, enable this plugin and run :Copilot setup
 
   if packer_bootstrap then
     require('packer').sync()
