@@ -59,7 +59,7 @@ map("n", "<A-9>", "<Cmd>BufferGoto 9<CR>", opts)
 map("n", "<A-0>", "<Cmd>BufferLast<CR>", opts)
 
 -- Diffview
-map('n', '<C-d>', '<cmd>lua require("plugins.git.diffview").toggle()<CR>', opts)
+map('n', '<leader>df', '<cmd>lua require("plugins.git.diffview").toggle()<CR>', opts)
 -- LazyGit
 -- For use this plugin and keymap you need to have installed lazygit
 map('n', '<leader>gg', ':LazyGit<CR>', opts)
