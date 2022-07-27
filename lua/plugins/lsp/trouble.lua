@@ -1,4 +1,4 @@
-local icons = require("icons") 
+local icons = require("icons")
 
 require("trouble").setup {
   position = "bottom", -- position of the list can be: bottom, top, left, right
@@ -38,11 +38,10 @@ require("trouble").setup {
   auto_fold = false, -- automatically fold a file trouble list at creation
   auto_jump = {"lsp_definitions"}, -- for the given modes, automatically jump if there is only a single result
   signs = {
-      -- icons / text used for a diagnostic
       error       = icons.errorOutline,
       warning     = icons.warningTriangleNoBg,
       hint        = icons.lightbulbOutline,
       information = icons.infoOutline,
   },
-  use_diagnostic_signs = false -- enabling this will use the signs defined in your lsp client
+  use_diagnostic_signs = true
 };
