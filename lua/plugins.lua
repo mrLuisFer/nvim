@@ -88,7 +88,7 @@ return require("packer").startup({function()
 	use({ "nvim-treesitter/nvim-treesitter", config = function() require("plugins.syntax.treesitter") end })
   use { 'nvim-treesitter/nvim-treesitter-textobjects', after = { 'nvim-treesitter' } }
   use { 'RRethy/nvim-treesitter-textsubjects', after = { 'nvim-treesitter' } }
-	use({ "m-demare/hlargs.nvim", config = function() require("hlargs").enable() end })
+	use({ "m-demare/hlargs.nvim", config = function() require("hlargs").setup() end })
 
   -- CMP Intellisense
   use { 'hrsh7th/cmp-nvim-lsp' }
