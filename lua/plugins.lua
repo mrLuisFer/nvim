@@ -61,7 +61,6 @@ return require("packer").startup({function()
 	use({ "glepnir/lspsaga.nvim" })
 	use({ "onsails/lspkind-nvim" })
 	use({ "williamboman/nvim-lsp-installer" })
-	use({ "folke/lsp-colors.nvim" })
   use { 'folke/lsp-trouble.nvim', config = function() require("plugins.lsp.trouble") end }
 
   -- SYNTAX: and LANGUAGES:
@@ -73,8 +72,6 @@ return require("packer").startup({function()
 	use({ "preservim/nerdcommenter" })
   use { "windwp/nvim-autopairs", after = { 'nvim-treesitter' }, config = function() require("plugins.syntax.autopairs") end }
   use { 'nacro90/numb.nvim', config = function() require('numb') end }
-  use 'jose-elias-alvarez/null-ls.nvim'
-  use 'MunifTanjim/eslint.nvim'
 
   -- TELESCOPE:
 	use({ "nvim-telescope/telescope.nvim" })
@@ -92,8 +89,6 @@ return require("packer").startup({function()
   use { 'nvim-treesitter/nvim-treesitter-textobjects', after = { 'nvim-treesitter' } }
   use { 'RRethy/nvim-treesitter-textsubjects', after = { 'nvim-treesitter' } }
 	use({ "m-demare/hlargs.nvim", config = function() require("hlargs").setup() end })
-  use { 'JoosepAlviste/nvim-ts-context-commentstring', after = { 'nvim-treesitter' } }
-  use { 'p00f/nvim-ts-rainbow', after = { 'nvim-treesitter' } }
 
   -- CMP Intellisense
   use { 'hrsh7th/cmp-nvim-lsp' }

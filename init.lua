@@ -13,7 +13,6 @@ require("mappings")
 
 require("plugins.syntax.indent")
 require("plugins.lsp")
-require("plugins.lsp.eslint")
 require("plugins.syntax.cmp")
 require("plugins.ui.lualine")
 require("plugins.telescope")
