@@ -1,7 +1,6 @@
 local use = require("packer").use
 local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
-
 local packer_bootstrap = nil
 
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -44,7 +43,6 @@ return require("packer").startup({function()
 	use({ "goolord/alpha-nvim", config = function() require("plugins.ui.alpha")	end })
 	use({ "prettier/vim-prettier", run = "yarn install --frozen-lockfile --production" })
 	use({ "kyazdani42/nvim-tree.lua", config = function() require("plugins.ui.treelua") end })
-  use({ "petertriho/nvim-scrollbar", config = function() require("scrollbar").setup{} end })
   use({ "xiyaowong/nvim-transparent", config = function () require("plugins.ui.transparent") end })
 
   -- DOC: vim-visual-multi
@@ -67,7 +65,6 @@ return require("packer").startup({function()
   use { 'folke/lsp-trouble.nvim', config = function() require("plugins.lsp.trouble") end }
 
   -- SYNTAX: and LANGUAGES:
-  use { 'jose-elias-alvarez/typescript.nvim' }
 	use({ "fatih/vim-go", run = ":GoUpdateBinaries" })
   use { 'NvChad/nvim-colorizer.lua', config = function() require("plugins.syntax.colorizer") end}
   use { 'L3MON4D3/LuaSnip', requires = { 'rafamadriz/friendly-snippets' }, config = function() require("plugins.luasnip") end}

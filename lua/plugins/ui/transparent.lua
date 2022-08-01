@@ -1,5 +1,7 @@
+local enabled = false
+
 require("transparent").setup({
-  enable = true, -- boolean: enable transparent
+  enable = enabled, -- boolean: enable transparent
   extra_groups = {
     "all",
     "BufferLineTabClose",
@@ -13,4 +15,4 @@ require("transparent").setup({
   exclude = {}, -- table: groups you don't want to clear
 })
 
-vim.g.transparent_enabled = true
+vim.g.transparent_enabled = enabled

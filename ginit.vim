@@ -15,7 +15,7 @@ endif
 
 " Enable GUI ScrollBar
 if exists(':GuiScrollBar')
-  GuiScrollBar 1
+  GuiScrollBar 0
 endif
 
 " Right Click Context Menu (Copy-Cut-Paste)
