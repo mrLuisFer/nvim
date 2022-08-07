@@ -24,17 +24,13 @@ return require("packer").startup({function()
 	use({ "navarasu/onedark.nvim", as = "onedark" })
 	use({ "morhetz/gruvbox" })
 	use({ "folke/tokyonight.nvim", branch = "main" })
-	use({ "overcache/NeoSolarized", as = "neosolarized" })
 	use({ "glepnir/zephyr-nvim" })
-	use({ "mangeshrex/everblush.vim" })
   use({ "wadackel/vim-dogrun" })
-  use 'Mofiqul/vscode.nvim'
 
 	-- PLUGINS:
 	use({ "kyazdani42/nvim-web-devicons" })
 	use({ "ryanoasis/vim-devicons" })
 	use({ "christoomey/vim-tmux-navigator" }) -- Navigate with C-h C-l C-j C-k
-	use({ "psliwka/vim-smoothie" })
   use({ "akinsho/bufferline.nvim", tag = "v2.*", config = function () require("bufferline").setup {} end })
 	use({ "romgrk/barbar.nvim", config = function() require("plugins.ui.barbar") end })
 	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true }})
@@ -61,13 +57,11 @@ return require("packer").startup({function()
 	use({ "glepnir/lspsaga.nvim" })
 	use({ "onsails/lspkind-nvim" })
 	use({ "williamboman/nvim-lsp-installer" })
-  use { 'folke/lsp-trouble.nvim', config = function() require("plugins.lsp.trouble") end }
 
   -- SYNTAX: and LANGUAGES:
 	use({ "fatih/vim-go", run = ":GoUpdateBinaries" })
   use { 'NvChad/nvim-colorizer.lua', config = function() require("plugins.syntax.colorizer") end}
   use { 'L3MON4D3/LuaSnip', requires = { 'rafamadriz/friendly-snippets' }, config = function() require("plugins.luasnip") end}
-  use({ "lukas-reineke/indent-blankline.nvim" })
 	use({ "mcauley-penney/tidy.nvim", config = function() require("tidy").setup() end })
 	use({ "preservim/nerdcommenter" })
   use { "windwp/nvim-autopairs", after = { 'nvim-treesitter' }, config = function() require("plugins.syntax.autopairs") end }
@@ -103,8 +97,7 @@ return require("packer").startup({function()
   -- GIT:
   use { 'kdheepak/lazygit.nvim' }
 	use({ "lewis6991/gitsigns.nvim", config = function() require("plugins.git.signs") end })
-  use {"sindrets/diffview.nvim", config = function() require("plugins.git.diffview") end }
-	-- use { 'github/copilot.vim' } -- if you want to use GitHub Copilot, enable this plugin and run :Copilot setup
+  -- use { 'github/copilot.vim' } -- if you want to use GitHub Copilot, enable this plugin and run :Copilot setup
 
   if packer_bootstrap then
     require('packer').sync()
