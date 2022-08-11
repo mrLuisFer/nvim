@@ -3,6 +3,10 @@ local opt =   vim.opt
 local g   =   vim.g
 
 local options = {
+  background     = 'dark',
+  wildoptions    = 'pum',
+  pumblend       = 5,
+  winblend       = 0,
   backup         = false,
   ruler          = true,
   clipboard      = "unnamed,unnamedplus",   --- Copy-paste between vim and everything else

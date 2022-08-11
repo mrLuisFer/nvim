@@ -46,8 +46,8 @@ packer.startup({ function()
   use({ "goolord/alpha-nvim", config = function() require("plugins.ui.alpha") end })
   use({ "prettier/vim-prettier", run = "yarn install --frozen-lockfile --production" })
   use({ "kyazdani42/nvim-tree.lua", config = function() require("plugins.ui.treelua") end })
+  use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
   use({ "xiyaowong/nvim-transparent", config = function() require("plugins.ui.transparent") end })
-  use({ 'karb94/neoscroll.nvim', config = function() require('neoscroll').setup() end })
   use({ 'mg979/vim-visual-multi', branch = 'master' })
   use { 'hrsh7th/vim-vsnip' }
 
@@ -57,6 +57,10 @@ packer.startup({ function()
   use({ "onsails/lspkind-nvim" })
   use({ "williamboman/nvim-lsp-installer" })
   use { 'neoclide/coc.nvim', branch = 'release' }
+  use { 'jose-elias-alvarez/null-ls.nvim', config = function() require("plugins.lsp.null-ls") end }
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+
 
   -- SYNTAX: and LANGUAGES:
   use({ "fatih/vim-go", run = ":GoUpdateBinaries" })
@@ -68,10 +72,11 @@ packer.startup({ function()
   use { 'nacro90/numb.nvim', config = function() require('numb') end }
 
   -- TELESCOPE:
-  use({ "nvim-telescope/telescope.nvim" })
   use({ "nvim-lua/popup.nvim" })
   use { "nvim-lua/plenary.nvim" }
+  use({ "nvim-telescope/telescope.nvim" })
   use { "nvim-telescope/telescope-fzf-native.nvim" }
+  use { 'nvim-telescope/telescope-file-browser.nvim' }
   use { 'cljoly/telescope-repo.nvim' }
   use { 'kevinhwang91/nvim-bqf', ft = 'qf' }
   use { 'nvim-pack/nvim-spectre' }
@@ -85,6 +90,7 @@ packer.startup({ function()
   use({ "m-demare/hlargs.nvim", config = function() require("hlargs").setup() end })
   use { "windwp/nvim-autopairs", after = { 'nvim-treesitter' },
     config = function() require("plugins.syntax.autopairs") end }
+  use 'windwp/nvim-ts-autotag'
 
   -- GIT:
   use { 'kdheepak/lazygit.nvim' }
