@@ -1,3 +1,10 @@
+local packerOk, packer = pcall(require, "packer")
+if (not packerOk) then
+  print("Packer is not installed")
+  return
+end
+vim.cmd [[ packadd packer.nvim ]]
+
 local use = require("packer").use
 local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
@@ -16,7 +23,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 -- PACKER:
-return require("packer").startup({ function()
+packer.startup({ function()
   use("wbthomason/packer.nvim")
   use({ "lewis6991/impatient.nvim" })
 
@@ -42,13 +49,13 @@ return require("packer").startup({ function()
   use({ "xiyaowong/nvim-transparent", config = function() require("plugins.ui.transparent") end })
   use({ 'karb94/neoscroll.nvim', config = function() require('neoscroll').setup() end })
   use({ 'mg979/vim-visual-multi', branch = 'master' })
+  use { 'hrsh7th/vim-vsnip' }
 
   -- LSP:
   use({ "neovim/nvim-lspconfig" })
   use({ "glepnir/lspsaga.nvim" })
   use({ "onsails/lspkind-nvim" })
   use({ "williamboman/nvim-lsp-installer" })
-
   use { 'neoclide/coc.nvim', branch = 'release' }
 
   -- SYNTAX: and LANGUAGES:
@@ -58,8 +65,6 @@ return require("packer").startup({ function()
     config = function() require("plugins.luasnip") end }
   use({ "mcauley-penney/tidy.nvim", config = function() require("tidy").setup() end })
   use({ "preservim/nerdcommenter" })
-  use { "windwp/nvim-autopairs", after = { 'nvim-treesitter' },
-    config = function() require("plugins.syntax.autopairs") end }
   use { 'nacro90/numb.nvim', config = function() require('numb') end }
 
   -- TELESCOPE:
@@ -78,8 +83,8 @@ return require("packer").startup({ function()
   use { 'nvim-treesitter/nvim-treesitter-textobjects', after = { 'nvim-treesitter' } }
   use { 'RRethy/nvim-treesitter-textsubjects', after = { 'nvim-treesitter' } }
   use({ "m-demare/hlargs.nvim", config = function() require("hlargs").setup() end })
-
-  use { 'hrsh7th/vim-vsnip' }
+  use { "windwp/nvim-autopairs", after = { 'nvim-treesitter' },
+    config = function() require("plugins.syntax.autopairs") end }
 
   -- GIT:
   use { 'kdheepak/lazygit.nvim' }

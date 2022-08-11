@@ -67,4 +67,12 @@ map('n', 'gy', '<Plug>(coc-type-definition)', opts)
 map('n', 'gi', '<Plug>(coc-implementation)', opts)
 map('n', 'gr', '<Plug>(coc-references)', opts)
 
--- vim.cmd "source $HOME/.config/nvim/lua/plugins/syntax/coc.vim"
+-- Delete word backward
+map('n', 'dw', 'vb"_d<CR>', opts)
+
+-- Select all
+map('n', '<C-a>', 'gg<S-v>G<CR>', opts)
+
+-- Split window
+map('n', 'ss', ':split<Return><C-w>w<CR>', opts)
+map('n', 'sv', ':vsplit<Return><C-w>w<CR>', opts)
