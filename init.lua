@@ -12,6 +12,6 @@ require("themes")
 require("mappings")
 
 require("plugins.lsp")
-require("plugins.syntax.cmp")
 require("plugins.ui.lualine")
 require("plugins.telescope")
+require("plugins.syntax.coc-extensions")

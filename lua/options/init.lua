@@ -3,6 +3,11 @@ local opt =   vim.opt
 local g   =   vim.g
 
 local options = {
+  background     = 'dark',
+  wildoptions    = 'pum',
+  pumblend       = 5,
+  winblend       = 0,
+  backup         = false,
   ruler          = true,
   clipboard      = "unnamed,unnamedplus",   --- Copy-paste between vim and everything else
   completeopt    = "menu,menuone,noselect", --- Better autocompletion
@@ -32,9 +37,9 @@ local options = {
   termguicolors  = true,                    --- Correct terminal colors
   timeoutlen     = 200,                     --- Faster completion (cannot be lower than 200 because then commenting doesn't work)
   undofile       = true,                    --- Sets undo to file
-  updatetime     = 100,                     --- Faster completion
+  updatetime     = 200,                     --- Faster completion
   viminfo        = "'1000",                 --- Increase the size of file history
-  wildignore     = { "*node_modules/**", '**/coverage/**', '**/.idea/**', '**/.nuxt/**' }, --- Don't search inside Node.js modules
+  wildignore     = { "*node_modules/**", '**/coverage/**', '**/.idea/**', '**/.nuxt/**', '**/.next/**' }, --- Don't search inside Node.js modules
   wrap           = false,                   --- Display long lines as just one line
   autoindent     = true,                    --- Good auto indent
   backspace      = "indent,eol,start",      --- Making sure backspace works
@@ -79,11 +84,22 @@ opt.formatoptions:remove('r');
 opt.formatoptions:remove('o');
 opt.sessionoptions:remove { 'buffers', 'folds' }
 
+if (fn.has("win32") or fn.has("win64")) then
+  opt.clipboard:prepend { 'unnamed', 'unnamedplus' }
+elseif (fn.has("macunix")) then
+  opt.clipboard:append { 'unnamedplus' }
+end
+
+-- Turn off paste mode when leaving insert
+vim.api.nvim_create_autocmd("InsertLeave", {
+  pattern = '*',
+  command = "set nopaste"
+})
+
 if fn.has('linux') or fn.has('unix') then
   g.python_host_prog = '/usr/bin/python3'
 elseif fn.has('win32') or fn.has('win64') then
   -- Please read the documentation and run in a terminal: Whereis.exe python or python3
-  -- and add it between the string
 	-- DOCUMENTATION: https://github.com/neovim/neovim/wiki/Installing-Neovim
   g.python_host_prog = ''
 end
