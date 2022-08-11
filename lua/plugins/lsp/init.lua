@@ -90,9 +90,6 @@ local lsp_defaults = {
   flags = {
     debounce_text_changes = 150,
   },
-  capabilities = require('cmp_nvim_lsp').update_capabilities(
-    lsp.protocol.make_client_capabilities()
-  ),
   on_attach = on_attach
 }
 
