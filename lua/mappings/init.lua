@@ -67,4 +67,4 @@ map('n', 'gy', '<Plug>(coc-type-definition)', opts)
 map('n', 'gi', '<Plug>(coc-implementation)', opts)
 map('n', 'gr', '<Plug>(coc-references)', opts)
 
-vim.cmd "source $HOME/.config/nvim/lua/plugins/syntax/coc.vim"
+-- vim.cmd "source $HOME/.config/nvim/lua/plugins/syntax/coc.vim"
