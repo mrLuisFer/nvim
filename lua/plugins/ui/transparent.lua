@@ -1,4 +1,4 @@
-local enabled = false
+local enabled = true
 
 require("transparent").setup({
   enable = enabled, -- boolean: enable transparent
