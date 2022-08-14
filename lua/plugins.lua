@@ -61,7 +61,6 @@ packer.startup({ function()
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
 
-
   -- SYNTAX: and LANGUAGES:
   use({ "fatih/vim-go", run = ":GoUpdateBinaries" })
   use { 'NvChad/nvim-colorizer.lua', config = function() require("plugins.syntax.colorizer") end }
@@ -78,6 +77,12 @@ packer.startup({ function()
   use { "nvim-telescope/telescope-fzf-native.nvim" }
   use { 'nvim-telescope/telescope-file-browser.nvim' }
   use { 'cljoly/telescope-repo.nvim' }
+  if (fn.has("linux") or fn.has("macunix")) then
+    -- for image viewer
+    use { 'nvim-telescope/telescope-media-files.nvim',
+      config = function() require('telescope').load_extension('media_files') end }
+    use { 'edluffy/hologram.nvim' }
+  end
   use { 'kevinhwang91/nvim-bqf', ft = 'qf' }
   use { 'nvim-pack/nvim-spectre' }
   use({ "junegunn/fzf", dir = "~/.fzf", run = "./install --all" })
