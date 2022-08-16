@@ -33,6 +33,7 @@ packer.startup({ function()
   use({ "folke/tokyonight.nvim", branch = "main" })
   use({ "glepnir/zephyr-nvim" })
   use({ "wadackel/vim-dogrun" })
+  use 'marko-cerovac/material.nvim'
 
   -- PLUGINS:
   use({ "kyazdani42/nvim-web-devicons" })
