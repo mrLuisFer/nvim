@@ -85,5 +85,5 @@ elseif fn.has('win32') or fn.has('win64') then
   -- Please read the documentation and run in a terminal: Whereis.exe python or python3
   -- and add it between the string
 	-- DOCUMENTATION: https://github.com/neovim/neovim/wiki/Installing-Neovim
-  g.python_host_prog = ''
+  g.python_host_prog = 'C:\\Users\\mrlui\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe'
 end

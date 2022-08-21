@@ -1,22 +1,37 @@
-require'nvim-treesitter.configs'.setup {
-	ensure_installed = "all",
-	ignore_install = { 'phpdoc', 'haskell' },
+local fn = vim.fn
+
+local hasWindows = fn.has('win32') or fn.has('win64')
+local languages = {}
+
+if hasWindows then
+  -- On windows, if you use "all", this takes to long for intall and maybe some crashs and bugs
+  require 'nvim-treesitter.install'.compilers = { 'clang', "gcc" }
+  languages = { 'astro', 'css', 'dockerfile', 'gitignore', 'go', 'graphql', 'html', 'java', 'javascript', 'jsdoc', 'json', 'tree-sitter-jsonc', 'lua', 'markdown', 'prisma', 'python', 'rust', 'ruby', 'scss', 'svelte', 'tsx', 'typescript', 'vue', 'vim', 'yaml', 'zig', 'c', 'cpp'}
+else
+  -- For Unix and Linux
+  languages = "all"
+end
+
+
+require 'nvim-treesitter.configs'.setup {
+  ensure_installed = languages,
+  ignore_install = { 'phpdoc', 'haskell' },
   highlight = {
     enable = true,
   },
   textobjects = {
     enable = true,
     select = {
-			enable = true,
+      enable = true,
       lookahead = true,
-				keymaps = {
-          ["af"] = "@function.outer",
-          ["if"] = "@function.inner",
-          ["ac"] = "@class.outer",
-          ["ic"] = "@class.inner",
-        },
+      keymaps = {
+        ["af"] = "@function.outer",
+        ["if"] = "@function.inner",
+        ["ac"] = "@class.outer",
+        ["ic"] = "@class.inner",
+      },
     },
-		move = {
+    move = {
       enable = true,
       set_jumps = true, -- whether to set jumps in the jumplist
       goto_next_start = {
@@ -42,9 +57,8 @@ require'nvim-treesitter.configs'.setup {
         ["~"] = "@parameter.inner",
       },
     },
-
   },
-  sync_install = true,
+  sync_install = false,
   incremental_selection = {
     enable = false,
     keymaps = {
@@ -55,7 +69,7 @@ require'nvim-treesitter.configs'.setup {
     },
   },
   indent = {
-    enable = true
+    enable = not hasWindows
   },
   rainbow = {
     enable = true
