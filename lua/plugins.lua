@@ -1,3 +1,10 @@
+local packerOk, packer = pcall(require, "packer")
+if (not packerOk) then
+  print("Packer is not installed")
+  return
+end
+vim.cmd [[ packadd packer.nvim ]]
+
 local use = require("packer").use
 local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
@@ -16,7 +23,11 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 -- PACKER:
+<<<<<<< HEAD
 return require("packer").startup({ function()
+=======
+packer.startup({ function()
+>>>>>>> 4e04bf03a6e10006b0410ec7cbe5ea0c71e91c46
   use("wbthomason/packer.nvim")
   use({ "lewis6991/impatient.nvim" })
 
@@ -25,8 +36,13 @@ return require("packer").startup({ function()
   use({ "morhetz/gruvbox" })
   use({ "folke/tokyonight.nvim", branch = "main" })
   use({ "glepnir/zephyr-nvim" })
+<<<<<<< HEAD
   use({ "mangeshrex/everblush.vim" })
   use({ "wadackel/vim-dogrun" })
+=======
+  use({ "wadackel/vim-dogrun" })
+  use 'marko-cerovac/material.nvim'
+>>>>>>> 4e04bf03a6e10006b0410ec7cbe5ea0c71e91c46
 
   -- PLUGINS:
   use({ "kyazdani42/nvim-web-devicons" })
@@ -40,14 +56,28 @@ return require("packer").startup({ function()
   use({ "goolord/alpha-nvim", config = function() require("plugins.ui.alpha") end })
   use({ "prettier/vim-prettier", run = "yarn install --frozen-lockfile --production" })
   use({ "kyazdani42/nvim-tree.lua", config = function() require("plugins.ui.treelua") end })
+<<<<<<< HEAD
   use({ "xiyaowong/nvim-transparent", config = function() require("plugins.ui.transparent") end })
+=======
+  use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
+  use({ "xiyaowong/nvim-transparent", config = function() require("plugins.ui.transparent") end })
+  use({ 'mg979/vim-visual-multi', branch = 'master' })
+  use { 'hrsh7th/vim-vsnip' }
+>>>>>>> 4e04bf03a6e10006b0410ec7cbe5ea0c71e91c46
 
   -- LSP:
   use({ "neovim/nvim-lspconfig" })
   use({ "glepnir/lspsaga.nvim" })
   use({ "onsails/lspkind-nvim" })
   use({ "williamboman/nvim-lsp-installer" })
+<<<<<<< HEAD
   use { 'folke/lsp-trouble.nvim', config = function() require("plugins.lsp.trouble") end }
+=======
+  use { 'neoclide/coc.nvim', branch = 'release' }
+  use { 'jose-elias-alvarez/null-ls.nvim', config = function() require("plugins.lsp.null-ls") end }
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+>>>>>>> 4e04bf03a6e10006b0410ec7cbe5ea0c71e91c46
 
   -- SYNTAX: and LANGUAGES:
   use({ "fatih/vim-go", run = ":GoUpdateBinaries" })
@@ -56,17 +86,31 @@ return require("packer").startup({ function()
     config = function() require("plugins.luasnip") end }
   use({ "mcauley-penney/tidy.nvim", config = function() require("tidy").setup() end })
   use({ "preservim/nerdcommenter" })
+<<<<<<< HEAD
   use { "windwp/nvim-autopairs", after = { 'nvim-treesitter' },
     config = function() require("plugins.syntax.autopairs") end }
+=======
+>>>>>>> 4e04bf03a6e10006b0410ec7cbe5ea0c71e91c46
   use { 'nacro90/numb.nvim', config = function() require('numb') end }
   use({ 'mg979/vim-visual-multi', branch = 'master' })
 
   -- TELESCOPE:
+<<<<<<< HEAD
   use({ "nvim-telescope/telescope.nvim" })
+=======
+>>>>>>> 4e04bf03a6e10006b0410ec7cbe5ea0c71e91c46
   use({ "nvim-lua/popup.nvim" })
   use { "nvim-lua/plenary.nvim" }
+  use({ "nvim-telescope/telescope.nvim" })
   use { "nvim-telescope/telescope-fzf-native.nvim" }
+  use { 'nvim-telescope/telescope-file-browser.nvim' }
   use { 'cljoly/telescope-repo.nvim' }
+  if (fn.has("linux") or fn.has("macunix")) then
+    -- for image viewer
+    use { 'nvim-telescope/telescope-media-files.nvim',
+      config = function() require('telescope').load_extension('media_files') end }
+    use { 'edluffy/hologram.nvim' }
+  end
   use { 'kevinhwang91/nvim-bqf', ft = 'qf' }
   use { 'nvim-pack/nvim-spectre' }
   use({ "junegunn/fzf", dir = "~/.fzf", run = "./install --all" })
@@ -77,6 +121,7 @@ return require("packer").startup({ function()
   use { 'nvim-treesitter/nvim-treesitter-textobjects', after = { 'nvim-treesitter' } }
   use { 'RRethy/nvim-treesitter-textsubjects', after = { 'nvim-treesitter' } }
   use({ "m-demare/hlargs.nvim", config = function() require("hlargs").setup() end })
+<<<<<<< HEAD
 
   -- CMP Intellisense
   use { 'hrsh7th/cmp-nvim-lsp' }
@@ -99,6 +144,16 @@ return require("packer").startup({ function()
     use { "sindrets/diffview.nvim", config = function() require("plugins.git.diffview") end }
     -- use { 'github/copilot.vim' } -- if you want to use GitHub Copilot, enable this plugin and run :Copilot setup
   end
+=======
+  use { "windwp/nvim-autopairs", after = { 'nvim-treesitter' },
+    config = function() require("plugins.syntax.autopairs") end }
+  use 'windwp/nvim-ts-autotag'
+
+  -- GIT:
+  use { 'kdheepak/lazygit.nvim' }
+  use({ "lewis6991/gitsigns.nvim", config = function() require("plugins.git.signs") end })
+  -- use { 'github/copilot.vim' } -- if you want to use GitHub Copilot, enable this plugin and run :Copilot setup
+>>>>>>> 4e04bf03a6e10006b0410ec7cbe5ea0c71e91c46
 
   if packer_bootstrap then
     require('packer').sync()

@@ -1,4 +1,3 @@
-local g = vim.g
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
@@ -12,9 +11,6 @@ map("n", "<leader>q", ":q<CR>", opts)
 
 map("n", "<C-x>", ":x<CR>", opts)
 map("n", "<leader>x", ":x<CR>", opts)
-
--- Remove hightlights
-map("n", "<CR>", ":noh<CR><CR>", opts)
 
 -- Don't yank on delete char
 map("n", "x", '"_x', opts)
@@ -58,8 +54,25 @@ map("n", "<A-8>", "<Cmd>BufferGoto 8<CR>", opts)
 map("n", "<A-9>", "<Cmd>BufferGoto 9<CR>", opts)
 map("n", "<A-0>", "<Cmd>BufferLast<CR>", opts)
 
--- Diffview
-map('n', '<leader>df', '<cmd>lua require("plugins.git.diffview").toggle()<CR>', opts)
 -- LazyGit
 -- For use this plugin and keymap you need to have installed lazygit
 map('n', '<leader>gg', ':LazyGit<CR>', opts)
+
+-- CoC Mappings
+map('n', '[g', '<Plug>(coc-diagnostic-prev)', opts)
+map('n', ']g', '<Plug>(coc-diagnostic-next)', opts)
+-- -- GoTo code navigation.
+map('n', 'gd', '<Plug>(coc-definition)', opts)
+map('n', 'gy', '<Plug>(coc-type-definition)', opts)
+map('n', 'gi', '<Plug>(coc-implementation)', opts)
+map('n', 'gr', '<Plug>(coc-references)', opts)
+
+-- Delete word backward
+map('n', 'dw', 'vb"_d<CR>', opts)
+
+-- Select all
+map('n', '<C-a>', 'gg<S-v>G<CR>', opts)
+
+-- Split window
+map('n', 'ss', ':split<Return><C-w>w<CR>', opts)
+map('n', 'sv', ':vsplit<Return><C-w>w<CR>', opts)
