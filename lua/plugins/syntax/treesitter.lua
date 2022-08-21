@@ -6,7 +6,7 @@ local languages = {}
 if hasWindows then
   -- On windows, if you use "all", this takes to long for intall and maybe some crashs and bugs
   require 'nvim-treesitter.install'.compilers = { 'clang', "gcc" }
-  languages = { 'astro', 'css', 'dockerfile', 'gitignore', 'go', 'graphql', 'html', 'java', 'javascript', 'jsdoc', 'json', 'tree-sitter-jsonc', 'lua', 'markdown', 'prisma', 'python', 'rust', 'ruby', 'scss', 'svelte', 'tsx', 'typescript', 'vue', 'vim', 'yaml', 'zig', 'c', 'cpp'}
+  languages = { 'astro', 'css', 'dockerfile', 'go', 'graphql', 'html', 'java', 'javascript', 'jsdoc',  'lua', 'markdown', 'prisma', 'python', 'rust', 'ruby', 'scss', 'svelte', 'tsx', 'typescript', 'vue', 'vim', 'yaml', 'zig', 'c', 'cpp'}
 else
   -- For Unix and Linux
   languages = "all"
