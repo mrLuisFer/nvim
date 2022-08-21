@@ -1,20 +1,18 @@
 local fn = vim.fn
 
 local hasWindows = fn.has('win32') or fn.has('win64')
-local languages = {}
 
-if hasWindows then
-  -- On windows, if you use "all", this takes to long for intall and maybe some crashs and bugs
-  require 'nvim-treesitter.install'.compilers = { 'clang', "gcc" }
-  languages = { 'astro', 'css', 'dockerfile', 'go', 'graphql', 'html', 'java', 'javascript', 'jsdoc',  'lua', 'markdown', 'prisma', 'python', 'rust', 'ruby', 'scss', 'svelte', 'tsx', 'typescript', 'vue', 'vim', 'yaml', 'zig', 'c', 'cpp'}
-else
-  -- For Unix and Linux
-  languages = "all"
+local languages = function()
+  if hasWindows then
+    require 'nvim-treesitter.install'.compilers = { 'clang', "gcc" }
+    return { 'astro', 'css', 'dockerfile', 'go', 'graphql', 'html', 'java', 'javascript', 'jsdoc',  'lua', 'markdown', 'prisma', 'python', 'rust', 'ruby', 'scss', 'svelte', 'tsx', 'typescript', 'vue', 'vim', 'yaml', 'zig', 'c', 'cpp'}
+  else
+    return "all"
+  end
 end
 
-
 require 'nvim-treesitter.configs'.setup {
-  ensure_installed = languages,
+  ensure_installed = languages(),
   ignore_install = { 'phpdoc', 'haskell' },
   highlight = {
     enable = true,
