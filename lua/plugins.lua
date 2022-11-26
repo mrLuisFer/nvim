@@ -40,8 +40,10 @@ return require("packer").startup({ function()
   use({ "kyazdani42/nvim-web-devicons" })
   use({ "ryanoasis/vim-devicons" })
   use({ "christoomey/vim-tmux-navigator" }) -- Navigate with C-h C-l C-j C-k
-  use({ "akinsho/bufferline.nvim", tag = "v2.*", config = function() require("bufferline").setup {} end })
-  use({ "romgrk/barbar.nvim", config = function() require("plugins.ui.barbar") end })
+  use({ "akinsho/bufferline.nvim", tag = "v3.*", config = function() require("bufferline").setup {} end })
+  if fn.has("windows") or fn.has("linux") then
+    use({ "romgrk/barbar.nvim", config = function() require("plugins.ui.barbar") end })
+  end
   use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
   use { 'antoinemadec/FixCursorHold.nvim' } -- Needed while issue https://github.com/neovim/neovim/issues/12587 is still open
   use({ "nathom/filetype.nvim" })
@@ -79,7 +81,6 @@ return require("packer").startup({ function()
   use({ "nvim-telescope/telescope.nvim" })
   use({ "nvim-lua/popup.nvim" })
   use { "nvim-lua/plenary.nvim" }
-  use({ "nvim-telescope/telescope.nvim" })
   use { "nvim-telescope/telescope-fzf-native.nvim" }
   use { 'nvim-telescope/telescope-file-browser.nvim' }
   use { 'cljoly/telescope-repo.nvim' }
@@ -107,7 +108,7 @@ return require("packer").startup({ function()
   use({ "lewis6991/gitsigns.nvim", config = function() require("plugins.git.signs") end })
 
   -- For non windows users
-  if fn.has('linux') or fn.has('unix') or fn.has('macunix') then
+  if fn.has('linux') then
     use { 'nvim-telescope/telescope-media-files.nvim',
       config = function() require('telescope').load_extension('media_files') end }
     use { 'edluffy/hologram.nvim' }

@@ -5,7 +5,7 @@ local hasWindows = fn.has('win32') or fn.has('win64')
 local languages = function()
   if hasWindows then
     require 'nvim-treesitter.install'.compilers = { 'clang', "gcc" }
-    return { 'astro', 'css', 'dockerfile', 'go', 'graphql', 'html', 'java', 'javascript', 'jsdoc',  'lua', 'markdown', 'prisma', 'python', 'rust', 'ruby', 'scss', 'svelte', 'tsx', 'typescript', 'vue', 'vim', 'yaml', 'zig', 'c', 'cpp'}
+    return { 'astro', 'css', 'dockerfile', 'go', 'graphql', 'html', 'java', 'javascript', 'jsdoc',  'lua', 'prisma', 'python', 'rust', 'ruby', 'scss', 'svelte', 'tsx', 'typescript', 'vue', 'vim', 'yaml', 'zig', 'c', 'cpp'}
   else
     return "all"
   end
@@ -13,7 +13,7 @@ end
 
 require 'nvim-treesitter.configs'.setup {
   ensure_installed = languages(),
-  ignore_install = { 'phpdoc', 'haskell' },
+  ignore_install = { 'phpdoc', 'haskell', 'markdown' },
   highlight = {
     enable = true,
   },
