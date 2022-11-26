@@ -39,7 +39,9 @@ packer.startup({ function()
   use({ "kyazdani42/nvim-web-devicons" })
   use({ "ryanoasis/vim-devicons" })
   use({ "christoomey/vim-tmux-navigator" }) -- Navigate with C-h C-l C-j C-k
-  use({ "akinsho/bufferline.nvim", tag = "v2.*", config = function() require("bufferline").setup {} end })
+  if fn.has("win32") or fn.has("linux") then
+    use({ "akinsho/bufferline.nvim", tag = "v3.*", config = function() require("bufferline").setup {} end })
+  end
   use({ "romgrk/barbar.nvim", config = function() require("plugins.ui.barbar") end })
   use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
   use { 'antoinemadec/FixCursorHold.nvim' } -- Needed while issue https://github.com/neovim/neovim/issues/12587 is still open
@@ -71,18 +73,20 @@ packer.startup({ function()
   use({ "preservim/nerdcommenter" })
   use { 'nacro90/numb.nvim', config = function() require('numb') end }
 
-  -- TELESCOPE:
-  use({ "nvim-lua/popup.nvim" })
-  use { "nvim-lua/plenary.nvim" }
-  use({ "nvim-telescope/telescope.nvim" })
-  use { "nvim-telescope/telescope-fzf-native.nvim" }
-  use { 'nvim-telescope/telescope-file-browser.nvim' }
-  use { 'cljoly/telescope-repo.nvim' }
-  if (fn.has("linux") or fn.has("macunix")) then
-    -- for image viewer
-    use { 'nvim-telescope/telescope-media-files.nvim',
-      config = function() require('telescope').load_extension('media_files') end }
-    use { 'edluffy/hologram.nvim' }
+  if fn.has("win32") or fn.has("linux") then
+    -- TELESCOPE:
+    use({ "nvim-lua/popup.nvim" })
+    use { "nvim-lua/plenary.nvim" }
+    use({ "nvim-telescope/telescope.nvim" })
+    use { "nvim-telescope/telescope-fzf-native.nvim" }
+    use { 'nvim-telescope/telescope-file-browser.nvim' }
+    use { 'cljoly/telescope-repo.nvim' }
+    if fn.has("linux") then
+      -- for image viewer
+      use { 'nvim-telescope/telescope-media-files.nvim',
+        config = function() require('telescope').load_extension('media_files') end }
+      use { 'edluffy/hologram.nvim' }
+    end
   end
   use { 'kevinhwang91/nvim-bqf', ft = 'qf' }
   use { 'nvim-pack/nvim-spectre' }
@@ -101,7 +105,6 @@ packer.startup({ function()
   -- GIT:
   use { 'kdheepak/lazygit.nvim' }
   use({ "lewis6991/gitsigns.nvim", config = function() require("plugins.git.signs") end })
-  -- use { 'github/copilot.vim' } -- if you want to use GitHub Copilot, enable this plugin and run :Copilot setup
 
   if packer_bootstrap then
     require('packer').sync()
