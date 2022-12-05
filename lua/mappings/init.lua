@@ -1,6 +1,5 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
-local fn = vim.fn
 
 -- Save file using `CTRL-S` or `Space-w`
 map("n", "<leader>w", ":w<CR>", opts)
@@ -28,21 +27,18 @@ vim.cmd [[
 -- Prettier
 map("n", "<C-p>", ":Prettier<CR>", opts)
 
-if fn.has("win32") or fn.has("linux") then
-  -- Find files using Telescope
-  map("n", "<C-f>", ":Telescope find_files<CR>", opts)
-end
-
+-- Telescope
+map("n", "<leader>ff", ":Telescope find_files<CR>", opts)
+map("n", "<C-f>", ":Telescope live_grep<CR>", opts)
 map("n", "<leader>fw", ":Telescope live_grep<CR>", opts)
 map("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 -- or FZF
 map("n", "<leader>z", ":FZF<CR>", opts)
 
 -- NVIM Tree Lua
-map("n", "<C-b>", ":NvimTreeToggle<CR>", opts)
+map("n", "<leader>b", ":NvimTreeToggle<CR>", opts)
 map("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
 
--- Barbar
 map("n", "<Tab>", ":BufferNext<CR>", opts)
 map("n", "<S-Tab>", ":BufferPrev<CR>", opts)
 map("n", "<C-w>", ":BufferClose<CR>", opts)

@@ -39,20 +39,19 @@ packer.startup({ function()
   use({ "kyazdani42/nvim-web-devicons" })
   use({ "ryanoasis/vim-devicons" })
   use({ "christoomey/vim-tmux-navigator" }) -- Navigate with C-h C-l C-j C-k
-  if fn.has("win32") or fn.has("linux") then
-    use({ "akinsho/bufferline.nvim", tag = "v3.*", config = function() require("bufferline").setup {} end })
-  end
-  use({ "romgrk/barbar.nvim", config = function() require("plugins.ui.barbar") end })
   use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
   use { 'antoinemadec/FixCursorHold.nvim' } -- Needed while issue https://github.com/neovim/neovim/issues/12587 is still open
   use({ "nathom/filetype.nvim" })
   use({ "goolord/alpha-nvim", config = function() require("plugins.ui.alpha") end })
   use({ "prettier/vim-prettier", run = "yarn install --frozen-lockfile --production" })
-  use({ "kyazdani42/nvim-tree.lua", config = function() require("plugins.ui.treelua") end })
+  use({ 'nvim-tree/nvim-tree.lua', config = function() require("plugins.ui.treelua") end, tag = "nightly" })
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
   use({ "xiyaowong/nvim-transparent", config = function() require("plugins.ui.transparent") end })
   use({ 'mg979/vim-visual-multi', branch = 'master' })
   use { 'hrsh7th/vim-vsnip' }
+  use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
+  use { 'romgrk/barbar.nvim', wants = 'nvim-web-devicons', config = function() require("plugins.ui.barbar") end }
+  use {'srcery-colors/srcery-vim', as = 'srcery'}
 
   -- LSP:
   use({ "neovim/nvim-lspconfig" })
@@ -67,40 +66,29 @@ packer.startup({ function()
   -- SYNTAX: and LANGUAGES:
   use({ "fatih/vim-go", run = ":GoUpdateBinaries" })
   use { 'NvChad/nvim-colorizer.lua', config = function() require("plugins.syntax.colorizer") end }
-  use { 'L3MON4D3/LuaSnip', requires = { 'rafamadriz/friendly-snippets' },
-    config = function() require("plugins.luasnip") end }
+  use { 'L3MON4D3/LuaSnip', requires = { 'rafamadriz/friendly-snippets' }, config = function() require("plugins.luasnip") end }
   use({ "mcauley-penney/tidy.nvim", config = function() require("tidy").setup() end })
   use({ "preservim/nerdcommenter" })
   use { 'nacro90/numb.nvim', config = function() require('numb') end }
+  use 'sheerun/vim-polyglot'
 
-  if fn.has("win32") or fn.has("linux") then
-    -- TELESCOPE:
-    use({ "nvim-lua/popup.nvim" })
-    use { "nvim-lua/plenary.nvim" }
-    use({ "nvim-telescope/telescope.nvim" })
-    use { "nvim-telescope/telescope-fzf-native.nvim" }
-    use { 'nvim-telescope/telescope-file-browser.nvim' }
-    use { 'cljoly/telescope-repo.nvim' }
-    if fn.has("linux") then
-      -- for image viewer
-      use { 'nvim-telescope/telescope-media-files.nvim',
-        config = function() require('telescope').load_extension('media_files') end }
-      use { 'edluffy/hologram.nvim' }
-    end
+  -- TELESCOPE:
+  use({ "nvim-lua/popup.nvim" })
+  use { "nvim-lua/plenary.nvim" }
+  use({ "nvim-telescope/telescope.nvim" })
+  use { "nvim-telescope/telescope-fzf-native.nvim" }
+  use { 'nvim-telescope/telescope-file-browser.nvim' }
+  use { 'cljoly/telescope-repo.nvim' }
+  if fn.has("linux") or fn.has("unix") then
+    -- for image viewer
+    use { 'nvim-telescope/telescope-media-files.nvim',
+      config = function() require('telescope').load_extension('media_files') end }
+    use { 'edluffy/hologram.nvim' }
   end
   use { 'kevinhwang91/nvim-bqf', ft = 'qf' }
   use { 'nvim-pack/nvim-spectre' }
   use({ "junegunn/fzf", dir = "~/.fzf", run = "./install --all" })
   use({ "junegunn/fzf.vim" })
-
-  -- TREESITTER:
-  use({ "nvim-treesitter/nvim-treesitter", config = function() require("plugins.syntax.treesitter") end })
-  use { 'nvim-treesitter/nvim-treesitter-textobjects', after = { 'nvim-treesitter' } }
-  use { 'RRethy/nvim-treesitter-textsubjects', after = { 'nvim-treesitter' } }
-  use({ "m-demare/hlargs.nvim", config = function() require("hlargs").setup() end })
-  use { "windwp/nvim-autopairs", after = { 'nvim-treesitter' },
-    config = function() require("plugins.syntax.autopairs") end }
-  use 'windwp/nvim-ts-autotag'
 
   -- GIT:
   use { 'kdheepak/lazygit.nvim' }
