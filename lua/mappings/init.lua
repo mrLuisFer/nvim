@@ -25,10 +25,12 @@ vim.cmd [[
 ]]
 
 -- Prettier
-map("n", "<C-p>", ":Prettier<CR>", opts)
+map("n", "<leader>p", ":Prettier<CR>", opts)
 
--- Telescope
-map("n", "<leader>ff", ":Telescope find_files<CR>", opts)
+-- -- Telescope
+-- find files
+map("n", "<C-p>", ":Telescope find_files<CR>", opts)
+-- find words
 map("n", "<C-f>", ":Telescope live_grep<CR>", opts)
 map("n", "<leader>fw", ":Telescope live_grep<CR>", opts)
 map("n", "<leader>fb", ":Telescope buffers<CR>", opts)
@@ -36,7 +38,7 @@ map("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 map("n", "<leader>z", ":FZF<CR>", opts)
 
 -- NVIM Tree Lua
-map("n", "<leader>b", ":NvimTreeToggle<CR>", opts)
+map("n", "<C-b>", ":NvimTreeToggle<CR>", opts)
 map("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
 
 map("n", "<Tab>", ":BufferNext<CR>", opts)
