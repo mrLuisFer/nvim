@@ -56,7 +56,13 @@ packer.startup({ function()
   use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
 
   -- LSP:
-  use({ "neovim/nvim-lspconfig" })
+  use({ "neovim/nvim-lspconfig", requires = {
+		-- Automatically install LSPs to stdpath for neovim
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+		'j-hui/fidget.nvim', -- Useful status updates for LSP
+    'folke/neodev.nvim', -- Additional lua configuration, makes nvim stuff amazing
+	}})
   use({ "glepnir/lspsaga.nvim" })
   use({ "onsails/lspkind-nvim" })
   use({ "williamboman/nvim-lsp-installer" })

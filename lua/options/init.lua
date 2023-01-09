@@ -60,6 +60,8 @@ local options = {
     eob = ' ', -- Suppress ~ at EndOfBuffer
     fold = ' ', -- Hide trailing folding characters
   },
+	breakindent = true,
+	hlsearch = false
 }
 
 local globals = {
