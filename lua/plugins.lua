@@ -52,6 +52,8 @@ packer.startup({ function()
   use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
   use { 'romgrk/barbar.nvim', wants = 'nvim-web-devicons', config = function() require("plugins.ui.barbar") end }
   use {'srcery-colors/srcery-vim', as = 'srcery'}
+  use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
+  use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
 
   -- LSP:
   use({ "neovim/nvim-lspconfig" })
@@ -71,6 +73,9 @@ packer.startup({ function()
   use({ "preservim/nerdcommenter" })
   use { 'nacro90/numb.nvim', config = function() require('numb') end }
   use 'sheerun/vim-polyglot'
+  use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
+  use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
+
 
   -- TELESCOPE:
   use({ "nvim-lua/popup.nvim" })

@@ -78,3 +78,10 @@ map('n', '<C-a>', 'gg<S-v>G<CR>', opts)
 -- Split window
 map('n', 'ss', ':split<Return><C-w>w<CR>', opts)
 map('n', 'sv', ':vsplit<Return><C-w>w<CR>', opts)
+
+-- Keymaps for better default experience
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+
+-- Remap for dealing with word wrap
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
