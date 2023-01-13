@@ -3,8 +3,6 @@ if not present then
 	return
 end
 
-local icons = require("icons")
-
 signs.setup({
 	signs = {
 		add = { hl = "GitGutterAdd", text = "▎", numhl = "GitSignsAddNr" },

@@ -2,6 +2,7 @@ local cmd = vim.cmd
 local colorschemes = {
 	zep						= 'zephyr',
 	one						= 'onedark',
+	onedark						= 'onedark',
 	gruv					= 'gruvbox',
 	palenight			= 'palenight',
 	tokyon				= 'tokyonight',
