@@ -80,8 +80,7 @@ packer.startup({ function()
   use { 'nacro90/numb.nvim', config = function() require('numb') end }
   use 'sheerun/vim-polyglot'
   use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
-  use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
-
+	use('m4xshen/autoclose.nvim')
 
   -- TELESCOPE:
   use({ "nvim-lua/popup.nvim" })

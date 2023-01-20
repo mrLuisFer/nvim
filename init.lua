@@ -15,3 +15,5 @@ require("plugins.telescope")
 require("plugins.syntax.coc-extensions")
 
 require("themes")
+
+require("autoclose").setup({})
