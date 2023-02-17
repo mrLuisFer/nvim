@@ -16,4 +16,5 @@ require("plugins.syntax.coc-extensions")
 
 require("themes")
 
+-- Custom require plugins
 require("autoclose").setup({})

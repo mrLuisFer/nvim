@@ -54,6 +54,7 @@ packer.startup({ function()
   use {'srcery-colors/srcery-vim', as = 'srcery'}
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
   use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
+	use 'andweeb/presence.nvim'
 
   -- LSP:
   use({ "neovim/nvim-lspconfig", requires = {
@@ -81,6 +82,7 @@ packer.startup({ function()
   use 'sheerun/vim-polyglot'
   use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
 	use('m4xshen/autoclose.nvim')
+	use('github/copilot.vim') -- copilot
 
   -- TELESCOPE:
   use({ "nvim-lua/popup.nvim" })
