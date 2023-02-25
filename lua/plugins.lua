@@ -83,6 +83,7 @@ packer.startup({ function()
   use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
 	use('m4xshen/autoclose.nvim')
 	use('github/copilot.vim') -- copilot
+	use 'prisma/vim-prisma'
 
   -- TELESCOPE:
   use({ "nvim-lua/popup.nvim" })
