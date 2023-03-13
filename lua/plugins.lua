@@ -34,6 +34,11 @@ packer.startup({ function()
   use({ "glepnir/zephyr-nvim" })
   use({ "wadackel/vim-dogrun" })
   use 'marko-cerovac/material.nvim'
+	use { "kyazdani42/blue-moon", config = function()
+			vim.opt.termguicolors = true
+			vim.cmd "colorscheme blue-moon"
+		end
+	}
 
   -- PLUGINS:
   use({ "kyazdani42/nvim-web-devicons" })
