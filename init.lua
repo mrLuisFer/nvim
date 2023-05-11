@@ -14,6 +14,7 @@ require("mappings")
 
 require("plugins.lsp")
 require("plugins.ui.lualine")
+require('plugins.ui.treelua')
 require("plugins.telescope")
 require("plugins.syntax.coc-extensions")
 

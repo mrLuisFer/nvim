@@ -62,7 +62,7 @@ packer.startup({ function()
 	use {'romgrk/barbar.nvim', requires = {
 		'lewis6991/gitsigns.nvim', -- for git status
 		'nvim-tree/nvim-web-devicons', -- for file icons
-	}}  
+	}}
 	use 'nvim-tree/nvim-tree.lua'
 
   -- LSP:
