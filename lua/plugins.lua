@@ -49,16 +49,20 @@ packer.startup({ function()
   use({ "nathom/filetype.nvim" })
   use({ "goolord/alpha-nvim", config = function() require("plugins.ui.alpha") end })
   use({ "prettier/vim-prettier", run = "yarn install --frozen-lockfile --production" })
-  use({ 'nvim-tree/nvim-tree.lua', config = function() require("plugins.ui.treelua") end, tag = "nightly" })
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
   use({ "xiyaowong/nvim-transparent", config = function() require("plugins.ui.transparent") end })
   use({ 'mg979/vim-visual-multi', branch = 'master' })
   use { 'hrsh7th/vim-vsnip' }
   use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
   use { 'romgrk/barbar.nvim', wants = 'nvim-web-devicons', config = function() require("plugins.ui.barbar") end }
-  use {'srcery-colors/srcery-vim', as = 'srcery'}
+	use {'romgrk/barbar.nvim', requires = {
+		'lewis6991/gitsigns.nvim', -- for git status
+		'nvim-tree/nvim-web-devicons', -- for file icons
+	}}  
+	use {'srcery-colors/srcery-vim', as = 'srcery'}
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
   use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
+	use 'nvim-tree/nvim-tree.lua'
 
   -- LSP:
   use({ "neovim/nvim-lspconfig", requires = {
@@ -75,6 +79,9 @@ packer.startup({ function()
   use { 'jose-elias-alvarez/null-ls.nvim', config = function() require("plugins.lsp.null-ls") end }
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
+	use 'yioneko/nvim-vtsls'
+  use 'stevearc/aerial.nvim'
+  use 'nvim-treesitter/nvim-treesitter'
 
   -- SYNTAX: and LANGUAGES:
   use({ "fatih/vim-go", run = ":GoUpdateBinaries" })
