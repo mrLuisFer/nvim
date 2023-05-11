@@ -12,7 +12,7 @@ local colorschemes = {
   vscode        = 'vscode'
 }
 vim.g.everblushNR = 1
-vim.g.lightline = { colorscheme = 'blue-moon' }
+vim.g.lightline = { colorscheme = colorschemes.gruv}
 
 cmd('colorscheme '..colorschemes.zep)
 

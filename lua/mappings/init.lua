@@ -37,10 +37,7 @@ map("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 -- or FZF
 map("n", "<leader>z", ":FZF<CR>", opts)
 
--- NVIM Tree Lua
-map("n", "<C-b>", ":NvimTreeToggle<CR>", opts)
-map("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
-
+-- Barbar
 map("n", "<Tab>", ":BufferNext<CR>", opts)
 map("n", "<S-Tab>", ":BufferPrev<CR>", opts)
 map("n", "<C-w>", ":BufferClose<CR>", opts)

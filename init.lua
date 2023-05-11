@@ -1,9 +1,21 @@
+-- Init Lua File
 pcall(require, "impatient")
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
--- Init Lua File
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
+end
+vim.opt.rtp:prepend(lazypath)
 require("plugins")
 
 require("options")
@@ -14,9 +26,7 @@ require("mappings")
 
 require("plugins.lsp")
 require("plugins.ui.lualine")
-require('plugins.ui.treelua')
 require("plugins.telescope")
-require("plugins.syntax.coc-extensions")
 
 require("themes")
 
