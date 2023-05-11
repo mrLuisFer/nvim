@@ -2,6 +2,7 @@ local api = vim.api
 local lsp = vim.lsp
 local util = require("vim.lsp.util")
 
+require("lspconfig.configs").vtsls = require("vtsls").lspconfig
 local lspconfig = require("lspconfig")
 
 local capabilities = lsp.protocol.make_client_capabilities()
@@ -28,7 +29,6 @@ local servers = {
   "graphql",
   "eslint",
   "jsonls",
-  "sumneko_lua",
   "tailwindcss",
   "tsserver",
   "vuels",

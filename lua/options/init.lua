@@ -71,6 +71,7 @@ local globals = {
   vim_svelte_plugin_load_full_syntax = 1,
   neoline_disable_tabline            = 1,
   material_style                     = "deep ocean",
+	editorconfig											 = true
 }
 
 for k, v in pairs(options) do

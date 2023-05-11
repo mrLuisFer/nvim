@@ -34,6 +34,11 @@ packer.startup({ function()
   use({ "glepnir/zephyr-nvim" })
   use({ "wadackel/vim-dogrun" })
   use 'marko-cerovac/material.nvim'
+	use { "kyazdani42/blue-moon", config = function()
+			vim.opt.termguicolors = true
+			vim.cmd "colorscheme blue-moon"
+		end
+	}
 
   -- PLUGINS:
   use({ "kyazdani42/nvim-web-devicons" })
@@ -44,7 +49,6 @@ packer.startup({ function()
   use({ "nathom/filetype.nvim" })
   use({ "goolord/alpha-nvim", config = function() require("plugins.ui.alpha") end })
   use({ "prettier/vim-prettier", run = "yarn install --frozen-lockfile --production" })
-  use({ 'nvim-tree/nvim-tree.lua', config = function() require("plugins.ui.treelua") end, tag = "nightly" })
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
   use({ "xiyaowong/nvim-transparent", config = function() require("plugins.ui.transparent") end })
   use({ 'mg979/vim-visual-multi', branch = 'master' })
@@ -55,6 +59,11 @@ packer.startup({ function()
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
   use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
 	use 'andweeb/presence.nvim'
+	use {'romgrk/barbar.nvim', requires = {
+		'lewis6991/gitsigns.nvim', -- for git status
+		'nvim-tree/nvim-web-devicons', -- for file icons
+	}}  
+	use 'nvim-tree/nvim-tree.lua'
 
   -- LSP:
   use({ "neovim/nvim-lspconfig", requires = {
@@ -71,6 +80,9 @@ packer.startup({ function()
   use { 'jose-elias-alvarez/null-ls.nvim', config = function() require("plugins.lsp.null-ls") end }
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
+	use 'yioneko/nvim-vtsls'
+  use 'stevearc/aerial.nvim'
+  use 'nvim-treesitter/nvim-treesitter'
 
   -- SYNTAX: and LANGUAGES:
   use({ "fatih/vim-go", run = ":GoUpdateBinaries" })
@@ -84,6 +96,8 @@ packer.startup({ function()
 	use('m4xshen/autoclose.nvim')
 	use('github/copilot.vim') -- copilot
 	use 'prisma/vim-prisma'
+  use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
+
 
   -- TELESCOPE:
   use({ "nvim-lua/popup.nvim" })
