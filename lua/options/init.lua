@@ -61,7 +61,7 @@ local options = {
     fold = ' ', -- Hide trailing folding characters
   },
 	breakindent = true,
-	hlsearch = false
+	hlsearch = true
 }
 
 local globals = {

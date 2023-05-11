@@ -55,13 +55,14 @@ packer.startup({ function()
   use { 'hrsh7th/vim-vsnip' }
   use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
   use { 'romgrk/barbar.nvim', wants = 'nvim-web-devicons', config = function() require("plugins.ui.barbar") end }
+  use {'srcery-colors/srcery-vim', as = 'srcery'}
+  use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
+  use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
+	use 'andweeb/presence.nvim'
 	use {'romgrk/barbar.nvim', requires = {
 		'lewis6991/gitsigns.nvim', -- for git status
 		'nvim-tree/nvim-web-devicons', -- for file icons
 	}}  
-	use {'srcery-colors/srcery-vim', as = 'srcery'}
-  use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
-  use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
 	use 'nvim-tree/nvim-tree.lua'
 
   -- LSP:
@@ -92,6 +93,9 @@ packer.startup({ function()
   use { 'nacro90/numb.nvim', config = function() require('numb') end }
   use 'sheerun/vim-polyglot'
   use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
+	use('m4xshen/autoclose.nvim')
+	use('github/copilot.vim') -- copilot
+	use 'prisma/vim-prisma'
   use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
 
