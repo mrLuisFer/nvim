@@ -108,7 +108,7 @@ require("lazy").setup({
 	{ "windwp/nvim-ts-autotag",                    after = "nvim-treesitter" },
 	{ "nvim-lua/popup.nvim" },
 	{ "nvim-lua/plenary.nvim" },
-	{ "nvim-telescope/telescope.nvim" },
+	{ "nvim-telescope/telescope.nvim",             dependencies = "tsakirist/telescope-lazy.nvim" },
 	{ "nvim-telescope/telescope-fzf-native.nvim" },
 	{ 'nvim-telescope/telescope-file-browser.nvim' },
 	{ 'cljoly/telescope-repo.nvim' },
