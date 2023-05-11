@@ -28,7 +28,6 @@ local servers = {
   "graphql",
   "eslint",
   "jsonls",
-  "sumneko_lua",
   "tailwindcss",
   "tsserver",
   "vuels",
