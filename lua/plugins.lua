@@ -100,7 +100,6 @@ require("lazy").setup({
 	{ "mcauley-penney/tidy.nvim",  config = function() require("tidy").setup() end },
 	{ "preservim/nerdcommenter" },
 	{ 'nacro90/numb.nvim',         config = function() require('numb') end },
-	'sheerun/vim-polyglot',
 	"windwp/nvim-autopairs",
 	'm4xshen/autoclose.nvim',
 	'github/copilot.vim', -- copilot
