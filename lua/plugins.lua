@@ -44,7 +44,6 @@ require("lazy").setup({
 	{ "nvim-lualine/lualine.nvim",      dependencies = { "nvim-tree/nvim-web-devicons" } },
 	{ 'antoinemadec/FixCursorHold.nvim' },
 	{ "nathom/filetype.nvim" },
-	{ "goolord/alpha-nvim",             config = function() require("plugins.ui.alpha") end },
 	{ "prettier/vim-prettier" },
 	'MunifTanjim/prettier.nvim',
 	{ "xiyaowong/nvim-transparent", config = function() require("plugins.ui.transparent") end },

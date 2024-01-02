@@ -14,6 +14,6 @@ local colorschemes = {
 vim.g.everblushNR = 1
 vim.g.lightline = { colorscheme = colorschemes.gruv}
 
-cmd('colorscheme '..colorschemes.zep)
+cmd('colorscheme '..colorschemes.onedark)
 
 return colorschemes
