@@ -1,5 +1,4 @@
 -- Init Lua File
-pcall(require, "impatient")
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
@@ -16,6 +15,8 @@ if not vim.loop.fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
+
+pcall(require, "impatient")
 require("plugins")
 
 require("options")

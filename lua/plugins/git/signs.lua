@@ -3,6 +3,11 @@ if not present then
 	return
 end
 
+if not signs then
+  return
+end
+
+
 signs.setup({
 	signs = {
 		add = { hl = "GitGutterAdd", text = "▎", numhl = "GitSignsAddNr" },

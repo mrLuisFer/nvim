@@ -87,14 +87,12 @@ require("lazy").setup({
 	'williamboman/mason-lspconfig.nvim',
 	'yioneko/nvim-vtsls',
 	'stevearc/aerial.nvim',
-	'nvim-treesitter/nvim-treesitter',
+	{ 'nvim-treesitter/nvim-treesitter'},
 	{ 'NvChad/nvim-colorizer.lua', config = function() require("plugins.syntax.colorizer") end },
 	{
 		'L3MON4D3/LuaSnip',
-		requires = { 'rafamadriz/friendly-snippets' },
-		config = function()
-			require("plugins.luasnip")
-		end
+		version = 'v2.*',
+		build = "make install_jsregexp || echo 'LuaSnip not installed!'",
 	},
 	{ "mcauley-penney/tidy.nvim",  config = function() require("tidy").setup() end },
 	{ "preservim/nerdcommenter" },
