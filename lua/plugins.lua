@@ -1,3 +1,4 @@
+---@diagnostic disable-next-line: different-requires
 require("lazy").setup({
 	{
 		'folke/neodev.nvim',
@@ -94,6 +95,7 @@ require("lazy").setup({
 		'L3MON4D3/LuaSnip',
 		requires = { 'rafamadriz/friendly-snippets' },
 		config = function()
+			---@diagnostic disable-next-line: different-requires
 			require("plugins.luasnip")
 		end
 	},
